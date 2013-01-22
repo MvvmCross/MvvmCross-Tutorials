@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Collections.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2nd kitten is:"
+      />
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Mvx.MvxHttpImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       local:MvxBind="{'ImageUrl':{'Path':'Kittens[2].ImageUrl'}}"
+        ></Mvx.MvxHttpImageView>
+    <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          local:MvxBind="{'Text':{'Path':'Kittens[2].Name'}}"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          />    
+  </LinearLayout>
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kitten 'Felix' is:"
+      />
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Mvx.MvxHttpImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       local:MvxBind="{'ImageUrl':{'Path':'Lookup[\\'Felix\\'].ImageUrl'}}"
+        ></Mvx.MvxHttpImageView>
+    <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          local:MvxBind="{'Text':{'Path':'Lookup[\\'Felix\\'].Name'}}"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          />
+  </LinearLayout>
+</LinearLayout>
