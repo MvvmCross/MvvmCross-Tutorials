@@ -15,6 +15,7 @@ namespace Collections.Touch
 		public MainMenuView (MvxShowViewModelRequest request)
 			: base(request)
 		{
+			Title = "Main Menu";
 		}
 
 		public override void ViewDidLoad ()
@@ -36,6 +37,7 @@ namespace Collections.Touch
 			private static readonly NSString Identifier = new NSString("MenuCellIdentifier");
 			private const string BindingText = "{'TitleText':{'Path':'Title'},'SelectedCommand':{'Path':'ShowCommand'}}";
 
+#warning Switch to new base constructor when released...
 			public TableSource (UITableView tableView)
 				: base(tableView, MonoTouch.UIKit.UITableViewCellStyle.Default, TableSource.Identifier, BindingText)
 			{				

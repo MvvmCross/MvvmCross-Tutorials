@@ -98,6 +98,9 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch">
       <HintPath>..\..\Lib\MvvmCross\Touch\Debug\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -107,6 +110,25 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\MainMenuView.cs" />
+    <Compile Include="Views\Samples\Cells\KittenCell.cs" />
+    <Compile Include="Views\Samples\Cells\KittenCell.designer.cs">
+      <DependentUpon>KittenCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\SmallFixedView.cs" />
+    <Compile Include="Views\Samples\BaseKittenTableView.cs" />
+    <Compile Include="Views\Samples\BaseDynamicKittenTableView.cs" />
+    <Compile Include="Views\Samples\Cells\DogCell.cs" />
+    <Compile Include="Views\Samples\Cells\DogCell.designer.cs">
+      <DependentUpon>DogCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\LargeFixedView.cs" />
+    <Compile Include="Views\Samples\LargeDynamicView.cs" />
+    <Compile Include="Views\Samples\SmallDynamicView.cs" />
+    <Compile Include="Views\Samples\PolymorphicListItemView.cs" />
+    <Compile Include="Views\Samples\SpecificPositionsView.cs" />
+    <Compile Include="Views\Samples\SpecificPositionsView.designer.cs">
+      <DependentUpon>SpecificPositionsView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -117,5 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="Views\Samples\" />
+    <Folder Include="Views\Samples\Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\Samples\Cells\KittenCell.xib" />
+    <InterfaceDefinition Include="Views\Samples\Cells\DogCell.xib" />
+    <InterfaceDefinition Include="Views\Samples\SpecificPositionsView.xib" />
   </ItemGroup>
 </Project>
