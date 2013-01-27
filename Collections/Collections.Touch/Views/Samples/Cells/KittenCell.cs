@@ -4,6 +4,7 @@ using Cirrious.MvvmCross.Plugins.DownloadCache;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Platform;
+using MonoTouch.CoreGraphics;
 
 namespace Collections.Touch
 {
@@ -31,6 +32,29 @@ namespace Collections.Touch
 			return 120f;
 		}
 
+		public override void TouchesBegan (NSSet touches, UIEvent evt)
+		{
+			AnimateToScale(1.2f);
+		}
+
+		public override void TouchesCancelled (NSSet touches, UIEvent evt)
+		{
+			AnimateToScale(1.0f);
+		}
+
+		public override void TouchesEnded (NSSet touches, UIEvent evt)
+		{
+			AnimateToScale(1.0f);
+		}
+
+		private void AnimateToScale (float scale)
+		{
+			UIView.BeginAnimations("animateToScale");
+			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseIn);
+			UIView.SetAnimationDuration(0.5);
+			Transform = CGAffineTransform.MakeScale (scale, 1.0f);
+			UIView.CommitAnimations();
+		}
 		private void InitialiseImageHelper()
 		{
 			_imageHelper = new MvxDynamicImageHelper<UIImage>();

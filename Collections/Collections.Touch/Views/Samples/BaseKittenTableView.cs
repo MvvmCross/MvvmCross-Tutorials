@@ -9,6 +9,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Cirrious.MvvmCross.Interfaces.ViewModels;
+using System.Collections.Specialized;
 
 namespace Collections.Touch
 {
@@ -25,7 +26,13 @@ namespace Collections.Touch
 		{
 			base.ViewDidLoad ();
 
-			var source = new TableSource(TableView);
+			var source = new TableSource(TableView)
+			{
+				UseAnimations = true,
+				AddAnimation = UITableViewRowAnimation.Left,
+				RemoveAnimation = UITableViewRowAnimation.Right
+			};
+
 			this.AddBindings(new Dictionary<object, string>()
 			    {
 					{source, "{'ItemsSource':{'Path':'Kittens'}}" }
@@ -57,6 +64,5 @@ namespace Collections.Touch
 			}
 		}
 	}
-
 }
 

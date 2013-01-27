@@ -18,7 +18,7 @@ namespace Collections.Core.ViewModels.Samples.SmallDynamic
         public SmallDynamicViewModel()
         {
             Kittens = new ObservableCollection<Kitten>();
-            foreach (var kitten in CreateKittens(10))
+            foreach (var kitten in CreateKittens(2))
             {
                 Kittens.Add(kitten);
             }
@@ -42,17 +42,16 @@ namespace Collections.Core.ViewModels.Samples.SmallDynamic
 
         private void DoAddKitten()
         {
-            var kitten = CreateKittens(1).First();
+            var kitten = CreateKitten();
             Kittens.Add(kitten);
         }
 
         private void DoKillKittens()
         {
-            var initialCount = Kittens.Count;
-            while (Kittens.Count > initialCount/2)
-            {
-                Kittens.RemoveAt(0);
-            }
+			if (!Kittens.Any ())
+				return;
+
+            Kittens.RemoveAt(0);
         }
     }
 }
