@@ -37,7 +37,7 @@ namespace Collections.Core.ViewModels.Samples.LargeDynamic
 
         private void DoAddKitten()
         {
-            var kitten = CreateKittens(1).First();
+            var kitten = CreateKitten();
             Kittens.Add(kitten);
         }
 
