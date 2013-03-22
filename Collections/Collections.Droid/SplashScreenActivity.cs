@@ -14,7 +14,7 @@ namespace Collections.Droid
 {
     [Activity(Label = "Collection", MainLauncher = true, NoHistory = true, Icon = "@drawable/icon")]
     public class SplashScreenActivity
-        : MvxBaseSplashScreenActivity
+        : MvxSplashScreenActivity
     {
         public SplashScreenActivity()
             : base(Resource.Layout.SplashScreen)

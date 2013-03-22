@@ -1,18 +1,15 @@
-﻿using Cirrious.MvvmCross.Application;
-using Cirrious.MvvmCross.ExtensionMethods;
-using Cirrious.MvvmCross.Interfaces.ServiceProvider;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
+﻿using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
+using Collections.Core.ViewModels;
 
 namespace Collections.Core
 {
     public class App
         : MvxApplication
-        , IMvxServiceProducer
     {
-        public App()
+        public override void Initialize()
         {
-            var startApplicationObject = new StartApplicationObject();
-            this.RegisterServiceInstance<IMvxStartNavigation>(startApplicationObject);
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainMenuViewModel>());
         }
     }
 }

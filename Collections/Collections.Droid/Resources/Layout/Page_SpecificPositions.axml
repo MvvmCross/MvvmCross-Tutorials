@@ -14,15 +14,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Mvx.MvxHttpImageView
+    <Mvx.MvxImageView
        android:layout_width="50dp"
        android:layout_height="50dp"
-       local:MvxBind="{'ImageUrl':{'Path':'Kittens[2].ImageUrl'}}"
-        ></Mvx.MvxHttpImageView>
+       local:MvxBind="ImageUrl Kittens[2].ImageUrl"
+        ></Mvx.MvxImageView>
     <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          local:MvxBind="{'Text':{'Path':'Kittens[2].Name'}}"
+          local:MvxBind="Text Kittens[2].Name"
           android:textAppearance="?android:attr/textAppearanceLarge"
           />    
   </LinearLayout>
@@ -35,15 +35,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Mvx.MvxHttpImageView
+    <Mvx.MvxImageView
        android:layout_width="50dp"
        android:layout_height="50dp"
-       local:MvxBind="{'ImageUrl':{'Path':'Lookup[\\'Felix\\'].ImageUrl'}}"
-        ></Mvx.MvxHttpImageView>
+       local:MvxBind="ImageUrl Lookup[Felix].ImageUrl"
+        ></Mvx.MvxImageView>
     <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          local:MvxBind="{'Text':{'Path':'Lookup[\\'Felix\\'].Name'}}"
+          local:MvxBind="Text Lookup[Felix].Name"
           android:textAppearance="?android:attr/textAppearanceLarge"
           />
   </LinearLayout>

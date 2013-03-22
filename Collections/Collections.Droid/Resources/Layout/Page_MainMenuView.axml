@@ -4,10 +4,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-  <Mvx.MvxBindableListView
+  <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         local:MvxItemTemplate="@layout/listitem_mainmenu"
-        local:MvxBind="{'ItemsSource':{'Path':'MenuItems'}}"
+        local:MvxBind="ItemsSource MenuItems"
       />
 </FrameLayout>

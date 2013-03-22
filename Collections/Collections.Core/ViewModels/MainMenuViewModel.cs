@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Commands;
 using Cirrious.MvvmCross.ViewModels;
 using Collections.Core.ViewModels.Samples.LargeDynamic;
 using Collections.Core.ViewModels.Samples.LargeFixed;
@@ -24,7 +23,7 @@ namespace Collections.Core.ViewModels
             {
                 Title = title;
                 ViewModelType = viewModelType;
-                ShowCommand = new MvxRelayCommand(() => parent.RequestNavigate(ViewModelType));
+                ShowCommand = new MvxRelayCommand(() => parent.ShowViewModel(ViewModelType));
             }
         }
 

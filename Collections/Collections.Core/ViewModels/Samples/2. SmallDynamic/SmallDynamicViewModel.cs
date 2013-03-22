@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Commands;
+using Cirrious.MvvmCross.ViewModels;
 using Collections.Core.ViewModels.Samples.ListItems;
 
 namespace Collections.Core.ViewModels.Samples.SmallDynamic
