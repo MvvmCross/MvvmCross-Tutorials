@@ -38,7 +38,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartApplicationObject.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\Samples\BaseSampleViewModel.cs" />
     <Compile Include="ViewModels\Samples\ListItems\Animal.cs" />
@@ -59,7 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.dll</HintPath>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
