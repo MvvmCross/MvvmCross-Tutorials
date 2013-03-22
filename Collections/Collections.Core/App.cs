@@ -1,13 +1,14 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
+using Collections.Core.ViewModels;
 
 namespace Collections.Core
 {
     public class App
         : MvxApplication
     {
-        public App()
+        public override void Initialize()
         {
-            var startApplicationObject = new StartApplicationObject();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainMenuViewModel>());
         }
     }

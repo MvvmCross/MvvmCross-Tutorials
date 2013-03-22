@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Commands;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Collections.Core.ViewModels.Samples.LargeDynamic
 {

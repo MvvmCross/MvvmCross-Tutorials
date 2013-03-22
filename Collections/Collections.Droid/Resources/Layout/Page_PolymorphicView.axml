@@ -4,10 +4,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-  <Mvx.MvxBindableListView
+  <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/TheListView"
-        local:MvxBind="{'ItemsSource':{'Path':'Animals'}}"
+        local:MvxBind="ItemsSource Animals"
       />
 </FrameLayout>

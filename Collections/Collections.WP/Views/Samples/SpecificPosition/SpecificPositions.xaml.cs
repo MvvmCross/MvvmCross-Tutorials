@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using Cirrious.MvvmCross.WindowsPhone.Views;
+﻿using Cirrious.MvvmCross.WindowsPhone.Views;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 
 namespace Collections.WP.Views.Samples.SpecificPosition
 {
-    public partial class SpecificPositions : BaseSpecificPositions
+    public partial class SpecificPositions : MvxPhonePage
     {
+        public new SpecificPositionsViewModel ViewModel
+        {
+            get { return (SpecificPositionsViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public SpecificPositions()
         {
             InitializeComponent();
         }
     }
 
-    public partial class BaseSpecificPositions : MvxPhonePage<SpecificPositionsViewModel>
-    {        
-    }
 }

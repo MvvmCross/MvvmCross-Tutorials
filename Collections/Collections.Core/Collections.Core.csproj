@@ -57,11 +57,11 @@
     <Compile Include="ViewModels\Samples\6. SpecificPositions\SpecificPositionsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.CrossCore">
       <HintPath>..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

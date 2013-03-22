@@ -3,14 +3,17 @@ using Collections.Core.ViewModels.Samples.LargeFixed;
 
 namespace Collections.WP.Views.Samples.LargeFixed
 {
-    public partial class LargeFixed : BaseLargeFixed
+    public partial class LargeFixed : MvxPhonePage
     {
+        public new LargeFixedViewModel ViewModel
+        {
+            get { return (LargeFixedViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public LargeFixed()
         {
             InitializeComponent();
         }
     }
-
-    public class BaseLargeFixed : MvxPhonePage<LargeFixedViewModel> 
-    {}
 }

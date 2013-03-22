@@ -1,4 +1,4 @@
-﻿namespace TipCalc.Core
+﻿namespace TipCalc.Core.Services
 {
     public interface ICalculation
     {

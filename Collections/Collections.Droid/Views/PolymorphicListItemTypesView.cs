@@ -1,26 +1,34 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.Views;
+using Cirrious.MvvmCross.Droid.Views;
 using Collections.Core.ViewModels.Samples.ListItems;
 using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
 
 namespace Collections.Droid.Views
 {
     [Activity(Label = "Polymorphic Types", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class PolymorphicListItemTypesView : MvxBindingActivityView<PolymorphicListItemTypesViewModel>
+    public class PolymorphicListItemTypesView : MvxActivity
     {
+        public new PolymorphicListItemTypesViewModel ViewModel
+        {
+            get { return (PolymorphicListItemTypesViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.Page_PolymorphicView);
-            var list = FindViewById<MvxBindableListView>(Resource.Id.TheListView);
-            list.Adapter = new CustomAdapter(this);
+            var list = FindViewById<MvxListView>(Resource.Id.TheListView);
+            list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
         }
 
-        public class CustomAdapter : MvxBindableListAdapter
+        public class CustomAdapter : MvxAdapter
         {
-            public CustomAdapter(Context context) 
-                : base(context)
+            public CustomAdapter(Context context, IMvxAndroidBindingContext bindingContext)
+                : base(context, bindingContext)
             {
             }
 

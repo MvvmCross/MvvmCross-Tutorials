@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
-using Cirrious.MvvmCross.ExtensionMethods;
-using Cirrious.MvvmCross.Interfaces.ServiceProvider;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
+using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -11,7 +10,6 @@ namespace Collections.WP
 {
     public partial class App
         : Application
-        , IMvxServiceConsumer
     {
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -68,7 +66,7 @@ namespace Collections.WP
         {
             RootFrame.Navigating -= RootFrameOnNavigating;
             navigatingCancelEventArgs.Cancel = true;
-            RootFrame.Dispatcher.BeginInvoke(() => this.GetService<IMvxStartNavigation>().Start());
+            RootFrame.Dispatcher.BeginInvoke(() => Mvx.Resolve<IMvxAppStart>().Start());
         }
 
         // Code to execute when the application is activated (brought to foreground)

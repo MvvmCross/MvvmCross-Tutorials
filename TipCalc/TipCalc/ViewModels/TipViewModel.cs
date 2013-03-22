@@ -1,6 +1,7 @@
 ﻿using Cirrious.MvvmCross.ViewModels;
+using TipCalc.Core.Services;
 
-namespace TipCalc.Core
+namespace TipCalc.Core.ViewModels
 {
     public class TipViewModel : MvxViewModel
     {
@@ -38,8 +39,8 @@ namespace TipCalc.Core
         {
             if (value < 0)
                 value = 0;
-            if (value > 40)
-                value = 40;
+            if (value > 100)
+                value = 100;
             return value;
         }
 

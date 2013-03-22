@@ -7,26 +7,36 @@
 //  
 // Project Lead - Stuart Lodge, Cirrious. http://www.cirrious.com - Hire me - I'm worth it!
 
-using System;
-using System.Collections.Generic;
 using Android.Content;
-using Cirrious.MvvmCross.Application;
-using Cirrious.MvvmCross.Binding.Droid;
+using Cirrious.MvvmCross.Droid.Platform;
+using Cirrious.MvvmCross.ViewModels;
 using Collections.Core;
 
 namespace Collections.Droid
 {
     public class Setup
-        : MvxBaseAndroidBindingSetup
+        : MvxAndroidSetup
     {
         public Setup(Context applicationContext)
             : base(applicationContext)
         {
         }
 
-        protected override MvxApplication CreateApp()
+        protected override IMvxApplication CreateApp()
         {
             return new App();
+        }
+
+        protected override Cirrious.MvvmCross.ViewModels.IMvxNavigationSerializer CreateNavigationSerializer()
+        {
+            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+            return new MvxJsonNavigationSerializer();
+        }
+
+        protected override void InitializeLastChance()
+        {
+            base.InitializeLastChance();
+            Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

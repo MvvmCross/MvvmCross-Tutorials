@@ -38,43 +38,58 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.Binding.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Android">
-      <HintPath>..\..\Lib\MvvmCross\Droid\Debug\Cirrious.MvvmCross.Binding.Android.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid">
-      <HintPath>..\..\Lib\MvvmCross\Droid\Debug\Cirrious.MvvmCross.Droid.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Droid">
-      <HintPath>..\..\Lib\MvvmCross\Droid\Debug\Cirrious.MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid">
-      <HintPath>..\..\Lib\MvvmCross\Droid\Debug\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Lib\MvvmCross\Portable\Debug\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Mvx\Portable\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\MvvmCross\Droid\Debug\System.Net.dll</HintPath>
+      <HintPath>..\..\Lib\Mvx\Droid\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows">
       <HintPath>..\..\Lib\MvvmCross\Droid\Debug\System.Windows.dll</HintPath>
