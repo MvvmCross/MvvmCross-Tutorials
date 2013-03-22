@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Calculation.cs" />
-    <Compile Include="ICalculation.cs" />
+    <Compile Include="Services\Calculation.cs" />
+    <Compile Include="Services\ICalculation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipViewModel.cs" />
+    <Compile Include="ViewModels\TipViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">

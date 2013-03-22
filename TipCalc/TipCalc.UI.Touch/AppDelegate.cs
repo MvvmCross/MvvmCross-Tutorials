@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Platform;
@@ -21,6 +18,7 @@ namespace TipCalc.UI.Touch
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 			var presenter = new MvxTouchViewPresenter(this, window);
+
 			var setup = new Setup(this, presenter);
 			setup.Initialize();
 
