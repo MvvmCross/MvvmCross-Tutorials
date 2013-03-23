@@ -1,23 +1,26 @@
-
 using System;
-using System.Drawing;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using MonoTouchCellTutorial.Core.ViewModels;
-using Cirrious.MvvmCross.Views;
 using MonoTouchCellTutorial.Core.Models.Kittens;
 using MonoTouchCellTutorial.Core.Models.Dogs;
 using System.Collections.Generic;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
+using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace MonoTouchCellTutorial
 {
-	public partial class PetShopView : MvxBindingTouchViewController<PetShopViewModel>
+	public partial class PetShopView : MvxViewController
 	{
-		public PetShopView (MvxShowViewModelRequest request) 
-			: base (request, "PetShopView", null)
+		public new PetShopViewModel ViewModel
+		{
+			get { return (PetShopViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		public PetShopView () 
+			: base ("PetShopView", null)
 		{
 		}
 		
@@ -84,7 +87,7 @@ namespace MonoTouchCellTutorial
 			}
 		}
 
-		public class TableSource : MvxSimpleBindableTableViewSource
+		public class TableSource : MvxTableViewSource
 		{
 			public TableSource (UITableView tableView)
 				: base(tableView)

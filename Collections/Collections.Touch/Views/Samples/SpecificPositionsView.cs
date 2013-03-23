@@ -1,26 +1,25 @@
-
-using System;
-using System.Drawing;
-
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Plugins.DownloadCache;
-using Cirrious.MvvmCross.Platform;
 using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Collections.Core.ViewModels.Samples.SpecificPositions;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
-using Cirrious.MvvmCross.Views;
+using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace Collections.Touch
 {
-	public partial class SpecificPositionsView : MvxBindingTouchViewController<SpecificPositionsViewModel>
+	public partial class SpecificPositionsView : MvxViewController
 	{
-		private MvxDynamicImageHelper<UIImage> _secondImageHelper;
-		private MvxDynamicImageHelper<UIImage> _felixImageHelper;
+		private MvxImageViewLoader _secondImageHelper;
+		private MvxImageViewLoader _felixImageHelper;
 
-		public SpecificPositionsView (MvxShowViewModelRequest request) 
-			: base (request, "SpecificPositionsView", null)
+		public new SpecificPositionsViewModel ViewModel
+		{
+			get { return (SpecificPositionsViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		public SpecificPositionsView () 
+			: base ("SpecificPositionsView", null)
 		{
 			Title = "Specific Positions";
 		}
@@ -39,14 +38,22 @@ namespace Collections.Touch
 
 			InitialiseImageHelpers();
 
-			this.AddBindings(
-				new Dictionary<object, string>()
-				{
-					{ this._secondImageHelper, "{'ImageUrl':{'Path':'Kittens[2].ImageUrl'}}" },
-					{ this.SecondLabel, "{'Text':{'Path':'Kittens[2].Name'}}" },
-					{ this._felixImageHelper, "{'ImageUrl':{'Path':'Lookup[\"Felix\"].ImageUrl'}}" },
-					{ this.FelixLabel, "{'Text':{'Path':'Lookup[\"Felix\"].Name'}}" },
-				});
+			// old syntax
+			//this.AddBindings(
+			//	new Dictionary<object, string>()
+			//	{
+			//		{ this._secondImageHelper, "ImageUrl Kittens[2].ImageUrl" },
+			//		{ this.SecondLabel, "Text Kittens[2].Name" },
+			//		{ this._felixImageHelper, "ImageUrl Lookup[Felix].ImageUrl" },
+			//		{ this.FelixLabel, "Text Lookup[Felix].Name" },
+			//	});
+
+			// alternative syntax:
+			this.Bind(_secondImageHelper, (SpecificPositionsViewModel vm) => vm.Kittens[2].ImageUrl);
+			this.Bind(SecondLabel, (SpecificPositionsViewModel vm) => vm.Kittens[2].Name);
+			this.Bind(_felixImageHelper, (SpecificPositionsViewModel vm) => vm.Lookup["Felix"].ImageUrl);
+			this.Bind(FelixLabel, (SpecificPositionsViewModel vm) => vm.Lookup["Felix"].Name);
+
 		}
 		
 		public override void ViewDidUnload ()
@@ -69,22 +76,8 @@ namespace Collections.Touch
 
 		private void InitialiseImageHelpers()
 		{
-			_secondImageHelper = new MvxDynamicImageHelper<UIImage>();
-			_secondImageHelper.ImageChanged += SecondImageHelperOnImageChanged;
-			_felixImageHelper = new MvxDynamicImageHelper<UIImage>();
-			_felixImageHelper.ImageChanged += FelixImageHelperOnImageChanged;
-		}
-		
-		private void SecondImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (SecondImageView != null && mvxValueEventArgs.Value != null)
-				SecondImageView.Image = mvxValueEventArgs.Value;
-		}
-		
-		private void FelixImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (FelixImageView != null && mvxValueEventArgs.Value != null)
-				FelixImageView.Image = mvxValueEventArgs.Value;
+			_secondImageHelper = new MvxImageViewLoader(() => SecondImageView);
+			_felixImageHelper = new MvxImageViewLoader(() => FelixImageView);
 		}
 	}
 }

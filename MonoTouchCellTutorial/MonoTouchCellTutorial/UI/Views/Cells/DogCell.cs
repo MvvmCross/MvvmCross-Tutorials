@@ -3,13 +3,12 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Plugins.DownloadCache;
-using Cirrious.MvvmCross.Platform;
 using System.Windows.Input;
 
 namespace MonoTouchCellTutorial
 {
 	[Register("DogCell")]
-	public partial class DogCell : MvxBaseBindableTableViewCell
+	public partial class DogCell : MvxTableViewCell
 	{
 		public static readonly NSString Identifier = new NSString("DogCell");
 		
@@ -62,18 +61,11 @@ SellCommand SellCommand";
 			set { _imageHelper.ImageUrl = value; }
 		}
 		
-		private MvxDynamicImageHelper<UIImage> _imageHelper;
-		
+		private MvxImageViewLoader _imageHelper;
+
 		private void InitialiseImageHelper()
 		{
-			_imageHelper = new MvxDynamicImageHelper<UIImage>();
-			_imageHelper.ImageChanged += ImageHelperOnImageChanged;
-		}
-		
-		private void ImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (mvxValueEventArgs.Value != null)
-				DogImageView.Image = mvxValueEventArgs.Value;
+			_imageHelper = new MvxImageViewLoader(() => DogImageView);
 		}
 
 		public ICommand SellCommand { get; set; }

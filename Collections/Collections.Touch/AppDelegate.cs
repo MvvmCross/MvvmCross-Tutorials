@@ -5,10 +5,9 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Interfaces.ServiceProvider;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
-using Cirrious.MvvmCross.ExtensionMethods;
+using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Collections.Touch
 {
@@ -18,7 +17,6 @@ namespace Collections.Touch
 	[Register ("AppDelegate")]
 	public partial class AppDelegate 
 		: MvxApplicationDelegate 
-		, IMvxServiceConsumer
 	{
 		// class-level declarations
 		UIWindow _window;
@@ -40,7 +38,7 @@ namespace Collections.Touch
 			setup.Initialize();
 			
 			// start the app
-			var start = this.GetService<IMvxStartNavigation>();
+			var start = Mvx.Resolve<IMvxAppStart>();
 			start.Start();
 
 			_window.MakeKeyAndVisible ();

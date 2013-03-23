@@ -1,22 +1,18 @@
-using System;
-using Cirrious.MvvmCross.Binding.Touch;
 using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Interfaces;
-using Cirrious.MvvmCross.Platform;
-using Cirrious.MvvmCross.Application;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
+using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore.Plugins;
 
 namespace MonoTouchCellTutorial
 {
-	public class Setup : MvxBaseTouchBindingSetup
+	public class Setup : MvxTouchSetup
 	{
 		public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
 			: base(applicationDelegate, presenter)
 		{
 		}
 
-		#region Overrides of MvxBaseSetup
-		
-		protected override MvxApplication CreateApp()
+		protected override IMvxApplication CreateApp()
 		{
 			var app = new Core.App();
 			return app;
@@ -28,8 +24,15 @@ namespace MonoTouchCellTutorial
 			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.File.Touch.Plugin>();
 			base.AddPluginsLoaders(registry);
 		}
-		
-		#endregion	
+
+		protected override void InitializeLastChance ()
+		{
+			Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
+			Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+			Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
+
+			base.InitializeLastChance ();
+		}
 	}
 }
 

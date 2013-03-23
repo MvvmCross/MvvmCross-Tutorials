@@ -1,9 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Cirrious.MvvmCross.Commands;
 using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.ExtensionMethods;
 using MonoTouchCellTutorial.Core.Models.Dogs;
 using MonoTouchCellTutorial.Core.Models.Kittens;
 using MonoTouchCellTutorial.Core.Models;
@@ -57,10 +55,10 @@ namespace MonoTouchCellTutorial.Core.ViewModels
 		private readonly IAnimalSupplier _animalSupplier;
 		private readonly IPricingModel _pricingModel;
 
-		public PetShopViewModel()
+		public PetShopViewModel(IAnimalSupplier animalSupplier, IPricingModel pricingModel)
 		{
-			_animalSupplier = this.GetService<IAnimalSupplier>();
-			_pricingModel = this.GetService<IPricingModel>();
+			_animalSupplier = animalSupplier;
+			_pricingModel = pricingModel;
 
 			Stock = new ObservableCollection<PetShopAnimalViewModel>();
 		}

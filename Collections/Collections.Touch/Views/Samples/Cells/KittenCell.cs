@@ -9,11 +9,11 @@ using MonoTouch.CoreGraphics;
 namespace Collections.Touch
 {
 	[Register("KittenCell")]
-	public partial class KittenCell : MvxBaseBindableTableViewCell
+	public partial class KittenCell : MvxTableViewCell
 	{
-		private const string BindingText = "{'Name':{'Path':'Name'},'ImageUrl':{'Path':'ImageUrl'}}";
+		private const string BindingText = "Name Name;ImageUrl ImageUrl";
 
-		private MvxDynamicImageHelper<UIImage> _imageHelper;
+		private MvxImageViewLoader _imageHelper;
 
 		public KittenCell ()
 			: base(BindingText)
@@ -57,14 +57,7 @@ namespace Collections.Touch
 		}
 		private void InitialiseImageHelper()
 		{
-			_imageHelper = new MvxDynamicImageHelper<UIImage>();
-			_imageHelper.ImageChanged += ImageHelperOnImageChanged;
-		}
-
-		private void ImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (KittenImageView != null && mvxValueEventArgs.Value != null)
-				KittenImageView.Image = mvxValueEventArgs.Value;
+			_imageHelper = new MvxImageViewLoader(() => KittenImageView);
 		}
 
 		public string Name {
