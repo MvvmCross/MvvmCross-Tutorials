@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Platform;
@@ -38,7 +34,7 @@ namespace MonoTouchCellTutorial
 			var setup = new Setup(this, presenter);
 			setup.Initialize();
 
-			var simpleStart = new MvxSimpleStartApplicationObject<PetShopViewModel>();
+			var simpleStart = new MvxAppStart<PetShopViewModel>();
 			simpleStart.Start();
 
 			// make the window visible

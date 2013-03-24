@@ -2,23 +2,18 @@ using System;
 using Collections.Core.ViewModels;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using Collections.Core.ViewModels.Samples.SmallFixed;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
-using System.Collections.Specialized;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Collections.Touch
 {
-	public class BaseKittenTableView<TViewModel> 
-		: MvxBindingTouchTableViewController<TViewModel>
-		where TViewModel : class, IMvxViewModel
+	public class BaseKittenTableView 
+		: MvxTableViewController
 	{
-		public BaseKittenTableView (MvxShowViewModelRequest request)
-			: base(request)
+		public BaseKittenTableView ()
 		{
 		}
 
@@ -35,32 +30,23 @@ namespace Collections.Touch
 
 			this.AddBindings(new Dictionary<object, string>()
 			    {
-					{source, "{'ItemsSource':{'Path':'Kittens'}}" }
+					{source, "ItemsSource Kittens" }
 				});
 
 			TableView.Source = source;
 			TableView.ReloadData();
 		}
 
-		public class TableSource : MvxSimpleBindableTableViewSource
+		public class TableSource : MvxSimpleTableViewSource
 		{
-			private static readonly NSString KittenCellIdentifier = new NSString("KittenCell");
-
 			public TableSource (UITableView tableView)
-				: base(tableView)
+				: base(tableView, "KittenCell", "KittenCell")
 			{
-				tableView.RegisterNibForCellReuse(UINib.FromName("KittenCell", NSBundle.MainBundle), KittenCellIdentifier);
 			}
 
 			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 			{
 				return KittenCell.GetCellHeight();
-			}
-
-			protected override NSString CellIdentifier {
-				get {
-					return KittenCellIdentifier;
-				}
 			}
 		}
 	}

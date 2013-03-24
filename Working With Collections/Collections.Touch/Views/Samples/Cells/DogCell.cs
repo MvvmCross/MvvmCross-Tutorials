@@ -1,29 +1,42 @@
 using System;
+using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Plugins.DownloadCache;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Platform;
+using Collections.Core.ViewModels.Samples.ListItems;
 
 namespace Collections.Touch
 {
 	[Register("DogCell")]
-	public partial class DogCell : MvxBaseBindableTableViewCell
+	public partial class DogCell : MvxTableViewCell
 	{
-		private const string BindingText = "{'Name':{'Path':'Name'},'ImageUrl':{'Path':'ImageUrl'}}";
-		
-		private MvxDynamicImageHelper<UIImage> _imageHelper;
+		private MvxImageViewLoader _imageHelper;
 		
 		public DogCell ()
-			: base(BindingText)
+			: base()
 		{
 			InitialiseImageHelper();
+			InitialiseBindings();
 		}
 		
 		public DogCell (IntPtr handle)
-			: base(BindingText, handle)
+			: base(handle)
 		{
 			InitialiseImageHelper();
+			InitialiseBindings();
+		}
+
+		private void InitialiseBindings()
+		{
+			// this is equivalent to:
+			//private const string BindingText = "Name Name;ImageUrl ImageUrl";
+			BindingContext.DoOnNextDataContextChange(() =>
+			 	{
+					this.Bind ((cell) => cell.Name, (Dog dog) => dog.Name);
+					this.Bind ((cell) => cell.ImageUrl, (Dog dog) => dog.ImageUrl);
+				});
 		}
 		
 		public static float GetCellHeight ()
@@ -33,14 +46,7 @@ namespace Collections.Touch
 		
 		private void InitialiseImageHelper()
 		{
-			_imageHelper = new MvxDynamicImageHelper<UIImage>();
-			_imageHelper.ImageChanged += ImageHelperOnImageChanged;
-		}
-		
-		private void ImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (DogImageView != null && mvxValueEventArgs.Value != null)
-				DogImageView.Image = mvxValueEventArgs.Value;
+			_imageHelper = new MvxImageViewLoader(() => DogImageView);
 		}
 		
 		public string Name {

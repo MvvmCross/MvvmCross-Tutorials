@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Cirrious.MvvmCross.ViewModels;
 using MonoTouchCellTutorial.Core.Interfaces;
 
 namespace MonoTouchCellTutorial.Core.Services

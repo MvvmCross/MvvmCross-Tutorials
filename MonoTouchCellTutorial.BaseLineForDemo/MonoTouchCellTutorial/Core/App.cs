@@ -1,16 +1,12 @@
-using System;
-using Cirrious.MvvmCross.Application;
-using Cirrious.MvvmCross.ExtensionMethods;
-using Cirrious.MvvmCross.Interfaces.ServiceProvider;
-
 using MonoTouchCellTutorial.Core.Interfaces;
 using MonoTouchCellTutorial.Core.Services;
+using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore.IoC;
 
 namespace MonoTouchCellTutorial.Core
 {
 	public class App 
 		: MvxApplication
-		, IMvxServiceProducer
 	{
 		public App ()
 		{
@@ -19,8 +15,8 @@ namespace MonoTouchCellTutorial.Core
 
 		private void RegisterServices()
 		{
-			this.RegisterServiceInstance<IPricingModel>(new PricingModel());
-			this.RegisterServiceInstance<IAnimalSupplier>(new AnimalSupplier());
+			Mvx.RegisterSingleton<IPricingModel>(new PricingModel());
+			Mvx.RegisterSingleton<IAnimalSupplier>(new AnimalSupplier());
 		}
 	}
 }

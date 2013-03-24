@@ -1,11 +1,4 @@
 using System;
-using Collections.Core.ViewModels;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using System.Collections.Generic;
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Collections.Core.ViewModels.Samples.SmallFixed;
 using Collections.Core.ViewModels.Samples.LargeFixed;
@@ -14,10 +7,15 @@ using Collections.Core.ViewModels.Samples.SmallDynamic;
 
 namespace Collections.Touch
 {
-	public class LargeDynamicView : BaseDynamicKittenTableView<LargeDynamicViewModel>
+	public class LargeDynamicView : BaseDynamicKittenTableView
 	{
-		public LargeDynamicView (MvxShowViewModelRequest request)
-			: base(request)
+		public new LargeDynamicViewModel ViewModel
+		{
+			get { return (LargeDynamicViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		public LargeDynamicView ()
 		{
 			Title = "Large Dynamic";
 		}

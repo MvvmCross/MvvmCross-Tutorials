@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using Cirrious.MvvmCross.ViewModels;
-using MonoTouchCellTutorial.Core.Models.Dogs;
+﻿using MonoTouchCellTutorial.Core.Models.Dogs;
 using MonoTouchCellTutorial.Core.Models.Kittens;
-using MonoTouchCellTutorial.Core.Models;
 using MonoTouchCellTutorial.Core.Interfaces;
 
 namespace MonoTouchCellTutorial.Core.Services

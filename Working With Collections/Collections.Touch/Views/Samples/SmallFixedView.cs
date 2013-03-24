@@ -2,7 +2,6 @@ using System;
 using Collections.Core.ViewModels;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using System.Collections.Generic;
 using MonoTouch.Foundation;
@@ -14,10 +13,15 @@ using Collections.Core.ViewModels.Samples.SmallDynamic;
 
 namespace Collections.Touch
 {
-	public class SmallFixedView : BaseKittenTableView<SmallFixedViewModel>
+	public class SmallFixedView : BaseKittenTableView
 	{
-		public SmallFixedView (MvxShowViewModelRequest request)
-			: base(request)
+		public new SmallFixedViewModel ViewModel
+		{
+			get { return (SmallFixedViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		public SmallFixedView ()
 		{
 			Title = "Small Fixed";
 		}

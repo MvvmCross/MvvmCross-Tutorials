@@ -2,25 +2,17 @@ using System;
 using Collections.Core.ViewModels;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Collections.Core.ViewModels.Samples.SmallFixed;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
 
 namespace Collections.Touch
 {
-	public abstract class BaseDynamicKittenTableView<TViewModel>
-		: BaseKittenTableView<TViewModel> 
-			where TViewModel : class, IMvxViewModel		
+	public abstract class BaseDynamicKittenTableView
+		: BaseKittenTableView
 	{
-		public BaseDynamicKittenTableView (MvxShowViewModelRequest request)
-			: base(request)
-		{
-		}
-
 		private UIBarButtonItem _rightButton;
 
 		public override void ViewDidLoad ()

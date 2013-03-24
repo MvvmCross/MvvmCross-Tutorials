@@ -1,0 +1,34 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouchCellTutorial/AppDelegate.cs">
+    <Files>
+      <File FileName="MonoTouchCellTutorial/UI/Setup.cs" Line="3" Column="37" />
+      <File FileName="MonoTouchCellTutorial/Core/Models/Dogs/DogGenerator.cs" Line="6" Column="37" />
+      <File FileName="MonoTouchCellTutorial/AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MonoTouchCellTutorial" expanded="True" selected="True">
+            <Node name="Core" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Dogs" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UI" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

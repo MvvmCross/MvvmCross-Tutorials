@@ -1,24 +1,25 @@
 using System;
-using Collections.Core.ViewModels;
 using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Views;
-using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using Collections.Core.ViewModels.Samples.SmallFixed;
-using Cirrious.MvvmCross.Interfaces.ViewModels;
 using Collections.Core.ViewModels.Samples.ListItems;
 using Collections.Core.ViewModels.Samples.MultipleListItemTypes;
+using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace Collections.Touch
 {
 	public class PolymorphicListItemView 
-		: MvxBindingTouchTableViewController<PolymorphicListItemTypesViewModel>
+		: MvxTableViewController
 	{
-		public PolymorphicListItemView (MvxShowViewModelRequest request)
-			: base(request)
+		public new PolymorphicListItemTypesViewModel ViewModel
+		{
+			get { return (PolymorphicListItemTypesViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
+
+		public PolymorphicListItemView ()
 		{
 			Title = "Poly List";
 		}
@@ -30,14 +31,14 @@ namespace Collections.Touch
 			var source = new TableSource(TableView);
 			this.AddBindings(new Dictionary<object, string>()
 			                 {
-				{source, "{'ItemsSource':{'Path':'Animals'}}" }
+				{source, "ItemsSource Animals" }
 			});
 			
 			TableView.Source = source;
 			TableView.ReloadData();
 		}
 		
-		public class TableSource : MvxSimpleBindableTableViewSource
+		public class TableSource : MvxTableViewSource
 		{
 			private static readonly NSString KittenCellIdentifier = new NSString("KittenCell");
 			private static readonly NSString DogCellIdentifier = new NSString("DogCell");

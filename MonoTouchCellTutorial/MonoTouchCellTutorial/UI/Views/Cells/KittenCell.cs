@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace MonoTouchCellTutorial
 {
 	[Register("KittenCell")]
-	public partial class KittenCell : MvxBaseBindableTableViewCell
+	public partial class KittenCell : MvxTableViewCell
 	{
 		public static readonly NSString Identifier = new NSString("KittenCell");
 
@@ -63,19 +63,13 @@ DecreaseCommand DecreasePrice";
 			set { _imageHelper.ImageUrl = value; }
 		}
 		
-		private MvxDynamicImageHelper<UIImage> _imageHelper;
+		private MvxImageViewLoader _imageHelper;
 		
 		private void InitialiseImageHelper()
 		{
-			_imageHelper = new MvxDynamicImageHelper<UIImage>();
-			_imageHelper.ImageChanged += ImageHelperOnImageChanged;
+			_imageHelper = new MvxImageViewLoader(() => KittenImageView);
 		}
 		
-		private void ImageHelperOnImageChanged(object sender, MvxValueEventArgs<UIImage> mvxValueEventArgs)
-		{
-			if (mvxValueEventArgs.Value != null)
-				KittenImageView.Image = mvxValueEventArgs.Value;
-		}
 
 		public ICommand IncreaseCommand {get;set;}
 		public ICommand DecreaseCommand {get;set;}
