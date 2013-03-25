@@ -23,15 +23,7 @@ namespace MonoTouchCellTutorial
 			: base ("PetShopView", null)
 		{
 		}
-		
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
-		}
-		
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -39,10 +31,7 @@ namespace MonoTouchCellTutorial
 			// Perform any additional setup after loading the view, typically from a nib.
 			var source = new TableSource(TableView);
 
-			this.AddBindings(new Dictionary<object, string>()
-			  {
-				{ source, "ItemsSource Stock" }
-			});
+			this.Bind(source, (PetShopViewModel vm) => vm.Stock);
 
 			TableView.Source = source;
 			TableView.ReloadData();
@@ -51,11 +40,6 @@ namespace MonoTouchCellTutorial
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
-			
-			// Clear any references to subviews of the main view in order to
-			// allow the Garbage Collector to collect them sooner.
-			//
-			// e.g. myOutlet.Dispose (); myOutlet = null;
 			
 			ReleaseDesignerOutlets ();
 		}
