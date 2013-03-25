@@ -19,11 +19,11 @@ namespace MonoTouchCellTutorial.Core.ViewModels
 		}
 
 		public ICommand IncreasePrice {
-			get { return new MvxRelayCommand (() => Price = Price + 1); }
+			get { return new MvxCommand (() => Price = Price + 1); }
 		}
 
 		public ICommand DecreasePrice {
-			get { return new MvxRelayCommand (() => Price = Price - 1); }
+			get { return new MvxCommand (() => Price = Price - 1); }
 		}
 
 		public ICommand SellCommand { get; set; }

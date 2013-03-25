@@ -28,7 +28,7 @@ namespace Collections.Core.ViewModels.Samples.SmallDynamic
         {
             get
             {
-                return new MvxRelayCommand(DoAddKitten);
+                return new MvxCommand(DoAddKitten);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Collections.Core.ViewModels.Samples.SmallDynamic
         {
             get
             {
-                return new MvxRelayCommand(DoKillKittens);
+                return new MvxCommand(DoKillKittens);
             }
         }
 

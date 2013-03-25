@@ -23,7 +23,7 @@ namespace Collections.Core.ViewModels
             {
                 Title = title;
                 ViewModelType = viewModelType;
-                ShowCommand = new MvxRelayCommand(() => parent.ShowViewModel(ViewModelType));
+                ShowCommand = new MvxCommand(() => parent.ShowViewModel(ViewModelType));
             }
         }
 

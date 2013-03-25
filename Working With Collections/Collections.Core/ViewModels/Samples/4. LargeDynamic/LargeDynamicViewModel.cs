@@ -23,7 +23,7 @@ namespace Collections.Core.ViewModels.Samples.LargeDynamic
         {
             get
             {
-                return new MvxRelayCommand(DoAddKitten);
+                return new MvxCommand(DoAddKitten);
             }
         }
 
@@ -31,7 +31,7 @@ namespace Collections.Core.ViewModels.Samples.LargeDynamic
         {
             get
             {
-                return new MvxRelayCommand(DoKillKittens);
+                return new MvxCommand(DoKillKittens);
             }
         }
 

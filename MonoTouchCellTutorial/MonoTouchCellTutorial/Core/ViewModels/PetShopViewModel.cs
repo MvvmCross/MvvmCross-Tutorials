@@ -22,7 +22,7 @@ namespace MonoTouchCellTutorial.Core.ViewModels
         {
             get
             {
-                return new MvxRelayCommand(DoAddKitten);
+                return new MvxCommand(DoAddKitten);
             }
         }
 
@@ -30,7 +30,7 @@ namespace MonoTouchCellTutorial.Core.ViewModels
 		{
 			get
 			{
-				return new MvxRelayCommand(DoAddDog);
+				return new MvxCommand(DoAddDog);
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace MonoTouchCellTutorial.Core.ViewModels
 			var newStock = new PetShopAnimalViewModel();
 			newStock.Animal = animal;
 			newStock.Price = _pricingModel.CalculateInitialSalesPrice(cost);
-			newStock.SellCommand = new MvxRelayCommand(() => DoSale(newStock));
+			newStock.SellCommand = new MvxCommand(() => DoSale(newStock));
 
 			BankBalance = BankBalance - cost;
 			Stock.Add(newStock);

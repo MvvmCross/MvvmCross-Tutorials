@@ -9,7 +9,7 @@ namespace Navigation.Core.ViewModels
 
         public ICommand GoSimpleCommand
         {
-            get { return new MvxRelayCommand(() => ShowViewModel<SimpleViewModel>()); }
+            get { return new MvxCommand(() => ShowViewModel<SimpleViewModel>()); }
         }
 
         public string ParameterKey
@@ -20,13 +20,12 @@ namespace Navigation.Core.ViewModels
 
         public ICommand GoParameterizedCommand
         {
-            get { return new MvxRelayCommand(() => ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters() { Key = ParameterKey } )); }
+            get { return new MvxCommand(() => ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters() { Key = ParameterKey } )); }
         }
 
         public ICommand GoAnonymousCommand
         {
-            get { return new MvxRelayCommand(() => ShowViewModel<AnonymousViewModel>(new { key = ParameterKey })); }
+            get { return new MvxCommand(() => ShowViewModel<AnonymousViewModel>(new { key = ParameterKey })); }
         }
-
     }
 }
