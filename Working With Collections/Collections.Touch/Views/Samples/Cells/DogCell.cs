@@ -32,7 +32,7 @@ namespace Collections.Touch
 		{
 			// this is equivalent to:
 			//private const string BindingText = "Name Name;ImageUrl ImageUrl";
-			BindingContext.DoOnNextDataContextChange(() =>
+			this.DelayBind(() =>
 			 	{
 					this.Bind ((cell) => cell.Name, (Dog dog) => dog.Name);
 					this.Bind ((cell) => cell.ImageUrl, (Dog dog) => dog.ImageUrl);
