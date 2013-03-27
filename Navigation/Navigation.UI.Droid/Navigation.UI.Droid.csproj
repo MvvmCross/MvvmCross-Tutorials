@@ -26,7 +26,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -96,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Navigation.Core\Navigation.Core.csproj">
-      <Project>{84c24143-fa7e-45a8-8cd4-acdc9dfe5c0b}</Project>
+      <Project>{84C24143-FA7E-45A8-8CD4-ACDC9DFE5C0B}</Project>
       <Name>Navigation.Core</Name>
     </ProjectReference>
   </ItemGroup>
