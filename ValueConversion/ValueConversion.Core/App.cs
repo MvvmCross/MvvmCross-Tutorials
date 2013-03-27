@@ -10,7 +10,7 @@ namespace ValueConversion.Core
     {
         public override void Initialize()
         {
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<HomeViewModel>());    
+            RegisterAppStart<HomeViewModel>();
         }
     }
 }

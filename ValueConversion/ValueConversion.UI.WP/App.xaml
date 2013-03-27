@@ -9,11 +9,12 @@
     <!--Application Resources-->
     <Application.Resources>
         <nativeConverters:NativeTimeAgoConverter x:Name="TimeAgo" />
-        <nativeConverters:NativeColorConverter x:Name="Color" />
-        <nativeConverters:NativeInvertedVisibilityConverter x:Name="InvertedVis" />
-        <nativeConverters:NativeVisibilityConverter x:Name="Vis" />
+        <nativeConverters:NativeColorConverter x:Name="NativeColor" />
+        <nativeConverters:NativeInvertedVisibilityConverter x:Name="InvertedVisibility" />
+        <nativeConverters:NativeVisibilityConverter x:Name="Visibility" />
         <nativeConverters:NativeStringLengthConverter x:Name="StringLength" />
         <nativeConverters:NativeStringReverseConverter x:Name="StringReverse" />
+        <nativeConverters:NativeTwoWayConverter x:Name="TwoWay" />
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

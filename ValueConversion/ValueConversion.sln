@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConversion.Core", "Val
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConversion.UI.WP", "ValueConversion.UI.WP\ValueConversion.UI.WP.csproj", "{3C68BF20-07E8-479F-AB7A-96665E25EF61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConversion.UI.Droid", "ValueConversion.UI.Droid\ValueConversion.UI.Droid.csproj", "{3B661757-1140-461F-97CF-B820E3FE5B32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{3C68BF20-07E8-479F-AB7A-96665E25EF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C68BF20-07E8-479F-AB7A-96665E25EF61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C68BF20-07E8-479F-AB7A-96665E25EF61}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B661757-1140-461F-97CF-B820E3FE5B32}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

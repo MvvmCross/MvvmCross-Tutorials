@@ -1,38 +1,46 @@
 ﻿using System;
 using Cirrious.CrossCore.Converters;
-using Cirrious.MvvmCross.Plugins.Color;
-using Cirrious.MvvmCross.Plugins.Visibility;
 
 namespace ValueConversion.Core.Converters
 {
-    public class StringLengthConverter : MvxValueConverter
+    public class TwoWayConverter : MvxValueConverter<string, string>
     {
-        public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override string Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            var asString = value as string;
-            asString = asString ?? string.Empty;
-            return asString.Length;
+            return String.Format("$$${0}###", value);
+        }
+
+        protected override string ConvertBack(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return value.TrimStart('$').TrimEnd('#');
         }
     }
 
-    public class StringReverseConverter : MvxValueConverter
+    public class StringLengthConverter : MvxValueConverter<string>
     {
-        public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override object Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            var asString = value as string;
-            asString = asString ?? string.Empty;
-            char[] charArray = asString.ToCharArray();
+            value = value ?? string.Empty;
+            return value.Length;
+        }
+    }
+
+    public class StringReverseConverter : MvxValueConverter<string>
+    {
+        protected override object Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            value = value ?? string.Empty;
+            char[] charArray = value.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
     }
 
     public class TimeAgoConverter
-        : MvxValueConverter
+        : MvxValueConverter<DateTime>
     {
-        public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override object Convert(DateTime when, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            var when = (DateTime)value;
             var difference = (DateTime.UtcNow - when).TotalSeconds;
 
             string whichFormat;
@@ -65,15 +73,5 @@ namespace ValueConversion.Core.Converters
 
             return string.Format(whichFormat, valueToFormat);
         }
-    }
-
-    public class Converters
-    {
-        public TimeAgoConverter TimeAgo = new TimeAgoConverter();
-        public StringReverseConverter StringReverse = new StringReverseConverter();
-        public StringLengthConverter StringLength = new StringLengthConverter();
-        public MvxNativeColorConverter NativeColor = new MvxNativeColorConverter();
-        public MvxVisibilityConverter Visibility = new MvxVisibilityConverter();
-        public MvxInvertedVisibilityConverter InvertedVisibility = new MvxInvertedVisibilityConverter();
     }
 }

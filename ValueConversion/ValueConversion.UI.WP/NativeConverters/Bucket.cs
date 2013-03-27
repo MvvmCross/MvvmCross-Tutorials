@@ -27,4 +27,7 @@ namespace ValueConversion.UI.WP.NativeConverters
     public class NativeStringReverseConverter : MvxNativeValueConverter<StringReverseConverter>
     {
     }
+    public class NativeTwoWayConverter : MvxNativeValueConverter<TwoWayConverter>
+    {
+    }
 }

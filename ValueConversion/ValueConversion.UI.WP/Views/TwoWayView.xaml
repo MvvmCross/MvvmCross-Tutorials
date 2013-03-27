@@ -1,5 +1,5 @@
 ﻿<views:MvxPhonePage
-    x:Class="ValueConversion.UI.WP.Views.ColorsView"
+    x:Class="ValueConversion.UI.WP.Views.TwoWayView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -24,37 +24,17 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Colors" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Two Way" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
-    <Slider 
-        Minimum="0"
-        Maximum="255"
-        Value="{Binding Red, Mode=TwoWay}"
-        Background="Red"
-        Foreground="DeepPink"
-        ></Slider>
-                <Slider 
-        Minimum="0"
-        Maximum="255"
-        Value="{Binding Green, Mode=TwoWay}"
-        Background="Green"
-        Foreground="Lime"
-        ></Slider>
-                <Slider 
-        Minimum="0"
-        Maximum="255"
-        Value="{Binding Blue, Mode=TwoWay}"
-        Background="Blue"
-        Foreground="Cyan"
-        ></Slider>
-                <Rectangle
-                    Height="120"
-                    Fill="{Binding Color, Mode=OneWay, Converter={StaticResource NativeColor}}"
-                    ></Rectangle>
+                <TextBlock Text="The value"></TextBlock>
+                <TextBlock Text="{Binding TheText}" FontSize="64"></TextBlock>
+                <TextBlock Text="Edit this"></TextBlock>
+                <TextBox Text="{Binding TheText, Mode=TwoWay, Converter={StaticResource TwoWay}}"                    
+                    FontSize="64"></TextBox>
             </StackPanel>
         </Grid>
     </Grid>

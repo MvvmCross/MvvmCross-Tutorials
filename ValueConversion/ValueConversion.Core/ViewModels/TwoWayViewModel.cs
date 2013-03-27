@@ -6,14 +6,14 @@ namespace ValueConversion.Core.ViewModels
     {
         public TwoWayViewModel()
         {
-            _amount = 42;
+            _theText = "The answer is 42";
         }
 
-        private double _amount;
-        public double Amount
+        private string _theText;
+        public string TheText
         {
-            get { return _amount; }
-            set { _amount = value; RaisePropertyChanged(() => Amount); }
+            get { return _theText; }
+            set { _theText = value; RaisePropertyChanged(() => TheText); }
         }
     }
 }

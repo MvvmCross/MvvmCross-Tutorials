@@ -22,8 +22,15 @@ namespace ValueConversion.UI.WP
 
         protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
+        }
+
+        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        {
+            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
+            base.LoadPlugins(pluginManager);
         }
     }
 }
