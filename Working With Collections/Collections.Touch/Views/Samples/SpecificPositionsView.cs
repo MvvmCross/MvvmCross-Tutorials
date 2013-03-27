@@ -49,10 +49,10 @@ namespace Collections.Touch
 			//	});
 
 			// alternative syntax:
-			this.Bind(_secondImageHelper, (SpecificPositionsViewModel vm) => vm.Kittens[2].ImageUrl);
-			this.Bind(SecondLabel, (SpecificPositionsViewModel vm) => vm.Kittens[2].Name);
-			this.Bind(_felixImageHelper, (SpecificPositionsViewModel vm) => vm.Lookup["Felix"].ImageUrl);
-			this.Bind(FelixLabel, (SpecificPositionsViewModel vm) => vm.Lookup["Felix"].Name);
+			this.CreateBinding(_secondImageHelper).To((SpecificPositionsViewModel vm) => vm.Kittens[2].ImageUrl).Apply();
+			this.CreateBinding(SecondLabel).To((SpecificPositionsViewModel vm) => vm.Kittens[2].Name).Apply();
+			this.CreateBinding(_felixImageHelper).To((SpecificPositionsViewModel vm) => vm.Lookup["Felix"].ImageUrl).Apply();
+			this.CreateBinding(FelixLabel).To((SpecificPositionsViewModel vm) => vm.Lookup["Felix"].Name).Apply();
 
 		}
 		

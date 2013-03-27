@@ -34,8 +34,8 @@ namespace Collections.Touch
 			//private const string BindingText = "Name Name;ImageUrl ImageUrl";
 			this.DelayBind(() =>
 			 	{
-					this.Bind ((cell) => cell.Name, (Dog dog) => dog.Name);
-					this.Bind ((cell) => cell.ImageUrl, (Dog dog) => dog.ImageUrl);
+					this.CreateBinding().For((cell) => cell.Name).To((Dog dog) => dog.Name).Apply();
+					this.CreateBinding().For((cell) => cell.ImageUrl).To ((Dog dog) => dog.ImageUrl).Apply();
 				});
 		}
 		
