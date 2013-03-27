@@ -29,7 +29,7 @@ namespace Navigation.UI.Touch
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-			this.Bind( KeyLabel, (AnonymousViewModel vm) => vm.Key);
+			this.CreateBinding( KeyLabel).To ( (AnonymousViewModel vm) => vm.Key).Apply();
 		}
 	}
 }

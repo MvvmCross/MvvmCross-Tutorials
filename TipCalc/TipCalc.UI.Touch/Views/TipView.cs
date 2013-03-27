@@ -4,6 +4,7 @@ using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using TipCalc.Core;
+using TipCalc.Core.ViewModels;
 
 namespace TipCalc.UI.Touch
 {
@@ -23,16 +24,14 @@ namespace TipCalc.UI.Touch
 		{
 			base.ViewDidLoad ();
 			
-			this.Bind (this.TipLabel, (TipViewModel vm) => vm.Tip ); 
-			this.Bind (this.SubTotalTextField, (TipViewModel vm) => vm.SubTotal );
-			this.Bind (this.GenerositySlider, (TipViewModel vm) => vm.Generosity );
+			this.CreateBinding (this.TipLabel).To ( (TipViewModel vm) => vm.Tip ).Apply(); 
+			this.CreateBinding (this.SubTotalTextField).To ( (TipViewModel vm) => vm.SubTotal ).Apply();
+			this.CreateBinding (this.GenerositySlider).To ( (TipViewModel vm) => vm.Generosity ).Apply();
 		
 			View.AddGestureRecognizer(new UITapGestureRecognizer(() => {
 				this.SubTotalTextField.ResignFirstResponder();
 			}));
 		}
-
-
 	}
 }
 

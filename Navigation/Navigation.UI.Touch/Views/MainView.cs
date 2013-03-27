@@ -28,10 +28,10 @@ namespace Navigation.UI.Touch
 		{
 			base.ViewDidLoad ();
 			
-			this.Bind ( this.KeyTextField, (MainViewModel vm) => vm.ParameterKey);
-			this.Bind ( this.AnonButton, (MainViewModel vm) => vm.GoAnonymousCommand);
-			this.Bind ( this.ParamsButton, (MainViewModel vm) => vm.GoParameterizedCommand);
-			this.Bind ( this.SimpleButton, (MainViewModel vm) => vm.GoSimpleCommand);
+			this.CreateBinding ( this.KeyTextField).To( (MainViewModel vm) => vm.ParameterKey).Apply();
+			this.CreateBinding ( this.AnonButton).To( (MainViewModel vm) => vm.GoAnonymousCommand).Apply();
+			this.CreateBinding ( this.ParamsButton).To( (MainViewModel vm) => vm.GoParameterizedCommand).Apply();
+			this.CreateBinding ( this.SimpleButton).To( (MainViewModel vm) => vm.GoSimpleCommand).Apply();
 
 			this.View.AddGestureRecognizer( new UITapGestureRecognizer(() => {
 				this.KeyTextField.ResignFirstResponder();

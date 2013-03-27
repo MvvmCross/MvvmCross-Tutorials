@@ -30,7 +30,7 @@ namespace Navigation.UI.Touch
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-			this.Bind( KeyLabel, (ParameterizedViewModel vm) => vm.Key);
+			this.CreateBinding( KeyLabel).To ( (ParameterizedViewModel vm) => vm.Key).Apply();
 		}
 	}
 }
