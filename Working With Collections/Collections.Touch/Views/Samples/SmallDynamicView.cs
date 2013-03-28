@@ -1,3 +1,5 @@
+using Collections.Core.ViewModels.Samples.SmallDynamic;
+
 namespace Collections.Touch
 {
     public class SmallDynamicView : BaseDynamicKittenTableView
@@ -7,14 +9,22 @@ namespace Collections.Touch
             Title = "Small Dynamic";
         }
 
+		public SmallDynamicViewModel DynamicViewModel
+		{
+			get
+			{
+				return base.ViewModel as SmallDynamicViewModel;
+			}
+		}
+
         protected override void AddKittensPressed()
         {
-            ViewModel.AddKittenCommand.Execute(null);
+			DynamicViewModel.AddKittenCommand.Execute(null);
         }
 
         protected override void KillKittensPressed()
         {
-            ViewModel.KillKittensCommand.Execute(null);
+			DynamicViewModel.KillKittensCommand.Execute(null);
         }
     }
 }

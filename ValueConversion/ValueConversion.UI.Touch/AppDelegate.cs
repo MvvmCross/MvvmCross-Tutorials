@@ -1,5 +1,9 @@
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.Touch.Platform;
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
 
 namespace ValueConversion.UI.Touch
 {
@@ -10,7 +14,6 @@ namespace ValueConversion.UI.Touch
     public class AppDelegate : MvxApplicationDelegate
     {
         // class-level declarations
-        private ValueConversion_UI_TouchViewController viewController;
         private UIWindow window;
 
         //

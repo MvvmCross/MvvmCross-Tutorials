@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Collections.Touch
 {
-    public class PolymorphicListItemView
+    public class PolymorphicListItemTypesView
         : MvxTableViewController
     {
-        public PolymorphicListItemView()
+        public PolymorphicListItemTypesView()
         {
             Title = "Poly List";
         }

@@ -1,5 +1,7 @@
 using MonoTouch.UIKit;
 using TipCalc.Core.ViewModels;
+using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace TipCalc.UI.Touch
 {

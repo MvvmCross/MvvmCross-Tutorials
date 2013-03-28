@@ -2,6 +2,7 @@ using System;
 using MonoTouch.CoreGraphics;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Collections.Touch
 {
