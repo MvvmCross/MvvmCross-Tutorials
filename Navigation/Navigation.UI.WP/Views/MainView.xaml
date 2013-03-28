@@ -24,17 +24,17 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Main" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
-                <Button Content="GoSimple" Command="{Binding GoSimpleCommand}"></Button>
+                <Button Content="Go Simple" Command="{Binding GoSimpleCommand}"></Button>
                 <TextBlock Text="Key:"></TextBlock>
                 <TextBox Text="{Binding ParameterKey, Mode=TwoWay}"></TextBox>
-                <Button Content="GoParam" Command="{Binding GoParameterizedCommand}"></Button>
-                <Button Content="GoAnon" Command="{Binding GoAnonymousCommand}"></Button>
+                <Button Content="Go Param" Command="{Binding GoParameterizedCommand}"></Button>
+                <Button Content="Go Anon" Command="{Binding GoAnonymousCommand}"></Button>
             </StackPanel>
         </Grid>
     </Grid>

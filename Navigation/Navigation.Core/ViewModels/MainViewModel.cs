@@ -5,6 +5,11 @@ namespace Navigation.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
+        public MainViewModel()
+        {
+            _parameterKey = "42";
+        }
+
         private string _parameterKey;
 
         public ICommand GoSimpleCommand

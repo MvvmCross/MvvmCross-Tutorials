@@ -21,7 +21,7 @@ namespace Navigation.UI.WP
 
         protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
     }
