@@ -1,18 +1,22 @@
 ﻿using System;
 using Cirrious.CrossCore.Converters;
+using Cirrious.MvvmCross.Plugins.Color;
+using Cirrious.CrossCore.UI;
 
 namespace ValueConversion.Core.Converters
 {
-    public class TwoWayConverter : MvxValueConverter<string, string>
+    public class TwoWayConverter : MvxValueConverter<double, string>
     {
-        protected override string Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override string Convert(double value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return String.Format("$$${0}###", value);
+            return (value * value).ToString();
         }
 
-        protected override string ConvertBack(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override double ConvertBack(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return value.TrimStart('$').TrimEnd('#');
+			double doubleValue;
+			double.TryParse(value, out doubleValue);
+            return Math.Sqrt(doubleValue);
         }
     }
 
@@ -24,6 +28,37 @@ namespace ValueConversion.Core.Converters
             return value.Length;
         }
     }
+
+	public class ContrastColorConverter : MvxColorConverter
+	{
+		protected override MvxColor Convert (object value, object parameter, System.Globalization.CultureInfo culture)
+		{
+			var input = (MvxColor)value;
+			var brightnessToUse = SimpleContrast(input.R, input.G, input.B);
+			return new MvxColor(brightnessToUse,brightnessToUse,brightnessToUse);
+		}
+
+		private static int SimpleContrast(params int[] value)
+		{
+			// this is only a very simple contrast method
+			// for more advanced methods you need to look at HSV-type approaches
+
+			int max = 0;
+			foreach (var v in value)
+			{
+				if (v > max)
+					max = v;
+			}
+
+			return 255 - max;
+			if (max < 128)
+			{
+				return 128 + max;
+			}
+
+			return max - 128;
+		}
+	}
 
     public class StringReverseConverter : MvxValueConverter<string>
     {

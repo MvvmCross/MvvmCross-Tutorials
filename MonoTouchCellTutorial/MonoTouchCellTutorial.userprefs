@@ -1,40 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouchCellTutorial/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouchCellTutorial/UI/Views/PetShopView.cs">
     <Files>
       <File FileName="MonoTouchCellTutorial/UI/Views/Cells/KittenCell.cs" Line="66" Column="29" />
       <File FileName="MonoTouchCellTutorial/UI/Views/Cells/KittenCell.designer.cs" Line="1" Column="1" />
       <File FileName="MonoTouchCellTutorial/UI/Views/Cells/DogCell.cs" Line="69" Column="1" />
-      <File FileName="MonoTouchCellTutorial/UI/Views/Cells/DogCell.designer.cs" Line="14" Column="43" />
-      <File FileName="MonoTouchCellTutorial/UI/Views/PetShopView.cs" Line="90" Column="42" />
+      <File FileName="MonoTouchCellTutorial/UI/Views/Cells/DogCell.designer.cs" Line="1" Column="1" />
+      <File FileName="MonoTouchCellTutorial/UI/Views/PetShopView.cs" Line="52" Column="3" />
       <File FileName="MonoTouchCellTutorial/UI/Views/PetShopView.designer.cs" Line="1" Column="1" />
       <File FileName="MonoTouchCellTutorial/Core/ViewModels/PetShopAnimalViewModel.cs" Line="1" Column="1" />
-      <File FileName="MonoTouchCellTutorial/Core/App.cs" Line="14" Column="4" />
-      <File FileName="MonoTouchCellTutorial/Core/ViewModels/PetShopViewModel.cs" Line="62" Column="4" />
+      <File FileName="MonoTouchCellTutorial/Core/App.cs" Line="1" Column="1" />
+      <File FileName="MonoTouchCellTutorial/Core/ViewModels/PetShopViewModel.cs" Line="1" Column="1" />
       <File FileName="MonoTouchCellTutorial/Core/Services/PricingModel.cs" Line="1" Column="1" />
-      <File FileName="MonoTouchCellTutorial/Core/Services/AnimalSupplier.cs" Line="3" Column="1" />
-      <File FileName="MonoTouchCellTutorial/UI/Setup.cs" Line="32" Column="35" />
+      <File FileName="MonoTouchCellTutorial/Core/Services/AnimalSupplier.cs" Line="1" Column="1" />
+      <File FileName="MonoTouchCellTutorial/UI/Setup.cs" Line="1" Column="1" />
       <File FileName="MonoTouchCellTutorial/AppDelegate.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="MonoTouchCellTutorial" expanded="True">
-            <Node name="References" expanded="True" selected="True" />
-            <Node name="Core" expanded="True">
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-            <Node name="UI" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="Cells" expanded="True">
-                  <Node name="DogCell.cs" expanded="True" />
-                  <Node name="KittenCell.cs" expanded="True" />
-                </Node>
-                <Node name="PetShopView.cs" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="MonoTouchCellTutorial" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
