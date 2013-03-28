@@ -1,31 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 
 namespace Navigation.UI.Touch
 {
     [Register("AppDelegate")]
-    public partial class AppDelegate : MvxApplicationDelegate
+    public class AppDelegate : MvxApplicationDelegate
     {
-        UIWindow window;
+        private UIWindow window;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			var presenter = new MvxTouchViewPresenter(this, window);
-			var setup = new Setup(this, presenter);
-			setup.Initialize();
+            var presenter = new MvxTouchViewPresenter(this, window);
+            var setup = new Setup(this, presenter);
+            setup.Initialize();
 
-			var start = Mvx.Resolve<IMvxAppStart>();
-			start.Start();
+            var start = Mvx.Resolve<IMvxAppStart>();
+            start.Start();
 
             window.MakeKeyAndVisible();
 
@@ -33,4 +27,3 @@ namespace Navigation.UI.Touch
         }
     }
 }
-

@@ -6,9 +6,14 @@ namespace Navigation.Core.ViewModels
     {
         private string _key;
 
-        public class Parameters
+        public string Key
         {
-            public string Key { get; set; }
+            get { return _key; }
+            set
+            {
+                _key = value;
+                RaisePropertyChanged(() => Key);
+            }
         }
 
         public void Init(Parameters parameters)
@@ -16,10 +21,9 @@ namespace Navigation.Core.ViewModels
             Key = parameters.Key;
         }
 
-        public string Key
+        public class Parameters
         {
-            get { return _key; }
-            set { _key = value; RaisePropertyChanged(() => Key); }
+            public string Key { get; set; }
         }
     }
 }

@@ -5,12 +5,12 @@ namespace Navigation.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
+        private string _parameterKey;
+
         public MainViewModel()
         {
             _parameterKey = "42";
         }
-
-        private string _parameterKey;
 
         public ICommand GoSimpleCommand
         {
@@ -20,17 +20,27 @@ namespace Navigation.Core.ViewModels
         public string ParameterKey
         {
             get { return _parameterKey; }
-            set { _parameterKey = value; RaisePropertyChanged(() => ParameterKey); }
+            set
+            {
+                _parameterKey = value;
+                RaisePropertyChanged(() => ParameterKey);
+            }
         }
 
         public ICommand GoParameterizedCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters() { Key = ParameterKey } )); }
+            get
+            {
+                return
+                    new MvxCommand(
+                        () =>
+                        ShowViewModel<ParameterizedViewModel>(new ParameterizedViewModel.Parameters {Key = ParameterKey}));
+            }
         }
 
         public ICommand GoAnonymousCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<AnonymousViewModel>(new { key = ParameterKey })); }
+            get { return new MvxCommand(() => ShowViewModel<AnonymousViewModel>(new {key = ParameterKey})); }
         }
     }
 }

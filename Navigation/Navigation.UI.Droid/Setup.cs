@@ -1,11 +1,8 @@
-﻿using System;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+﻿using Android.Content;
 using Cirrious.MvvmCross.Droid.Platform;
+using Cirrious.MvvmCross.Plugins.Json;
 using Cirrious.MvvmCross.ViewModels;
+using Navigation.Core;
 
 namespace Navigation.UI.Droid
 {
@@ -17,14 +14,13 @@ namespace Navigation.UI.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new App();
         }
 
         protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
+            PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
     }
 }
-
