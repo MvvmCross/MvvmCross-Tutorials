@@ -4,16 +4,21 @@ namespace ValueConversion.Core.ViewModels
 {
     public class VisibilityViewModel : MvxViewModel
     {
+        private bool _makeItVisible;
+
         public VisibilityViewModel()
         {
             _makeItVisible = true;
         }
 
-        private bool _makeItVisible;
         public bool MakeItVisible
         {
             get { return _makeItVisible; }
-            set { _makeItVisible = value; RaisePropertyChanged(() => MakeItVisible); }
+            set
+            {
+                _makeItVisible = value;
+                RaisePropertyChanged(() => MakeItVisible);
+            }
         }
     }
 }

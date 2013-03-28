@@ -4,16 +4,21 @@ namespace ValueConversion.Core.ViewModels
 {
     public class StringsViewModel : MvxViewModel
     {
+        private string _theText;
+
         public StringsViewModel()
         {
             TheText = "Hello World";
         }
 
-        private string _theText;
         public string TheText
         {
             get { return _theText; }
-            set { _theText = value; RaisePropertyChanged(() => TheText); }
+            set
+            {
+                _theText = value;
+                RaisePropertyChanged(() => TheText);
+            }
         }
     }
 }

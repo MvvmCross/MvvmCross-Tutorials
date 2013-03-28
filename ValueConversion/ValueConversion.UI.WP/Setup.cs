@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Cirrious.CrossCore.Plugins;
+using Cirrious.MvvmCross.Plugins.Json;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
@@ -10,7 +8,7 @@ namespace ValueConversion.UI.WP
 {
     public class Setup : MvxPhoneSetup
     {
-        public Setup(PhoneApplicationFrame rootFrame) 
+        public Setup(PhoneApplicationFrame rootFrame)
             : base(rootFrame)
         {
         }
@@ -22,11 +20,11 @@ namespace ValueConversion.UI.WP
 
         protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
+            PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
 
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();

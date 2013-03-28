@@ -1,10 +1,4 @@
-﻿using System;
-
-using Android.App;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+﻿using Android.App;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace ValueConversion.UI.Droid
@@ -15,7 +9,6 @@ namespace ValueConversion.UI.Droid
         public SplashScreen()
             : base(Resource.Layout.Main)
         {
-        }        
+        }
     }
 }
-

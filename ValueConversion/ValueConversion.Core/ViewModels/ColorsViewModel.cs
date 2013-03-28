@@ -5,38 +5,58 @@ namespace ValueConversion.Core.ViewModels
 {
     public class ColorsViewModel : MvxViewModel
     {
+        private int _blue;
+        private MvxColor _color;
+        private int _green;
+        private int _red;
+
         public ColorsViewModel()
         {
             _red = 255;
             UpdateColor();
         }
 
-        private int _red;
         public int Red
         {
             get { return _red; }
-            set { _red = value; RaisePropertyChanged(() => Red); UpdateColor(); }
+            set
+            {
+                _red = value;
+                RaisePropertyChanged(() => Red);
+                UpdateColor();
+            }
         }
-        
-        private int _green;
+
         public int Green
         {
             get { return _green; }
-            set { _green = value; RaisePropertyChanged(() => Green); UpdateColor(); }
+            set
+            {
+                _green = value;
+                RaisePropertyChanged(() => Green);
+                UpdateColor();
+            }
         }
 
-        private int _blue;
         public int Blue
         {
             get { return _blue; }
-            set { _blue = value; RaisePropertyChanged(() => Blue); UpdateColor(); }
+            set
+            {
+                _blue = value;
+                RaisePropertyChanged(() => Blue);
+                UpdateColor();
+            }
         }
 
-        private MvxColor _color;
         public MvxColor Color
         {
             get { return _color; }
-            set { _color = value; RaisePropertyChanged(() => Color); }
+            set
+            {
+                _color = value;
+                RaisePropertyChanged(() => Color);
+            }
         }
 
         private void UpdateColor()

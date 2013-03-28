@@ -5,6 +5,10 @@ namespace ValueConversion.Core.ViewModels
 {
     public class DatesViewModel : MvxViewModel
     {
+        private DateTime _oldDate;
+        private DateTime _theDate;
+        private DateTime _veryOldDate;
+
         public DatesViewModel()
         {
             _theDate = DateTime.UtcNow;
@@ -12,25 +16,34 @@ namespace ValueConversion.Core.ViewModels
             _veryOldDate = DateTime.UtcNow.Add(-TimeSpan.FromDays(4.0));
         }
 
-        private DateTime _theDate;
         public DateTime TheDate
         {
             get { return _theDate; }
-            set { _theDate = value; RaisePropertyChanged(() => TheDate); }
+            set
+            {
+                _theDate = value;
+                RaisePropertyChanged(() => TheDate);
+            }
         }
 
-        private DateTime _oldDate;
         public DateTime OldDate
         {
             get { return _oldDate; }
-            set { _oldDate = value; RaisePropertyChanged(() => OldDate); }
+            set
+            {
+                _oldDate = value;
+                RaisePropertyChanged(() => OldDate);
+            }
         }
 
-        private DateTime _veryOldDate;
         public DateTime VeryOldDate
         {
             get { return _veryOldDate; }
-            set { _veryOldDate = value; RaisePropertyChanged(() => VeryOldDate); }
+            set
+            {
+                _veryOldDate = value;
+                RaisePropertyChanged(() => VeryOldDate);
+            }
         }
     }
 }

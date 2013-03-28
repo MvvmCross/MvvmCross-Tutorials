@@ -4,16 +4,21 @@ namespace ValueConversion.Core.ViewModels
 {
     public class TwoWayViewModel : MvxViewModel
     {
+        private double _theValue;
+
         public TwoWayViewModel()
         {
             _theValue = 3;
         }
 
-        private double _theValue;
         public double TheValue
         {
             get { return _theValue; }
-            set { _theValue = value; RaisePropertyChanged(() => TheValue); }
+            set
+            {
+                _theValue = value;
+                RaisePropertyChanged(() => TheValue);
+            }
         }
     }
 }

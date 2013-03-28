@@ -1,9 +1,13 @@
-﻿using Android.Content;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using Android.Content;
+using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.Plugins.Color;
 using Cirrious.MvvmCross.Plugins.Visibility;
 using Cirrious.MvvmCross.ViewModels;
 using ValueConversion.Core;
+using PluginLoader = Cirrious.MvvmCross.Plugins.Color.PluginLoader;
 
 namespace ValueConversion.UI.Droid
 {
@@ -12,6 +16,17 @@ namespace ValueConversion.UI.Droid
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
+        }
+
+        protected override List<Assembly> ValueConverterAssemblies
+        {
+            get
+            {
+                var toReturn = base.ValueConverterAssemblies;
+                toReturn.Add(typeof (MvxNativeColorValueConverter).Assembly);
+                toReturn.Add(typeof (MvxVisibilityValueConverter).Assembly);
+                return toReturn;
+            }
         }
 
         protected override IMvxApplication CreateApp()
@@ -24,19 +39,9 @@ namespace ValueConversion.UI.Droid
             return new MvxJsonNavigationSerializer();
         }
 
-        protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            get
-            {
-                var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof(MvxNativeColorValueConverter).Assembly);
-                toReturn.Add(typeof(MvxVisibilityValueConverter).Assembly);
-                return toReturn;
-            }
-        }
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
-        {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
