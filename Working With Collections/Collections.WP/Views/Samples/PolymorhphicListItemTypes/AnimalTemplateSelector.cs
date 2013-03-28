@@ -5,17 +5,9 @@ namespace Collections.WP.Views.Samples.PolymorhphicListItemTypes
 {
     public class AnimalTemplateSelector : BaseDataTemplateSelector
     {
-        public DataTemplate KittenTemplate
-        {
-            get;
-            set;
-        }
+        public DataTemplate KittenTemplate { get; set; }
 
-        public DataTemplate DogTemplate
-        {
-            get;
-            set;
-        }
+        public DataTemplate DogTemplate { get; set; }
 
         public override DataTemplate SelectTemplate(
             object item, DependencyObject container)

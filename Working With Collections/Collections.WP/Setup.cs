@@ -1,4 +1,5 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using Cirrious.MvvmCross.Plugins.Json;
+using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
 
@@ -17,9 +18,9 @@ namespace Collections.WP
             return new Core.App();
         }
 
-        protected override Cirrious.MvvmCross.ViewModels.IMvxNavigationSerializer CreateNavigationSerializer()
+        protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+            PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
     }

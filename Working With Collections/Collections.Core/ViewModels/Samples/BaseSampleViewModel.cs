@@ -6,8 +6,8 @@ namespace Collections.Core.ViewModels.Samples
 {
     public class BaseSampleViewModel : MvxViewModel
     {
-        private readonly KittenGenerator _kittenGenerator = new KittenGenerator();
         private readonly DogGenerator _dogGenerator = new DogGenerator();
+        private readonly KittenGenerator _kittenGenerator = new KittenGenerator();
 
         protected Kitten CreateKitten()
         {

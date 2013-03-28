@@ -6,18 +6,8 @@ namespace Collections.Core.ViewModels.Samples.SpecificPositions
     public class SpecificPositionsViewModel : BaseSampleViewModel
     {
         private List<Kitten> _kittens;
-        public List<Kitten> Kittens
-        {
-            get { return _kittens; }
-            set { _kittens = value; RaisePropertyChanged(() => Kittens); }
-        }
 
         private Dictionary<string, Kitten> _lookup;
-        public Dictionary<string, Kitten> Lookup
-        {
-            get { return _lookup; }
-            set { _lookup = value; RaisePropertyChanged(() => Lookup); }
-        }
 
         public SpecificPositionsViewModel()
         {
@@ -28,15 +18,35 @@ namespace Collections.Core.ViewModels.Samples.SpecificPositions
                 list.Add(kitten);
             }
             Kittens = list;
-            Lookup = new Dictionary<string, Kitten>()
+            Lookup = new Dictionary<string, Kitten>
                 {
-                    { "Kitty", CreateKittenNamed("Kitty") },
-                    { "Tom", CreateKittenNamed("Tom") },
-                    { "Felix", CreateKittenNamed("Felix") },
-                    { "Tiger", CreateKittenNamed("Tiger") },
-                    { "Lion", CreateKittenNamed("Lion") },
-                    { "Simba", CreateKittenNamed("Simba") },
+                    {"Kitty", CreateKittenNamed("Kitty")},
+                    {"Tom", CreateKittenNamed("Tom")},
+                    {"Felix", CreateKittenNamed("Felix")},
+                    {"Tiger", CreateKittenNamed("Tiger")},
+                    {"Lion", CreateKittenNamed("Lion")},
+                    {"Simba", CreateKittenNamed("Simba")},
                 };
+        }
+
+        public List<Kitten> Kittens
+        {
+            get { return _kittens; }
+            set
+            {
+                _kittens = value;
+                RaisePropertyChanged(() => Kittens);
+            }
+        }
+
+        public Dictionary<string, Kitten> Lookup
+        {
+            get { return _lookup; }
+            set
+            {
+                _lookup = value;
+                RaisePropertyChanged(() => Lookup);
+            }
         }
     }
 }

@@ -82,33 +82,30 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\MainMenuView.xaml.cs">
       <DependentUpon>MainMenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Samples\PolymorhphicListItemTypes\AnimalTemplateSelector.cs" />
-    <Compile Include="Views\Samples\LargeDynamic\LargeDynamic.xaml.cs">
-      <DependentUpon>LargeDynamic.xaml</DependentUpon>
+    <Compile Include="Views\Samples\LargeDynamic\LargeDynamicView.xaml.cs">
+      <DependentUpon>LargeDynamicView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Samples\LargeFixed\LargeFixed.xaml.cs">
-      <DependentUpon>LargeFixed.xaml</DependentUpon>
+    <Compile Include="Views\Samples\LargeFixed\LargeFixedView.xaml.cs">
+      <DependentUpon>LargeFixedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Samples\PolymorhphicListItemTypes\BaseDataTemplateSelector.cs" />
-    <Compile Include="Views\Samples\PolymorhphicListItemTypes\PolymorphicListItemTypes.xaml.cs">
-      <DependentUpon>PolymorphicListItemTypes.xaml</DependentUpon>
+    <Compile Include="Views\Samples\PolymorhphicListItemTypes\PolymorphicListItemTypesView.xaml.cs">
+      <DependentUpon>PolymorphicListItemTypesView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Samples\SmallDynamic\SmallDynamic.xaml.cs">
-      <DependentUpon>SmallDynamic.xaml</DependentUpon>
+    <Compile Include="Views\Samples\SmallDynamic\SmallDynamicView.xaml.cs">
+      <DependentUpon>SmallDynamicView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Samples\SmallFixed\SmallFixed.xaml.cs">
-      <DependentUpon>SmallFixed.xaml</DependentUpon>
+    <Compile Include="Views\Samples\SmallFixed\SmallFixedView.xaml.cs">
+      <DependentUpon>SmallFixedView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Samples\SpecificPosition\SpecificPositions.xaml.cs">
-      <DependentUpon>SpecificPositions.xaml</DependentUpon>
+    <Compile Include="Views\Samples\SpecificPosition\SpecificPositionsView.xaml.cs">
+      <DependentUpon>SpecificPositionsView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -116,35 +113,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\MainMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\LargeDynamic\LargeDynamic.xaml">
+    <Page Include="Views\Samples\LargeDynamic\LargeDynamicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\LargeFixed\LargeFixed.xaml">
+    <Page Include="Views\Samples\LargeFixed\LargeFixedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\PolymorhphicListItemTypes\PolymorphicListItemTypes.xaml">
+    <Page Include="Views\Samples\PolymorhphicListItemTypes\PolymorphicListItemTypesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\SmallDynamic\SmallDynamic.xaml">
+    <Page Include="Views\Samples\SmallDynamic\SmallDynamicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\SmallFixed\SmallFixed.xaml">
+    <Page Include="Views\Samples\SmallFixed\SmallFixedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Samples\SpecificPosition\SpecificPositions.xaml">
+    <Page Include="Views\Samples\SpecificPosition\SpecificPositionsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

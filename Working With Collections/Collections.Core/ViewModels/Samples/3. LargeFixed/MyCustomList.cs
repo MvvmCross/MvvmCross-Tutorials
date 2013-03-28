@@ -7,15 +7,7 @@ namespace Collections.Core.ViewModels.Samples.LargeFixed
 {
     public class MyCustomList : IList<Kitten>, IList
     {
-        private MockDataRepository _dataRepository = new MockDataRepository();
-
-        public int Count { get { return _dataRepository.GetCount(); } }
-
-        public Kitten this[int index]
-        {
-            get { return _dataRepository.GetKitten(index); }
-            set { throw new System.NotImplementedException(); }
-        }
+        private readonly MockDataRepository _dataRepository = new MockDataRepository();
 
         object IList.this[int index]
         {
@@ -23,6 +15,16 @@ namespace Collections.Core.ViewModels.Samples.LargeFixed
             set { throw new NotImplementedException(); }
         }
 
+        public int Count
+        {
+            get { return _dataRepository.GetCount(); }
+        }
+
+        public Kitten this[int index]
+        {
+            get { return _dataRepository.GetKitten(index); }
+            set { throw new NotImplementedException(); }
+        }
 
         #region Not implemented
 
@@ -35,29 +37,9 @@ namespace Collections.Core.ViewModels.Samples.LargeFixed
 
         public object SyncRoot { get; private set; }
 
-        public IEnumerator<Kitten> GetEnumerator()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
-
-        public void Add(Kitten item)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public int Add(object value)
         {
             throw new NotImplementedException();
-        }
-
-        public void Clear()
-        {
-            throw new System.NotImplementedException();
         }
 
         public bool Contains(object value)
@@ -80,39 +62,59 @@ namespace Collections.Core.ViewModels.Samples.LargeFixed
             throw new NotImplementedException();
         }
 
+        public bool IsFixedSize { get; private set; }
+
+        public IEnumerator<Kitten> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public void Add(Kitten item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Contains(Kitten item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void CopyTo(Kitten[] array, int arrayIndex)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool Remove(Kitten item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool IsReadOnly { get; private set; }
 
         public int IndexOf(Kitten item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Insert(int index, Kitten item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RemoveAt(int index)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-
-        public bool IsFixedSize { get; private set; }
 
         #endregion
     }

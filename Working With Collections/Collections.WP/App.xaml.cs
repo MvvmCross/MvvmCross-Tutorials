@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Navigation;
 using Cirrious.CrossCore.IoC;
@@ -11,12 +11,6 @@ namespace Collections.WP
     public partial class App
         : Application
     {
-        /// <summary>
-        /// Provides easy access to the root frame of the Phone Application.
-        /// </summary>
-        /// <returns>The root frame of the Phone Application.</returns>
-        public PhoneApplicationFrame RootFrame { get; private set; }
-
         /// <summary>
         /// Constructor for the Application object.
         /// </summary>
@@ -32,10 +26,10 @@ namespace Collections.WP
             InitializePhoneApplication();
 
             // Show graphics profiling information while debugging.
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
@@ -54,6 +48,12 @@ namespace Collections.WP
             var setup = new Setup(RootFrame);
             setup.Initialize();
         }
+
+        /// <summary>
+        /// Provides easy access to the root frame of the Phone Application.
+        /// </summary>
+        /// <returns>The root frame of the Phone Application.</returns>
+        public PhoneApplicationFrame RootFrame { get; private set; }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
@@ -90,27 +90,27 @@ namespace Collections.WP
         // Code to execute if a navigation fails
         private void RootFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // A navigation has failed; break into the debugger
-                System.Diagnostics.Debugger.Break();
+                Debugger.Break();
             }
         }
 
         // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
-                System.Diagnostics.Debugger.Break();
+                Debugger.Break();
             }
         }
 
         #region Phone application initialization
 
         // Avoid double-initialization
-        private bool phoneApplicationInitialized = false;
+        private bool phoneApplicationInitialized;
 
         // Do not add any additional code to this method
         private void InitializePhoneApplication()

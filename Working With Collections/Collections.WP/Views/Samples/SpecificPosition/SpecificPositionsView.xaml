@@ -1,5 +1,5 @@
 ﻿<views:MvxPhonePage
-    x:Class="Collections.WP.Views.Samples.SmallFixed.SmallFixed"
+    x:Class="Collections.WP.Views.Samples.SpecificPosition.SpecificPositionsView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
@@ -22,26 +22,24 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Collections" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Small Fixed" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="COLLECTIONS" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Specific Positions" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox ItemsSource="{Binding Kittens}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Image Height="120" Width="120" Source="{Binding ImageUrl}" ></Image>
-                            <TextBlock Grid.Column="1" Text="{Binding Name}"></TextBlock>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <StackPanel>
+                <TextBlock Text="2nd kitten is:"/>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Kittens[2].ImageUrl}" Width="50" Height="50"></Image>
+                    <TextBlock Text="{Binding Kittens[2].Name}"/>
+                </StackPanel>
+                <TextBlock Text="Kitten 'Felix' is:"/>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Lookup[Felix].ImageUrl}"  Width="50" Height="50"></Image>
+                    <TextBlock Text="{Binding Lookup[Felix].Name}"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
     </Grid>
 

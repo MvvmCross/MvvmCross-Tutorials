@@ -27,15 +27,16 @@ namespace Collections.Droid
             return new App();
         }
 
-        protected override Cirrious.MvvmCross.ViewModels.IMvxNavigationSerializer CreateNavigationSerializer()
+        protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
 
         protected override void InitializeLastChance()
         {
             base.InitializeLastChance();
+            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
             Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
         }
     }

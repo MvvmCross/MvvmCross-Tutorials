@@ -13,33 +13,33 @@ namespace Collections.Core.ViewModels
 {
     public class MainMenuViewModel : MvxViewModel
     {
+        public MainMenuViewModel()
+        {
+            MenuItems = new List<MenuItem>
+                {
+                    new MenuItem("Small Fixed Collection", this, typeof (SmallFixedViewModel)),
+                    new MenuItem("Small Dynamic Collection", this, typeof (SmallDynamicViewModel)),
+                    new MenuItem("Large Fixed Collection", this, typeof (LargeFixedViewModel)),
+                    new MenuItem("Large Dynamic Collection", this, typeof (LargeDynamicViewModel)),
+                    new MenuItem("Polymorphic Collection", this, typeof (PolymorphicListItemTypesViewModel)),
+                    new MenuItem("Specific Positions Collection", this, typeof (SpecificPositionsViewModel)),
+                };
+        }
+
+        public List<MenuItem> MenuItems { get; private set; }
+
         public class MenuItem
         {
-            public string Title { get; private set; }
-            public Type ViewModelType { get; private set; }
-            public ICommand ShowCommand { get; private set; }
-
             public MenuItem(string title, MainMenuViewModel parent, Type viewModelType)
             {
                 Title = title;
                 ViewModelType = viewModelType;
                 ShowCommand = new MvxCommand(() => parent.ShowViewModel(ViewModelType));
             }
-        }
 
-        public List<MenuItem> MenuItems { get; private set; }
-
-        public MainMenuViewModel()
-        {
-            MenuItems = new List<MenuItem>()
-                {
-                    new MenuItem("Small Fixed Collection", this, typeof(SmallFixedViewModel)),
-                    new MenuItem("Small Dynamic Collection", this, typeof(SmallDynamicViewModel)),
-                    new MenuItem("Large Fixed Collection", this, typeof(LargeFixedViewModel)),
-                    new MenuItem("Large Dynamic Collection", this, typeof(LargeDynamicViewModel)),
-                    new MenuItem("Polymorphic Collection", this, typeof(PolymorphicListItemTypesViewModel)),
-                    new MenuItem("Specific Positions Collection", this, typeof(SpecificPositionsViewModel)),
-                };
+            public string Title { get; private set; }
+            public Type ViewModelType { get; private set; }
+            public ICommand ShowCommand { get; private set; }
         }
     }
 }
