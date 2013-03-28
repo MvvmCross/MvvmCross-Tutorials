@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <x:String x:Key="AppName">Tip View</x:String>
     </Page.Resources>
 
     <!--
@@ -43,6 +43,7 @@
                     Text="SubTotal"
                     />
                 <TextBox 
+                    FontSize="24"
                     Text="{Binding SubTotal, Mode=TwoWay}" 
                     />
 
@@ -61,6 +62,7 @@
                     />
                 <TextBlock 
                     Text="{Binding Tip}" 
+                    FontSize="24"
                     />
             </StackPanel>
         </Grid>

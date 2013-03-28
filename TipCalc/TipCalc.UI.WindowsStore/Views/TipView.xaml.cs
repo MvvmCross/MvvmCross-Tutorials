@@ -5,12 +5,6 @@
     {
         public sealed partial class TipView : LayoutAwarePage
         {
-            public new TipViewModel ViewModel
-            {
-                get { return (TipViewModel)base.ViewModel; }
-                set { base.ViewModel = value; }
-            }
-
             public TipView()
             {
                 this.InitializeComponent();
