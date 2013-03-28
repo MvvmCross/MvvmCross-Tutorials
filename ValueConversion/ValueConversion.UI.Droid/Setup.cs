@@ -1,13 +1,5 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+﻿using Android.Content;
 using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.Plugins.Color;
 using Cirrious.MvvmCross.Plugins.Visibility;
 using Cirrious.MvvmCross.ViewModels;
@@ -50,15 +42,4 @@ namespace ValueConversion.UI.Droid
             base.LoadPlugins(pluginManager);
         }
     }
-
-
-    [Activity(Label = "ValueConversion.UI.Droid", MainLauncher = true, Icon = "@drawable/icon")]
-    public class SplashScreen : MvxSplashScreenActivity
-    {
-        public SplashScreen()
-            : base(Resource.Layout.Main)
-        {
-        }        
-    }
 }
-

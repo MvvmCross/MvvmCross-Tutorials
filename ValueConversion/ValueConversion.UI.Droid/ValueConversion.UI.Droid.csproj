@@ -85,9 +85,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity1.cs" />
+    <Compile Include="SplashScreen.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\ColorsView.cs" />
     <Compile Include="Views\HomeView.cs" />
   </ItemGroup>
   <ItemGroup>

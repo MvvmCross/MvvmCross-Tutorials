@@ -22,13 +22,4 @@ namespace ValueConversion.UI.Droid.Views
             SetContentView(Resource.Layout.View_Home);
         }
     }
-    [Activity]
-    public class ColorsView : MvxActivity
-    {
-        protected override void OnViewModelSet()
-        {
-            base.OnViewModelSet();
-            SetContentView(Resource.Layout.View_Colors);
-        }
-    }
 }
