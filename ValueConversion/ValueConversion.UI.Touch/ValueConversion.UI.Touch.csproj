@@ -139,12 +139,22 @@
     <Compile Include="Views\VisibilityView.designer.cs">
       <DependentUpon>VisibilityView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TwoWayView.cs" />
+    <Compile Include="Views\TwoWayView.designer.cs">
+      <DependentUpon>TwoWayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StringsView.cs" />
+    <Compile Include="Views\StringsView.designer.cs">
+      <DependentUpon>StringsView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="ValueConversion_UI_TouchViewController.xib" />
     <InterfaceDefinition Include="Views\DatesView.xib" />
     <InterfaceDefinition Include="Views\ColorsView.xib" />
     <InterfaceDefinition Include="Views\VisibilityView.xib" />
+    <InterfaceDefinition Include="Views\TwoWayView.xib" />
+    <InterfaceDefinition Include="Views\StringsView.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -16,14 +16,6 @@ namespace ValueConversion.UI.Touch
 		{
 		}
 		
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
-		}
-		
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -32,7 +24,9 @@ namespace ValueConversion.UI.Touch
 			this.CreateBinding(this.OldDateLabel).To<DatesViewModel>(vm => vm.OldDate).WithConversion("TimeAgo").Apply();
 			this.CreateBinding(this.VeryOldDateLabel).To<DatesViewModel>(vm => vm.VeryOldDate).WithConversion("TimeAgo").Apply();
 
-			// Perform any additional setup after loading the view, typically from a nib.
+			this.CreateBinding(this.SimpleDateLabel).To<DatesViewModel>(vm => vm.TheDate).Apply();
+			this.CreateBinding(this.SimpleOldDateLabel).To<DatesViewModel>(vm => vm.OldDate).Apply();
+			this.CreateBinding(this.SimpleVeryOldDateLabel).To<DatesViewModel>(vm => vm.VeryOldDate).Apply();
 		}
 	}
 }

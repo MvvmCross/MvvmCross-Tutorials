@@ -28,13 +28,15 @@ namespace ValueConversion.UI.Touch
 		{
 			base.ViewDidLoad ();
 			
-			// Perform any additional setup after loading the view, typically from a nib.
 			this.CreateBinding(this.RedSlider).To<ColorsViewModel>(vm => vm.Red).Apply();
 			this.CreateBinding(this.GreenSlider).To<ColorsViewModel>(vm => vm.Green).Apply();
 			this.CreateBinding(this.BlueSlider).To<ColorsViewModel>(vm => vm.Blue).Apply();
 			this.CreateBinding(this.ColorView).For(v => v.BackgroundColor).To<ColorsViewModel>(vm => vm.Color)
 				.WithConversion("NativeColor").Apply();
-
+			this.CreateBinding(this.ColorLabel).For (v => v.TextColor).To<ColorsViewModel>(vm => vm.Color)
+				.WithConversion("ContrastColor").Apply();
+			this.CreateBinding(this.ColorLabel).For (v => v.Text).To<ColorsViewModel>(vm => vm.Color)
+				.Apply();
 		}
 	}
 }

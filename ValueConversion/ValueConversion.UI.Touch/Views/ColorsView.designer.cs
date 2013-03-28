@@ -12,6 +12,9 @@ namespace ValueConversion.UI.Touch
 	partial class ColorsView
 	{
 		[Outlet]
+		MonoTouch.UIKit.UILabel ColorLabel { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UISlider RedSlider { get; set; }
 
 		[Outlet]
@@ -25,6 +28,11 @@ namespace ValueConversion.UI.Touch
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ColorLabel != null) {
+				ColorLabel.Dispose ();
+				ColorLabel = null;
+			}
+
 			if (RedSlider != null) {
 				RedSlider.Dispose ();
 				RedSlider = null;

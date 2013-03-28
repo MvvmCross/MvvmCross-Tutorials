@@ -22,7 +22,6 @@ namespace ValueConversion.UI.Touch
 
 			TableView.Source = source;
 			TableView.ReloadData();
-
 		}
 	}
 }

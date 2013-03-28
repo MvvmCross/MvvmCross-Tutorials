@@ -31,7 +31,7 @@ namespace MonoTouchCellTutorial
 			// Perform any additional setup after loading the view, typically from a nib.
 			var source = new TableSource(TableView);
 
-			this.Bind(source, (PetShopViewModel vm) => vm.Stock);
+			this.CreateBinding(source).To((PetShopViewModel vm) => vm.Stock).Apply ();
 
 			TableView.Source = source;
 			TableView.ReloadData();
