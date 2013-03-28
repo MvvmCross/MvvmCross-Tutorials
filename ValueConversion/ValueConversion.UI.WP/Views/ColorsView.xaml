@@ -51,10 +51,16 @@
         Background="Blue"
         Foreground="Cyan"
         ></Slider>
-                <Rectangle
+               <Grid>
+                    <Rectangle
                     Height="120"
-                    Fill="{Binding Color, Mode=OneWay, Converter={StaticResource NativeColor}}"
+                    Fill="{Binding Color, Converter={StaticResource NativeColor}}"
                     ></Rectangle>
+                    <TextBlock
+                    Text="{Binding Color}"
+                        Foreground="{Binding Color, Converter={StaticResource ContrastColor}}"
+                    ></TextBlock>
+                </Grid>
             </StackPanel>
         </Grid>
     </Grid>

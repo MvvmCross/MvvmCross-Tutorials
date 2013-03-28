@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <x:String x:Key="AppName">Home</x:String>
     </Page.Resources>
 
     <!--
@@ -37,13 +37,13 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
-        <ListBox Grid.Row="1" ItemsSource="{Binding Items}" Background="Black">
-            <ListBox.ItemTemplate>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Items}" Background="Black" >
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Width="440" Content="{Binding Name}" Command="{Binding ShowCommand}"></Button>
+                    <Button Background="Black" Width="440" Content="{Binding Name}" Command="{Binding ShowCommand}"></Button>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

@@ -29,8 +29,8 @@ namespace ValueConversion.UI.Droid
             get
             {
                 var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof(MvxNativeColorConverter).Assembly);
-                toReturn.Add(typeof(MvxVisibilityConverter).Assembly);
+                toReturn.Add(typeof(MvxNativeColorValueConverter).Assembly);
+                toReturn.Add(typeof(MvxVisibilityValueConverter).Assembly);
                 return toReturn;
             }
         }

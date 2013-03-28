@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cirrious.CrossCore.WindowsPhone.Converters;
+using System.Threading.Tasks;
+using Cirrious.CrossCore.WindowsStore.Converters;
 using Cirrious.MvvmCross.Plugins.Color;
 using Cirrious.MvvmCross.Plugins.Visibility;
 using ValueConversion.Core.Converters;
 
-namespace ValueConversion.UI.WP.NativeConverters
+namespace ValueConversion.UI.WindowsStore.NativeConverters
 {
     public class NativeTimeAgoConverter : MvxNativeValueConverter<TimeAgoConverter>
     {
@@ -25,7 +26,7 @@ namespace ValueConversion.UI.WP.NativeConverters
     {
     }
     public class NativeStringLengthConverter : MvxNativeValueConverter<StringLengthConverter>
-    {        
+    {
     }
     public class NativeStringReverseConverter : MvxNativeValueConverter<StringReverseConverter>
     {

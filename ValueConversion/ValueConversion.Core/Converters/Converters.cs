@@ -29,7 +29,7 @@ namespace ValueConversion.Core.Converters
         }
     }
 
-	public class ContrastColorConverter : MvxColorConverter
+	public class ContrastColorConverter : MvxColorValueConverter
 	{
 		protected override MvxColor Convert (object value, object parameter, System.Globalization.CultureInfo culture)
 		{
@@ -51,12 +51,6 @@ namespace ValueConversion.Core.Converters
 			}
 
 			return 255 - max;
-			if (max < 128)
-			{
-				return 128 + max;
-			}
-
-			return max - 128;
 		}
 	}
 

@@ -30,15 +30,12 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
-                <TextBlock Text="TheTheText:"></TextBlock>
-                <TextBlock Text="{Binding TheText}" FontSize="64"></TextBlock>
+                <TextBlock Text="The Text:"></TextBlock>
+                <TextBox Text="{Binding TheText,Mode=TwoWay}" ></TextBox>
                 <TextBlock Text="Length:"></TextBlock>
                 <TextBlock Text="{Binding TheText,Converter={StaticResource StringLength}}" FontSize="64"></TextBlock>
                 <TextBlock Text="Reverse:"></TextBlock>
                 <TextBlock Text="{Binding TheText,Converter={StaticResource StringReverse}}" FontSize="64"></TextBlock>
-                <TextBlock Text="Edit:"></TextBlock>
-                <TextBox Text="{Binding TheText,Mode=TwoWay}" ></TextBox>
-
             </StackPanel>
         </Grid>
     </Grid>

@@ -32,10 +32,13 @@
             <StackPanel>
                 <TextBlock Text="TheDate:"></TextBlock>
                 <TextBlock Text="{Binding TheDate,Converter={StaticResource TimeAgo}}" FontSize="64"></TextBlock>
-                <TextBlock Text="OldDate:"></TextBlock>
+                <TextBlock Text="{Binding TheDate}" Foreground="{StaticResource PhoneSubtleBrush}" ></TextBlock>
+                <TextBlock Text="OldDate:" Margin="0,24,0,0"></TextBlock>
                 <TextBlock Text="{Binding OldDate,Converter={StaticResource TimeAgo}}" FontSize="64"></TextBlock>
-                <TextBlock Text="VeryOldDate:"></TextBlock>
+                <TextBlock Text="{Binding OldDate}" Foreground="{StaticResource PhoneSubtleBrush}" ></TextBlock>
+                <TextBlock Text="VeryOldDate:" Margin="0,24,0,0"></TextBlock>
                 <TextBlock Text="{Binding VeryOldDate,Converter={StaticResource TimeAgo}}" FontSize="64"></TextBlock>
+                <TextBlock Text="{Binding VeryOldDate}" Foreground="{StaticResource PhoneSubtleBrush}" ></TextBlock>
             </StackPanel>
         </Grid>
     </Grid>

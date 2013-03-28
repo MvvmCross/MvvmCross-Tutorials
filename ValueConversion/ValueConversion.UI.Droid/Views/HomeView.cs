@@ -18,7 +18,6 @@ namespace ValueConversion.UI.Droid.Views
     {
         protected override void OnViewModelSet()
         {
-            base.OnViewModelSet();
             SetContentView(Resource.Layout.View_Home);
         }
     }

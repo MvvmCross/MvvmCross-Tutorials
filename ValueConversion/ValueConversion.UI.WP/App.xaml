@@ -12,6 +12,7 @@
         <nativeConverters:NativeColorConverter x:Name="NativeColor" />
         <nativeConverters:NativeInvertedVisibilityConverter x:Name="InvertedVisibility" />
         <nativeConverters:NativeVisibilityConverter x:Name="Visibility" />
+        <nativeConverters:NativeContrastColorConverter x:Name="ContrastColor" />
         <nativeConverters:NativeStringLengthConverter x:Name="StringLength" />
         <nativeConverters:NativeStringReverseConverter x:Name="StringReverse" />
         <nativeConverters:NativeTwoWayConverter x:Name="TwoWay" />

@@ -5,39 +5,34 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
   <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Edit this:"
+   />
+  <EditText
         android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-        android:text="Red:"
+        local:MvxBind="Text TheText" 
    />
-    <SeekBar
-        android:layout_width="fill_parent"
-        android:layout_height="64dp"
-        android:max="255"
-        local:MvxBind="Progress Red" />
   <TextView
         android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-        android:text="Green:"
+        android:text="The length:"
    />
-    <SeekBar
-        android:layout_width="fill_parent"
-        android:layout_height="64dp"
-        android:max="255"
-        local:MvxBind="Progress Green" />
   <TextView
         android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-        android:text="Blue:"
+        local:MvxBind="Text TheText, Converter=StringLength"
    />
-    <SeekBar
+  <TextView
         android:layout_width="fill_parent"
-        android:layout_height="64dp"
-        android:max="255"
-        local:MvxBind="Progress Blue" />
-    <TextView
+      android:layout_height="wrap_content"
+        android:text="In reverse:"
+   />
+  <TextView
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        local:MvxBind="BackgroundColor Color, Converter=NativeColor; Text Color; TextColor Color, Converter=ContrastColor" 
+      android:layout_height="wrap_content"
+        local:MvxBind="Text TheText, Converter=StringReverse"
    />
 
 </LinearLayout>
