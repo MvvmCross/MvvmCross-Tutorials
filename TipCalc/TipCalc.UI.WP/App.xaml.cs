@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Navigation;
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
@@ -9,11 +10,7 @@ namespace TipCalc.UI.WP
 {
     public partial class App : Application
     {
-        /// <summary>
-        /// Provides easy access to the root frame of the Phone Application.
-        /// </summary>
-        /// <returns>The root frame of the Phone Application.</returns>
-        public PhoneApplicationFrame RootFrame { get; private set; }
+        private bool _hasDoneFirstNavigation;
 
         /// <summary>
         /// Constructor for the Application object.
@@ -30,10 +27,10 @@ namespace TipCalc.UI.WP
             InitializePhoneApplication();
 
             // Show graphics profiling information while debugging.
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
@@ -53,22 +50,26 @@ namespace TipCalc.UI.WP
             setup.Initialize();
         }
 
-        private bool _hasDoneFirstNavigation = false;
+        /// <summary>
+        /// Provides easy access to the root frame of the Phone Application.
+        /// </summary>
+        /// <returns>The root frame of the Phone Application.</returns>
+        public PhoneApplicationFrame RootFrame { get; private set; }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             RootFrame.Navigating += (navigatingSender, navigatingArgs) =>
-            {
-                if (_hasDoneFirstNavigation)
-                    return;
+                {
+                    if (_hasDoneFirstNavigation)
+                        return;
 
-                navigatingArgs.Cancel = true;
-                _hasDoneFirstNavigation = true;
-                var appStart = Mvx.Resolve<IMvxAppStart>();
-                RootFrame.Dispatcher.BeginInvoke(() => appStart.Start());
-            };
+                    navigatingArgs.Cancel = true;
+                    _hasDoneFirstNavigation = true;
+                    var appStart = Mvx.Resolve<IMvxAppStart>();
+                    RootFrame.Dispatcher.BeginInvoke(() => appStart.Start());
+                };
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -92,27 +93,27 @@ namespace TipCalc.UI.WP
         // Code to execute if a navigation fails
         private void RootFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // A navigation has failed; break into the debugger
-                System.Diagnostics.Debugger.Break();
+                Debugger.Break();
             }
         }
 
         // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
-                System.Diagnostics.Debugger.Break();
+                Debugger.Break();
             }
         }
 
         #region Phone application initialization
 
         // Avoid double-initialization
-        private bool phoneApplicationInitialized = false;
+        private bool phoneApplicationInitialized;
 
         // Do not add any additional code to this method
         private void InitializePhoneApplication()

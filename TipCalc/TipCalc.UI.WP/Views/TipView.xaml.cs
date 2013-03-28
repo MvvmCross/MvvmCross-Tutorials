@@ -1,5 +1,4 @@
 ﻿using Cirrious.MvvmCross.WindowsPhone.Views;
-using TipCalc.Core.ViewModels;
 
 namespace TipCalc.UI.WP.Views
 {

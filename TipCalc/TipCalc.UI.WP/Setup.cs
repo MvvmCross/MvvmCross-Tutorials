@@ -1,6 +1,7 @@
-﻿using Cirrious.MvvmCross.ViewModels;
-using Microsoft.Phone.Controls;
+﻿using Cirrious.MvvmCross.Plugins.Json;
+using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
+using Microsoft.Phone.Controls;
 
 namespace TipCalc.UI.WP
 {
@@ -18,7 +19,7 @@ namespace TipCalc.UI.WP
 
         protected override IMvxNavigationSerializer CreateNavigationSerializer()
         {
-            Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded();
+            PluginLoader.Instance.EnsureLoaded();
             return new MvxJsonNavigationSerializer();
         }
     }

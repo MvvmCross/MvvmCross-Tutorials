@@ -1,33 +1,34 @@
-﻿    using System.Windows;
-    using Cirrious.CrossCore.IoC;
-    using Cirrious.MvvmCross.ViewModels;
-    using Cirrious.MvvmCross.Wpf.Views;
+﻿using System;
+using System.Windows;
+using Cirrious.CrossCore.IoC;
+using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.Wpf.Views;
 
-    namespace TipCalc.UI.Wpf
+namespace TipCalc.UI.Wpf
+{
+    public partial class App : Application
     {
-        public partial class App : Application
+        private bool _setupComplete;
+
+        private void DoSetup()
         {
-            private bool _setupComplete = false;
+            var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
 
-            private void DoSetup()
-            {
-                var presenter = new MvxSimpleWpfViewPresenter(MainWindow);
+            var setup = new Setup(Dispatcher, presenter);
+            setup.Initialize();
 
-                var setup = new Setup(Dispatcher, presenter);
-                setup.Initialize();
+            var start = Mvx.Resolve<IMvxAppStart>();
+            start.Start();
 
-                var start = Mvx.Resolve<IMvxAppStart>();
-                start.Start();
+            _setupComplete = true;
+        }
 
-                _setupComplete = true;
-            }
+        protected override void OnActivated(EventArgs e)
+        {
+            if (!_setupComplete)
+                DoSetup();
 
-            protected override void OnActivated(System.EventArgs e)
-            {
-                if (!_setupComplete)
-                    DoSetup();
-
-                base.OnActivated(e);
-            }
+            base.OnActivated(e);
         }
     }
+}

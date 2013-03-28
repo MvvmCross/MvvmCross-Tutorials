@@ -7,7 +7,8 @@ namespace TipCalc.UI.Wpf
 {
     public class Setup : MvxWpfSetup
     {
-        public Setup(Dispatcher uiThreadDispatcher, IMvxWpfViewPresenter presenter) : base(uiThreadDispatcher, presenter)
+        public Setup(Dispatcher uiThreadDispatcher, IMvxWpfViewPresenter presenter)
+            : base(uiThreadDispatcher, presenter)
         {
         }
 

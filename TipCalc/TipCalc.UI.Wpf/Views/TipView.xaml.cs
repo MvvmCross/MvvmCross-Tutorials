@@ -1,13 +1,12 @@
-﻿    using Cirrious.MvvmCross.Wpf.Views;
-    using TipCalc.Core.ViewModels;
+﻿using Cirrious.MvvmCross.Wpf.Views;
 
-    namespace TipCalc.UI.Wpf.Views
+namespace TipCalc.UI.Wpf.Views
+{
+    public partial class TipView : MvxWpfView
     {
-        public partial class TipView : MvxWpfView
+        public TipView()
         {
-            public TipView()
-            {
-                InitializeComponent();
-            }
+            InitializeComponent();
         }
     }
+}

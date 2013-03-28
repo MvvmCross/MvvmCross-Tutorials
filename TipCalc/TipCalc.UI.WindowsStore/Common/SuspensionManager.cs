@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.ApplicationModel;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
@@ -22,9 +19,19 @@ namespace TipCalc.UI.WindowsStore.Common
     /// </summary>
     internal sealed class SuspensionManager
     {
-        private static Dictionary<string, object> _sessionState = new Dictionary<string, object>();
-        private static List<Type> _knownTypes = new List<Type>();
         private const string sessionStateFilename = "_sessionState.xml";
+        private static Dictionary<string, object> _sessionState = new Dictionary<string, object>();
+        private static readonly List<Type> _knownTypes = new List<Type>();
+
+        private static readonly DependencyProperty FrameSessionStateKeyProperty =
+            DependencyProperty.RegisterAttached("_FrameSessionStateKey", typeof (String), typeof (SuspensionManager),
+                                                null);
+
+        private static readonly DependencyProperty FrameSessionStateProperty =
+            DependencyProperty.RegisterAttached("_FrameSessionState", typeof (Dictionary<String, Object>),
+                                                typeof (SuspensionManager), null);
+
+        private static readonly List<WeakReference<Frame>> _registeredFrames = new List<WeakReference<Frame>>();
 
         /// <summary>
         /// Provides access to global session state for the current session.  This state is
@@ -71,12 +78,15 @@ namespace TipCalc.UI.WindowsStore.Common
 
                 // Serialize the session state synchronously to avoid asynchronous access to shared
                 // state
-                MemoryStream sessionData = new MemoryStream();
-                DataContractSerializer serializer = new DataContractSerializer(typeof(Dictionary<string, object>), _knownTypes);
+                var sessionData = new MemoryStream();
+                var serializer = new DataContractSerializer(typeof (Dictionary<string, object>), _knownTypes);
                 serializer.WriteObject(sessionData, _sessionState);
 
                 // Get an output stream for the SessionState file and write the state asynchronously
-                StorageFile file = await ApplicationData.Current.LocalFolder.CreateFileAsync(sessionStateFilename, CreationCollisionOption.ReplaceExisting);
+                StorageFile file =
+                    await
+                    ApplicationData.Current.LocalFolder.CreateFileAsync(sessionStateFilename,
+                                                                        CreationCollisionOption.ReplaceExisting);
                 using (Stream fileStream = await file.OpenStreamForWriteAsync())
                 {
                     sessionData.Seek(0, SeekOrigin.Begin);
@@ -110,8 +120,8 @@ namespace TipCalc.UI.WindowsStore.Common
                 using (IInputStream inStream = await file.OpenSequentialReadAsync())
                 {
                     // Deserialize the Session State
-                    DataContractSerializer serializer = new DataContractSerializer(typeof(Dictionary<string, object>), _knownTypes);
-                    _sessionState = (Dictionary<string, object>)serializer.ReadObject(inStream.AsStreamForRead());
+                    var serializer = new DataContractSerializer(typeof (Dictionary<string, object>), _knownTypes);
+                    _sessionState = (Dictionary<string, object>) serializer.ReadObject(inStream.AsStreamForRead());
                 }
 
                 // Restore any registered frames to their saved state
@@ -130,12 +140,6 @@ namespace TipCalc.UI.WindowsStore.Common
                 throw new SuspensionManagerException(e);
             }
         }
-
-        private static DependencyProperty FrameSessionStateKeyProperty =
-            DependencyProperty.RegisterAttached("_FrameSessionStateKey", typeof(String), typeof(SuspensionManager), null);
-        private static DependencyProperty FrameSessionStateProperty =
-            DependencyProperty.RegisterAttached("_FrameSessionState", typeof(Dictionary<String, Object>), typeof(SuspensionManager), null);
-        private static List<WeakReference<Frame>> _registeredFrames = new List<WeakReference<Frame>>();
 
         /// <summary>
         /// Registers a <see cref="Frame"/> instance to allow its navigation history to be saved to
@@ -158,7 +162,8 @@ namespace TipCalc.UI.WindowsStore.Common
 
             if (frame.GetValue(FrameSessionStateProperty) != null)
             {
-                throw new InvalidOperationException("Frames must be either be registered before accessing frame session state, or not registered at all");
+                throw new InvalidOperationException(
+                    "Frames must be either be registered before accessing frame session state, or not registered at all");
             }
 
             // Use a dependency property to associate the session key with a frame, and keep a list of frames whose
@@ -181,12 +186,12 @@ namespace TipCalc.UI.WindowsStore.Common
         {
             // Remove session state and remove the frame from the list of frames whose navigation
             // state will be saved (along with any weak references that are no longer reachable)
-            SessionState.Remove((String)frame.GetValue(FrameSessionStateKeyProperty));
+            SessionState.Remove((String) frame.GetValue(FrameSessionStateKeyProperty));
             _registeredFrames.RemoveAll((weakFrameReference) =>
-            {
-                Frame testFrame;
-                return !weakFrameReference.TryGetTarget(out testFrame) || testFrame == frame;
-            });
+                {
+                    Frame testFrame;
+                    return !weakFrameReference.TryGetTarget(out testFrame) || testFrame == frame;
+                });
         }
 
         /// <summary>
@@ -204,11 +209,11 @@ namespace TipCalc.UI.WindowsStore.Common
         /// <see cref="SessionState"/>.</returns>
         public static Dictionary<String, Object> SessionStateForFrame(Frame frame)
         {
-            var frameState = (Dictionary<String, Object>)frame.GetValue(FrameSessionStateProperty);
+            var frameState = (Dictionary<String, Object>) frame.GetValue(FrameSessionStateProperty);
 
             if (frameState == null)
             {
-                var frameSessionKey = (String)frame.GetValue(FrameSessionStateKeyProperty);
+                var frameSessionKey = (String) frame.GetValue(FrameSessionStateKeyProperty);
                 if (frameSessionKey != null)
                 {
                     // Registered frames reflect the corresponding session state
@@ -216,7 +221,7 @@ namespace TipCalc.UI.WindowsStore.Common
                     {
                         _sessionState[frameSessionKey] = new Dictionary<String, Object>();
                     }
-                    frameState = (Dictionary<String, Object>)_sessionState[frameSessionKey];
+                    frameState = (Dictionary<String, Object>) _sessionState[frameSessionKey];
                 }
                 else
                 {
@@ -233,7 +238,7 @@ namespace TipCalc.UI.WindowsStore.Common
             var frameState = SessionStateForFrame(frame);
             if (frameState.ContainsKey("Navigation"))
             {
-                frame.SetNavigationState((String)frameState["Navigation"]);
+                frame.SetNavigationState((String) frameState["Navigation"]);
             }
         }
 
@@ -243,6 +248,7 @@ namespace TipCalc.UI.WindowsStore.Common
             frameState["Navigation"] = frame.GetNavigationState();
         }
     }
+
     public class SuspensionManagerException : Exception
     {
         public SuspensionManagerException()
@@ -252,7 +258,6 @@ namespace TipCalc.UI.WindowsStore.Common
         public SuspensionManagerException(Exception e)
             : base("SuspensionManager failed", e)
         {
-
         }
     }
 }

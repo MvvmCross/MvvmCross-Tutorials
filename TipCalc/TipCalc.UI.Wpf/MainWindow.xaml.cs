@@ -1,13 +1,12 @@
-﻿    using System.Windows;
-    using Cirrious.MvvmCross.Wpf.Views;
+﻿using System.Windows;
 
-    namespace TipCalc.UI.Wpf
+namespace TipCalc.UI.Wpf
+{
+    public partial class MainWindow : Window
     {
-        public partial class MainWindow : Window
+        public MainWindow()
         {
-            public MainWindow()
-            {
-                InitializeComponent();
-            }
+            InitializeComponent();
         }
     }
+}
