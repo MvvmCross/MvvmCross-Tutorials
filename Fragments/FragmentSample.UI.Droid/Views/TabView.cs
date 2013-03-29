@@ -21,12 +21,12 @@ namespace FragmentSample.UI.Droid.Views
 
         protected override void AddTabs(Bundle args)
         {
-            AddTab<Tab1Fragment>("Tab1", "Tab1", "Tab 1", args, TabViewModel.Vm1);
-            AddTab<Tab2Fragment>("Tab2", "Tab2", "Tab 2", args, TabViewModel.Vm2);
+            AddTab<Tab1Fragment>("Tab1", "Tab 1", args, TabViewModel.Vm1);
+            AddTab<Tab2Fragment>("Tab2", "Tab 2", args, TabViewModel.Vm2);
             // note that
-            AddTab<Tab3Fragment>("Tab3.1", "Tab3.1", "Tab 3.1", args, TabViewModel.Vm3);
-            AddTab<Tab3Fragment>("Tab3.2", "Tab3.2", "Tab 3.2", args, TabViewModel.Vm3);
-            AddTab<Tab3BigFragment>("Tab3.3", "Tab3_3", "Tab 3.3", args, TabViewModel.Vm3);
+            AddTab<Tab3Fragment>("Tab3.1", "Tab 3.1", args, TabViewModel.Vm3);
+            AddTab<Tab3Fragment>("Tab3.2", "Tab 3.2", args, TabViewModel.Vm3);
+            AddTab<Tab3BigFragment>("Tab3.3", "Tab 3.3", args, TabViewModel.Vm3);
         }
     }
 }

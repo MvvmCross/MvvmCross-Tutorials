@@ -7,8 +7,8 @@
 
         public ThirdTabViewModel()
         {
-            _firstName = "FirstName";
-            _lastName = "LastName";
+            _firstName = "Hello";
+            _lastName = "MvvmCross";
         }
 
         public string FirstName
