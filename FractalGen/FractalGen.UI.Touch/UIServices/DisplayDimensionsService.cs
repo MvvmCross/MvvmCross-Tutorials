@@ -1,4 +1,4 @@
-﻿using FractalGen.Core.Services;
+﻿using FractalGen.Core.Services.PlatformSpecific;
 
 namespace FractalGen.UI.Touch.UIServices
 {

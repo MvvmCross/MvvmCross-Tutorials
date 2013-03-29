@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FractalGen.Core.Services.Fractal;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.CrossCore.Converters;
-using FractalGen.Core.Services;
 using MonoTouch.CoreGraphics;
 
 namespace FractalGen.UI.Touch

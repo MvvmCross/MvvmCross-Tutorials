@@ -57,7 +57,10 @@
     <Compile Include="Services\Fractal\SimpleWriteableBitmap.cs" />
     <Compile Include="Services\Fractal\WriteableBitmapGenerator.cs" />
     <Compile Include="ViewModels\GenerateViewModel.cs" />
-    <Compile Include="ViewModels\MandelbrotTask.cs" />
+    <Compile Include="Services\Fractal\IMandelbrotTask.cs" />
+    <Compile Include="Services\Fractal\IMandelbrotTaskGenerator.cs" />
+    <Compile Include="Services\Fractal\MandelbrotTask.cs" />
+    <Compile Include="Services\Fractal\MandelbrotTaskGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

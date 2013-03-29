@@ -1,12 +1,11 @@
 ﻿using System;
 using Cirrious.CrossCore.UI;
-using FractalGen.Core.Services.PlatformSpecific;
 
 namespace FractalGen.Core.Services.Fractal
 {
     public class SimpleWriteableBitmap : ISimpleWriteableBitmap
     {
-		public SimpleWriteableBitmap(int baseWidth, int baseHeight)
+        public SimpleWriteableBitmap(int baseWidth, int baseHeight)
         {
             Height = baseHeight;
             Width = baseWidth;
@@ -31,7 +30,7 @@ namespace FractalGen.Core.Services.Fractal
                 var offset = y*Width;
                 for (var x = fromX; x < toX; x++)
                 {
-					Pixels[x + offset] = color.ARGB;
+                    Pixels[x + offset] = color.ARGB;
                 }
             }
         }

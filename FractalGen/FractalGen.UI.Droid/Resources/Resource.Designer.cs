@@ -68,9 +68,6 @@ namespace FractalGen.UI.Droid
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
-			// aapt resource value: 0x7f040001
-			public const int MyButton = 2130968577;
-			
 			private Id()
 			{
 			}
