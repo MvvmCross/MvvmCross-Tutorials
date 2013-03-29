@@ -6,11 +6,8 @@ namespace FractalGen.Core.Services.Fractal
 {
     public class SimpleWriteableBitmap : ISimpleWriteableBitmap
     {
-        private readonly IMvxColorToIntService _colorToIntService;
-
-        public SimpleWriteableBitmap(IMvxColorToIntService colorToIntService, int baseWidth, int baseHeight)
+		public SimpleWriteableBitmap(int baseWidth, int baseHeight)
         {
-            _colorToIntService = colorToIntService;
             Height = baseHeight;
             Width = baseWidth;
             Pixels = new int[baseWidth*baseHeight];
@@ -22,7 +19,7 @@ namespace FractalGen.Core.Services.Fractal
 
         public ISimpleWriteableBitmap Clone()
         {
-            var bitmap = new SimpleWriteableBitmap(_colorToIntService, Width, Height);
+            var bitmap = new SimpleWriteableBitmap(Width, Height);
             Array.Copy(Pixels, bitmap.Pixels, Pixels.Length);
             return bitmap;
         }
@@ -34,7 +31,7 @@ namespace FractalGen.Core.Services.Fractal
                 var offset = y*Width;
                 for (var x = fromX; x < toX; x++)
                 {
-                    Pixels[x + offset] = _colorToIntService.Convert(color);
+					Pixels[x + offset] = color.ARGB;
                 }
             }
         }
