@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Windows.UI.Xaml.Data;
+using Windows.Foundation.Metadata;
 
 namespace FractalGen.UI.Store.Common
 {
     /// <summary>
     /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
     /// </summary>
-    [Windows.Foundation.Metadata.WebHostHidden]
+    [WebHostHidden]
     public abstract class BindableBase : INotifyPropertyChanged
     {
         /// <summary>
@@ -30,10 +30,10 @@ namespace FractalGen.UI.Store.Common
         /// desired value.</returns>
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
-            if (object.Equals(storage, value)) return false;
+            if (Equals(storage, value)) return false;
 
             storage = value;
-            this.OnPropertyChanged(propertyName);
+            OnPropertyChanged(propertyName);
             return true;
         }
 
@@ -45,7 +45,7 @@ namespace FractalGen.UI.Store.Common
         /// that support <see cref="CallerMemberNameAttribute"/>.</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var eventHandler = this.PropertyChanged;
+            var eventHandler = PropertyChanged;
             if (eventHandler != null)
             {
                 eventHandler(this, new PropertyChangedEventArgs(propertyName));

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FractalGen.Core.Services
 {
@@ -22,27 +19,36 @@ namespace FractalGen.Core.Services
             // C/C++ Macro HSV to RGB
 
             double H = h;
-            while (H < 0) { H += 360; };
-            while (H >= 360) { H -= 360; };
+            while (H < 0)
+            {
+                H += 360;
+            }
+            ;
+            while (H >= 360)
+            {
+                H -= 360;
+            }
+            ;
             double R, G, B;
             if (V <= 0)
-            { R = G = B = 0; }
+            {
+                R = G = B = 0;
+            }
             else if (S <= 0)
             {
                 R = G = B = V;
             }
             else
             {
-                double hf = H / 60.0;
-                int i = (int)Math.Floor(hf);
+                double hf = H/60.0;
+                var i = (int) Math.Floor(hf);
                 double f = hf - i;
-                double pv = V * (1 - S);
-                double qv = V * (1 - S * f);
-                double tv = V * (1 - S * (1 - f));
+                double pv = V*(1 - S);
+                double qv = V*(1 - S*f);
+                double tv = V*(1 - S*(1 - f));
                 switch (i)
                 {
-
-                    // Red is the dominant color
+                        // Red is the dominant color
 
                     case 0:
                         R = V;
@@ -50,7 +56,7 @@ namespace FractalGen.Core.Services
                         B = pv;
                         break;
 
-                    // Green is the dominant color
+                        // Green is the dominant color
 
                     case 1:
                         R = qv;
@@ -63,7 +69,7 @@ namespace FractalGen.Core.Services
                         B = tv;
                         break;
 
-                    // Blue is the dominant color
+                        // Blue is the dominant color
 
                     case 3:
                         R = pv;
@@ -76,7 +82,7 @@ namespace FractalGen.Core.Services
                         B = V;
                         break;
 
-                    // Red is the dominant color
+                        // Red is the dominant color
 
                     case 5:
                         R = V;
@@ -84,7 +90,7 @@ namespace FractalGen.Core.Services
                         B = qv;
                         break;
 
-                    // Just in case we overshoot on our math by a little, we put these here. Since its a switch it won't slow us down at all to put these here.
+                        // Just in case we overshoot on our math by a little, we put these here. Since its a switch it won't slow us down at all to put these here.
 
                     case 6:
                         R = V;
@@ -97,7 +103,7 @@ namespace FractalGen.Core.Services
                         B = qv;
                         break;
 
-                    // The color is not defined, we should throw an error.
+                        // The color is not defined, we should throw an error.
 
                     default:
                         //LFATAL("i Value error in Pixel conversion, Value is %d", i);
@@ -105,9 +111,9 @@ namespace FractalGen.Core.Services
                         break;
                 }
             }
-            r = Clamp((int)(R * 255.0));
-            g = Clamp((int)(G * 255.0));
-            b = Clamp((int)(B * 255.0));
+            r = Clamp((int) (R*255.0));
+            g = Clamp((int) (G*255.0));
+            b = Clamp((int) (B*255.0));
         }
 
         /// <summary>

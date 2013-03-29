@@ -19,7 +19,5 @@ namespace FractalGen.Core.Services
         {
             _messenger.Publish(new TickMessage(this));
         }
-
-
     }
 }

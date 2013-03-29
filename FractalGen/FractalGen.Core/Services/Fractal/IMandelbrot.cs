@@ -4,7 +4,7 @@
     {
         bool IsScaleComplete { get; }
         bool IsLineComplete { get; }
+        ISimpleWriteableBitmap Bitmap { get; }
         void NextLine();
-        IWriteableBitmap Bitmap { get; }
     }
 }

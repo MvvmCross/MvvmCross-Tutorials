@@ -4,12 +4,13 @@ namespace FractalGen.UI.Phone.UIServices
 {
     public class DisplayDimensionsService : IDisplayDimensionsService
     {
-        public int Height { get; private set; }
-        public int Width { get; private set; }
-
         public DisplayDimensionsService()
         {
-            Height = Width = 440;
+            Height = 800;
+            Width = 480;
         }
+
+        public int Height { get; set; }
+        public int Width { get; set; }
     }
 }

@@ -2,11 +2,12 @@ namespace FractalGen.Core.Services
 {
     public class MandelbrotGenerator : IMandelbrotGenerator
     {
-        private readonly IInterestingPointGenerator _pointGenerator;
         private readonly IColorArrayGenerator _colorArrayGenerator;
+        private readonly IInterestingPointGenerator _pointGenerator;
         private readonly IWriteableBitmapGenerator _writeableBitmapGenerator;
 
-        public MandelbrotGenerator(IInterestingPointGenerator pointGenerator, IColorArrayGenerator colorArrayGenerator, IWriteableBitmapGenerator writeableBitmapGenerator)
+        public MandelbrotGenerator(IInterestingPointGenerator pointGenerator, IColorArrayGenerator colorArrayGenerator,
+                                   IWriteableBitmapGenerator writeableBitmapGenerator)
         {
             _writeableBitmapGenerator = writeableBitmapGenerator;
             _pointGenerator = pointGenerator;

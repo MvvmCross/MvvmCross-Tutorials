@@ -9,14 +9,24 @@ namespace FractalGen.UI.Droid.Views
 {
     public class CustomImageTargetBinding : MvxAndroidTargetBinding
     {
+        public CustomImageTargetBinding(ImageView target)
+            : base(target)
+        {
+        }
+
         protected ImageView ImageView
         {
             get { return (ImageView) base.Target; }
         }
 
-        public CustomImageTargetBinding(ImageView target)
-            : base(target)
+        public override Type TargetType
         {
+            get { return typeof (ISimpleWriteableBitmap); }
+        }
+
+        public override MvxBindingMode DefaultMode
+        {
+            get { return MvxBindingMode.OneWay; }
         }
 
         public override void SetValue(object value)
@@ -28,19 +38,9 @@ namespace FractalGen.UI.Droid.Views
             if (value == null)
                 return;
 
-            var writable = (IWriteableBitmap) value;
+            var writable = (ISimpleWriteableBitmap) value;
             var bitmap = Bitmap.CreateBitmap(writable.Pixels, writable.Width, writable.Height, Bitmap.Config.Argb4444);
             target.SetImageBitmap(bitmap);
-        }
-
-        public override Type TargetType
-        {
-            get { return typeof(IWriteableBitmap); }
-        }
-
-        public override MvxBindingMode DefaultMode
-        {
-            get { return MvxBindingMode.OneWay; }
         }
     }
 }

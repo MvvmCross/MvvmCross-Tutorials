@@ -21,27 +21,20 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <!--ContentPanel - place additional content here-->
+        <Image Grid.Row="0" Grid.RowSpan="2"  Source="{Binding Bitmap, Converter={StaticResource BytesToBitmap}}" Height="800" Width="480"></Image>
+        
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Fractals" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox ItemsSource="{Binding Bitmaps}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Image Source="{Binding Converter={StaticResource BytesToBitmap}}" Height="440" Width="440"></Image>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </Grid>
     </Grid>
 <views:MvxPhonePage.ApplicationBar>
         <shell:ApplicationBar >
             <shell:ApplicationBar.Buttons>
-                <shell:ApplicationBarIconButton IconUri="notExist" Text="aaa" Click="RefreshButton_OnClick"></shell:ApplicationBarIconButton>
+                <shell:ApplicationBarIconButton IconUri="/assets/appbar.refresh.png" Text="refresh" Click="RefreshButton_OnClick"></shell:ApplicationBarIconButton>
+                <shell:ApplicationBarIconButton IconUri="/assets/appbar.timer.png" Text="autoplay?" Click="RestartButton_OnClick"></shell:ApplicationBarIconButton>
             </shell:ApplicationBar.Buttons>
         </shell:ApplicationBar>
     </views:MvxPhonePage.ApplicationBar>

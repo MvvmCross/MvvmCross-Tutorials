@@ -1,15 +1,17 @@
 ﻿using FractalGen.Core.Services;
+using Windows.UI.Xaml;
 
 namespace FractalGen.UI.Store.UIServices
 {
     public class DisplayDimensionsService : IDisplayDimensionsService
     {
-        public int Height { get; private set; }
-        public int Width { get; private set; }
-
         public DisplayDimensionsService()
         {
-            Height = Width = 800;
+            Height = (int) (Window.Current.Bounds.Height);
+            Width = (int) (Window.Current.Bounds.Width);
         }
+
+        public int Height { get; set; }
+        public int Width { get; set; }
     }
 }

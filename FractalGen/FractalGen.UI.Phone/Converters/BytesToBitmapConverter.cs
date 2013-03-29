@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Media.Imaging;
 using FractalGen.Core.Services;
-using WriteableBitmap = System.Windows.Media.Imaging.WriteableBitmap;
 
 namespace FractalGen.UI.Phone.Converters
 {
@@ -10,7 +10,7 @@ namespace FractalGen.UI.Phone.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var bytes = (IWriteableBitmap) value;
+            var bytes = (ISimpleWriteableBitmap) value;
             if (bytes == null)
                 return null;
 

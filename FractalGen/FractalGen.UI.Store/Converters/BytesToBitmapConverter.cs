@@ -3,21 +3,22 @@ using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using FractalGen.Core.Services;
 using Windows.UI.Xaml.Data;
-using WriteableBitmap = Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
+using Windows.UI.Xaml.Media.Imaging;
 
-namespace FractalGen.UI.Phone.Converters
+namespace FractalGen.UI.Store.Converters
 {
     public class BytesToBitmapConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var bytes = (IWriteableBitmap)value;
-            if (bytes == null)
+            var writeableBitmap = (ISimpleWriteableBitmap) value;
+            if (writeableBitmap == null)
                 return null;
 
-            var byteArray = new byte[bytes.Pixels.Length*4];
-            Buffer.BlockCopy(bytes.Pixels, 0, byteArray, 0, byteArray.Length);
-            var toReturn = new WriteableBitmap(bytes.Width, bytes.Height);
+            var byteArray = new byte[writeableBitmap.Pixels.Length*4];
+            Buffer.BlockCopy(writeableBitmap.Pixels, 0, byteArray, 0, byteArray.Length);
+            var toReturn = new WriteableBitmap(writeableBitmap.Width, writeableBitmap.Height);
+
             var pixelStream = toReturn.PixelBuffer.AsStream();
             pixelStream.Seek(0, SeekOrigin.Begin);
             pixelStream.Write(byteArray, 0, byteArray.Length);

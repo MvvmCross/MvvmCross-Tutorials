@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using Cirrious.MvvmCross.WindowsStore.Views;
-using Windows.Foundation;
+using Windows.ApplicationModel;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
 namespace FractalGen.UI.Store.Common
 {
@@ -34,15 +34,15 @@ namespace FractalGen.UI.Store.Common
     /// </item>
     /// </list>
     /// </summary>
-    [Windows.Foundation.Metadata.WebHostHidden]
+    [WebHostHidden]
     public class LayoutAwarePage : MvxStorePage
     {
         /// <summary>
         /// Identifies the <see cref="DefaultViewModel"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty DefaultViewModelProperty =
-            DependencyProperty.Register("DefaultViewModel", typeof(IObservableMap<String, Object>),
-            typeof(LayoutAwarePage), null);
+            DependencyProperty.Register("DefaultViewModel", typeof (IObservableMap<String, Object>),
+                                        typeof (LayoutAwarePage), null);
 
         private List<Control> _layoutAwareControls;
 
@@ -51,39 +51,39 @@ namespace FractalGen.UI.Store.Common
         /// </summary>
         public LayoutAwarePage()
         {
-            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled) return;
+            if (DesignMode.DesignModeEnabled) return;
 
             // Create an empty default view model
-            this.DefaultViewModel = new ObservableDictionary<String, Object>();
+            DefaultViewModel = new ObservableDictionary<String, Object>();
 
             // When this page is part of the visual tree make two changes:
             // 1) Map application view state to visual state for the page
             // 2) Handle keyboard and mouse navigation requests
-            this.Loaded += (sender, e) =>
-            {
-                this.StartLayoutUpdates(sender, e);
-
-                // Keyboard and mouse navigation only apply when occupying the entire window
-                if (this.ActualHeight == Window.Current.Bounds.Height &&
-                    this.ActualWidth == Window.Current.Bounds.Width)
+            Loaded += (sender, e) =>
                 {
-                    // Listen to the window directly so focus isn't required
-                    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
-                        CoreDispatcher_AcceleratorKeyActivated;
-                    Window.Current.CoreWindow.PointerPressed +=
-                        this.CoreWindow_PointerPressed;
-                }
-            };
+                    StartLayoutUpdates(sender, e);
+
+                    // Keyboard and mouse navigation only apply when occupying the entire window
+                    if (ActualHeight == Window.Current.Bounds.Height &&
+                        ActualWidth == Window.Current.Bounds.Width)
+                    {
+                        // Listen to the window directly so focus isn't required
+                        Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
+                            CoreDispatcher_AcceleratorKeyActivated;
+                        Window.Current.CoreWindow.PointerPressed +=
+                            CoreWindow_PointerPressed;
+                    }
+                };
 
             // Undo the same changes when the page is no longer visible
-            this.Unloaded += (sender, e) =>
-            {
-                this.StopLayoutUpdates(sender, e);
-                Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated -=
-                    CoreDispatcher_AcceleratorKeyActivated;
-                Window.Current.CoreWindow.PointerPressed -=
-                    this.CoreWindow_PointerPressed;
-            };
+            Unloaded += (sender, e) =>
+                {
+                    StopLayoutUpdates(sender, e);
+                    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated -=
+                        CoreDispatcher_AcceleratorKeyActivated;
+                    Window.Current.CoreWindow.PointerPressed -=
+                        CoreWindow_PointerPressed;
+                };
         }
 
         /// <summary>
@@ -92,15 +92,9 @@ namespace FractalGen.UI.Store.Common
         /// </summary>
         protected IObservableMap<String, Object> DefaultViewModel
         {
-            get
-            {
-                return this.GetValue(DefaultViewModelProperty) as IObservableMap<String, Object>;
-            }
+            get { return GetValue(DefaultViewModelProperty) as IObservableMap<String, Object>; }
 
-            set
-            {
-                this.SetValue(DefaultViewModelProperty, value);
-            }
+            set { SetValue(DefaultViewModelProperty, value); }
         }
 
         #region Navigation support
@@ -114,9 +108,9 @@ namespace FractalGen.UI.Store.Common
         protected virtual void GoHome(object sender, RoutedEventArgs e)
         {
             // Use the navigation frame to return to the topmost page
-            if (this.Frame != null)
+            if (Frame != null)
             {
-                while (this.Frame.CanGoBack) this.Frame.GoBack();
+                while (Frame.CanGoBack) Frame.GoBack();
             }
         }
 
@@ -130,7 +124,7 @@ namespace FractalGen.UI.Store.Common
         protected virtual void GoBack(object sender, RoutedEventArgs e)
         {
             // Use the navigation frame to return to the previous page
-            if (this.Frame != null && this.Frame.CanGoBack) this.Frame.GoBack();
+            if (Frame != null && Frame.CanGoBack) Frame.GoBack();
         }
 
         /// <summary>
@@ -143,7 +137,7 @@ namespace FractalGen.UI.Store.Common
         protected virtual void GoForward(object sender, RoutedEventArgs e)
         {
             // Use the navigation frame to move to the next page
-            if (this.Frame != null && this.Frame.CanGoForward) this.Frame.GoForward();
+            if (Frame != null && Frame.CanGoForward) Frame.GoForward();
         }
 
         /// <summary>
@@ -154,16 +148,16 @@ namespace FractalGen.UI.Store.Common
         /// <param name="sender">Instance that triggered the event.</param>
         /// <param name="args">Event data describing the conditions that led to the event.</param>
         private void CoreDispatcher_AcceleratorKeyActivated(CoreDispatcher sender,
-            AcceleratorKeyEventArgs args)
+                                                            AcceleratorKeyEventArgs args)
         {
             var virtualKey = args.VirtualKey;
 
             // Only investigate further when Left, Right, or the dedicated Previous or Next keys
             // are pressed
             if ((args.EventType == CoreAcceleratorKeyEventType.SystemKeyDown ||
-                args.EventType == CoreAcceleratorKeyEventType.KeyDown) &&
+                 args.EventType == CoreAcceleratorKeyEventType.KeyDown) &&
                 (virtualKey == VirtualKey.Left || virtualKey == VirtualKey.Right ||
-                (int)virtualKey == 166 || (int)virtualKey == 167))
+                 (int) virtualKey == 166 || (int) virtualKey == 167))
             {
                 var coreWindow = Window.Current.CoreWindow;
                 var downState = CoreVirtualKeyStates.Down;
@@ -173,19 +167,19 @@ namespace FractalGen.UI.Store.Common
                 bool noModifiers = !menuKey && !controlKey && !shiftKey;
                 bool onlyAlt = menuKey && !controlKey && !shiftKey;
 
-                if (((int)virtualKey == 166 && noModifiers) ||
+                if (((int) virtualKey == 166 && noModifiers) ||
                     (virtualKey == VirtualKey.Left && onlyAlt))
                 {
                     // When the previous key or Alt+Left are pressed navigate back
                     args.Handled = true;
-                    this.GoBack(this, new RoutedEventArgs());
+                    GoBack(this, new RoutedEventArgs());
                 }
-                else if (((int)virtualKey == 167 && noModifiers) ||
-                    (virtualKey == VirtualKey.Right && onlyAlt))
+                else if (((int) virtualKey == 167 && noModifiers) ||
+                         (virtualKey == VirtualKey.Right && onlyAlt))
                 {
                     // When the next key or Alt+Right are pressed navigate forward
                     args.Handled = true;
-                    this.GoForward(this, new RoutedEventArgs());
+                    GoForward(this, new RoutedEventArgs());
                 }
             }
         }
@@ -198,7 +192,7 @@ namespace FractalGen.UI.Store.Common
         /// <param name="sender">Instance that triggered the event.</param>
         /// <param name="args">Event data describing the conditions that led to the event.</param>
         private void CoreWindow_PointerPressed(CoreWindow sender,
-            PointerEventArgs args)
+                                               PointerEventArgs args)
         {
             var properties = args.CurrentPoint.Properties;
 
@@ -212,8 +206,8 @@ namespace FractalGen.UI.Store.Common
             if (backPressed ^ forwardPressed)
             {
                 args.Handled = true;
-                if (backPressed) this.GoBack(this, new RoutedEventArgs());
-                if (forwardPressed) this.GoForward(this, new RoutedEventArgs());
+                if (backPressed) GoBack(this, new RoutedEventArgs());
+                if (forwardPressed) GoForward(this, new RoutedEventArgs());
             }
         }
 
@@ -242,13 +236,13 @@ namespace FractalGen.UI.Store.Common
         {
             var control = sender as Control;
             if (control == null) return;
-            if (this._layoutAwareControls == null)
+            if (_layoutAwareControls == null)
             {
                 // Start listening to view state changes when there are controls interested in updates
-                Window.Current.SizeChanged += this.WindowSizeChanged;
-                this._layoutAwareControls = new List<Control>();
+                Window.Current.SizeChanged += WindowSizeChanged;
+                _layoutAwareControls = new List<Control>();
             }
-            this._layoutAwareControls.Add(control);
+            _layoutAwareControls.Add(control);
 
             // Set the initial visual state of the control
             VisualStateManager.GoToState(control, DetermineVisualState(ApplicationView.Value), false);
@@ -256,7 +250,7 @@ namespace FractalGen.UI.Store.Common
 
         private void WindowSizeChanged(object sender, WindowSizeChangedEventArgs e)
         {
-            this.InvalidateVisualState();
+            InvalidateVisualState();
         }
 
         /// <summary>
@@ -273,13 +267,13 @@ namespace FractalGen.UI.Store.Common
         public void StopLayoutUpdates(object sender, RoutedEventArgs e)
         {
             var control = sender as Control;
-            if (control == null || this._layoutAwareControls == null) return;
-            this._layoutAwareControls.Remove(control);
-            if (this._layoutAwareControls.Count == 0)
+            if (control == null || _layoutAwareControls == null) return;
+            _layoutAwareControls.Remove(control);
+            if (_layoutAwareControls.Count == 0)
             {
                 // Stop listening to view state changes when no controls are interested in updates
-                this._layoutAwareControls = null;
-                Window.Current.SizeChanged -= this.WindowSizeChanged;
+                _layoutAwareControls = null;
+                Window.Current.SizeChanged -= WindowSizeChanged;
             }
         }
 
@@ -308,10 +302,10 @@ namespace FractalGen.UI.Store.Common
         /// </remarks>
         public void InvalidateVisualState()
         {
-            if (this._layoutAwareControls != null)
+            if (_layoutAwareControls != null)
             {
                 string visualState = DetermineVisualState(ApplicationView.Value);
-                foreach (var layoutAwareControl in this._layoutAwareControls)
+                foreach (var layoutAwareControl in _layoutAwareControls)
                 {
                     VisualStateManager.GoToState(layoutAwareControl, visualState, false);
                 }
@@ -353,20 +347,116 @@ namespace FractalGen.UI.Store.Common
         /// </summary>
         private class ObservableDictionary<K, V> : IObservableMap<K, V>
         {
-            private class ObservableDictionaryChangedEventArgs : IMapChangedEventArgs<K>
-            {
-                public ObservableDictionaryChangedEventArgs(CollectionChange change, K key)
-                {
-                    this.CollectionChange = change;
-                    this.Key = key;
-                }
+            private readonly Dictionary<K, V> _dictionary = new Dictionary<K, V>();
+            public event MapChangedEventHandler<K, V> MapChanged;
 
-                public CollectionChange CollectionChange { get; private set; }
-                public K Key { get; private set; }
+            public void Add(K key, V value)
+            {
+                _dictionary.Add(key, value);
+                InvokeMapChanged(CollectionChange.ItemInserted, key);
             }
 
-            private Dictionary<K, V> _dictionary = new Dictionary<K, V>();
-            public event MapChangedEventHandler<K, V> MapChanged;
+            public void Add(KeyValuePair<K, V> item)
+            {
+                Add(item.Key, item.Value);
+            }
+
+            public bool Remove(K key)
+            {
+                if (_dictionary.Remove(key))
+                {
+                    InvokeMapChanged(CollectionChange.ItemRemoved, key);
+                    return true;
+                }
+                return false;
+            }
+
+            public bool Remove(KeyValuePair<K, V> item)
+            {
+                V currentValue;
+                if (_dictionary.TryGetValue(item.Key, out currentValue) &&
+                    Equals(item.Value, currentValue) && _dictionary.Remove(item.Key))
+                {
+                    InvokeMapChanged(CollectionChange.ItemRemoved, item.Key);
+                    return true;
+                }
+                return false;
+            }
+
+            public V this[K key]
+            {
+                get { return _dictionary[key]; }
+                set
+                {
+                    _dictionary[key] = value;
+                    InvokeMapChanged(CollectionChange.ItemChanged, key);
+                }
+            }
+
+            public void Clear()
+            {
+                var priorKeys = _dictionary.Keys.ToArray();
+                _dictionary.Clear();
+                foreach (var key in priorKeys)
+                {
+                    InvokeMapChanged(CollectionChange.ItemRemoved, key);
+                }
+            }
+
+            public ICollection<K> Keys
+            {
+                get { return _dictionary.Keys; }
+            }
+
+            public bool ContainsKey(K key)
+            {
+                return _dictionary.ContainsKey(key);
+            }
+
+            public bool TryGetValue(K key, out V value)
+            {
+                return _dictionary.TryGetValue(key, out value);
+            }
+
+            public ICollection<V> Values
+            {
+                get { return _dictionary.Values; }
+            }
+
+            public bool Contains(KeyValuePair<K, V> item)
+            {
+                return _dictionary.Contains(item);
+            }
+
+            public int Count
+            {
+                get { return _dictionary.Count; }
+            }
+
+            public bool IsReadOnly
+            {
+                get { return false; }
+            }
+
+            public IEnumerator<KeyValuePair<K, V>> GetEnumerator()
+            {
+                return _dictionary.GetEnumerator();
+            }
+
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return _dictionary.GetEnumerator();
+            }
+
+            public void CopyTo(KeyValuePair<K, V>[] array, int arrayIndex)
+            {
+                int arraySize = array.Length;
+                foreach (var pair in _dictionary)
+                {
+                    if (arrayIndex >= arraySize) break;
+                    array[arrayIndex++] = pair;
+                }
+            }
 
             private void InvokeMapChanged(CollectionChange change, K key)
             {
@@ -377,115 +467,16 @@ namespace FractalGen.UI.Store.Common
                 }
             }
 
-            public void Add(K key, V value)
+            private class ObservableDictionaryChangedEventArgs : IMapChangedEventArgs<K>
             {
-                this._dictionary.Add(key, value);
-                this.InvokeMapChanged(CollectionChange.ItemInserted, key);
-            }
-
-            public void Add(KeyValuePair<K, V> item)
-            {
-                this.Add(item.Key, item.Value);
-            }
-
-            public bool Remove(K key)
-            {
-                if (this._dictionary.Remove(key))
+                public ObservableDictionaryChangedEventArgs(CollectionChange change, K key)
                 {
-                    this.InvokeMapChanged(CollectionChange.ItemRemoved, key);
-                    return true;
+                    CollectionChange = change;
+                    Key = key;
                 }
-                return false;
-            }
 
-            public bool Remove(KeyValuePair<K, V> item)
-            {
-                V currentValue;
-                if (this._dictionary.TryGetValue(item.Key, out currentValue) &&
-                    Object.Equals(item.Value, currentValue) && this._dictionary.Remove(item.Key))
-                {
-                    this.InvokeMapChanged(CollectionChange.ItemRemoved, item.Key);
-                    return true;
-                }
-                return false;
-            }
-
-            public V this[K key]
-            {
-                get
-                {
-                    return this._dictionary[key];
-                }
-                set
-                {
-                    this._dictionary[key] = value;
-                    this.InvokeMapChanged(CollectionChange.ItemChanged, key);
-                }
-            }
-
-            public void Clear()
-            {
-                var priorKeys = this._dictionary.Keys.ToArray();
-                this._dictionary.Clear();
-                foreach (var key in priorKeys)
-                {
-                    this.InvokeMapChanged(CollectionChange.ItemRemoved, key);
-                }
-            }
-
-            public ICollection<K> Keys
-            {
-                get { return this._dictionary.Keys; }
-            }
-
-            public bool ContainsKey(K key)
-            {
-                return this._dictionary.ContainsKey(key);
-            }
-
-            public bool TryGetValue(K key, out V value)
-            {
-                return this._dictionary.TryGetValue(key, out value);
-            }
-
-            public ICollection<V> Values
-            {
-                get { return this._dictionary.Values; }
-            }
-
-            public bool Contains(KeyValuePair<K, V> item)
-            {
-                return this._dictionary.Contains(item);
-            }
-
-            public int Count
-            {
-                get { return this._dictionary.Count; }
-            }
-
-            public bool IsReadOnly
-            {
-                get { return false; }
-            }
-
-            public IEnumerator<KeyValuePair<K, V>> GetEnumerator()
-            {
-                return this._dictionary.GetEnumerator();
-            }
-
-            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-            {
-                return this._dictionary.GetEnumerator();
-            }
-
-            public void CopyTo(KeyValuePair<K, V>[] array, int arrayIndex)
-            {
-                int arraySize = array.Length;
-                foreach (var pair in this._dictionary)
-                {
-                    if (arrayIndex >= arraySize) break;
-                    array[arrayIndex++] = pair;
-                }
+                public CollectionChange CollectionChange { get; private set; }
+                public K Key { get; private set; }
             }
         }
     }

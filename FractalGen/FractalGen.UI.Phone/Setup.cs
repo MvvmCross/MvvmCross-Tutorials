@@ -1,4 +1,6 @@
 ﻿using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore.Plugins;
+using Cirrious.MvvmCross.Plugins.Json;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
@@ -18,7 +20,7 @@ namespace FractalGen.UI.Phone
 
         protected override void InitializeFirstChance()
         {
-            this.CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
+            CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
             base.InitializeFirstChance();
         }
 
@@ -27,9 +29,9 @@ namespace FractalGen.UI.Phone
             return new MvxJsonNavigationSerializer();
         }
 
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

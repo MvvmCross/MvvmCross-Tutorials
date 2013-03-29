@@ -45,7 +45,7 @@
     <Compile Include="Services\Fractal\IHSVConverter.cs" />
     <Compile Include="Services\Fractal\IInterestingPointGenerator.cs" />
     <Compile Include="Services\Fractal\IMandelbrot.cs" />
-    <Compile Include="Services\Fractal\IWriteableBitmap.cs" />
+    <Compile Include="Services\Fractal\ISimpleWriteableBitmap.cs" />
     <Compile Include="Services\Fractal\IWriteableBitmapGenerator.cs" />
     <Compile Include="Services\Fractal\Limits.cs" />
     <Compile Include="Services\Fractal\Mandelbrot.cs" />
@@ -53,9 +53,10 @@
     <Compile Include="Services\Fractal\MandelbrotGenerator.cs" />
     <Compile Include="Services\ITimerService.cs" />
     <Compile Include="Services\TimerService.cs" />
-    <Compile Include="Services\Fractal\WriteableBitmap.cs" />
+    <Compile Include="Services\Fractal\SimpleWriteableBitmap.cs" />
     <Compile Include="Services\Fractal\WriteableBitmapGenerator.cs" />
     <Compile Include="ViewModels\GenerateViewModel.cs" />
+    <Compile Include="ViewModels\MandelbrotTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">

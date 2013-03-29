@@ -9,9 +9,9 @@ namespace FractalGen.Core.Services
             _colorToIntService = colorToIntService;
         }
 
-        public IWriteableBitmap Generate(int width, int height)
+        public ISimpleWriteableBitmap Generate(int width, int height)
         {
-            return new WriteableBitmap(_colorToIntService, width, height);
+            return new SimpleWriteableBitmap(_colorToIntService, width, height);
         }
     }
 }

@@ -2,12 +2,12 @@
 
 namespace FractalGen.Core.Services
 {
-    public interface IWriteableBitmap
+    public interface ISimpleWriteableBitmap
     {
-        IWriteableBitmap Clone();
         int[] Pixels { get; }
         int Height { get; }
         int Width { get; }
+        ISimpleWriteableBitmap Clone();
         void FillRectangle(int fromX, int fromY, int toX, int toY, MvxColor color);
     }
 }

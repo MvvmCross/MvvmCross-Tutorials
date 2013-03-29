@@ -1,9 +1,12 @@
 ﻿using Android.Content;
 using Android.Widget;
 using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
 using Cirrious.MvvmCross.Droid.Platform;
+using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
+using FractalGen.Core;
 using FractalGen.UI.Droid.Views;
 
 namespace FractalGen.UI.Droid
@@ -16,16 +19,16 @@ namespace FractalGen.UI.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new App();
         }
 
         protected override void InitializeFirstChance()
         {
-            this.CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
+            CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
             base.InitializeFirstChance();
         }
 
-        protected override void FillTargetFactories(Cirrious.MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
             registry.RegisterFactory(new MvxCustomBindingFactory<ImageView>("Special",
                                                                             imageView =>
@@ -33,9 +36,9 @@ namespace FractalGen.UI.Droid
             base.FillTargetFactories(registry);
         }
 
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

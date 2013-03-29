@@ -71,9 +71,6 @@ namespace FractalGen.UI.Droid
 			// aapt resource value: 0x7f040001
 			public const int MyButton = 2130968577;
 			
-			// aapt resource value: 0x7f040002
-			public const int TheList = 2130968578;
-			
 			private Id()
 			{
 			}
@@ -83,13 +80,10 @@ namespace FractalGen.UI.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Item_Bitmap = 2130903040;
+			public const int Main = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int View_Generate = 2130903042;
+			public const int View_Generate = 2130903041;
 			
 			private Layout()
 			{

@@ -4,7 +4,7 @@ namespace FractalGen.Core.Services
 {
     public class TickMessage : MvxMessage
     {
-        public TickMessage(object sender) 
+        public TickMessage(object sender)
             : base(sender)
         {
         }

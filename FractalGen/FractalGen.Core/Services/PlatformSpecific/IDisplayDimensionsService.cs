@@ -2,7 +2,7 @@
 {
     public interface IDisplayDimensionsService
     {
-        int Height { get; }
-        int Width { get; }
+        int Height { get; set; }
+        int Width { get; set; }
     }
 }

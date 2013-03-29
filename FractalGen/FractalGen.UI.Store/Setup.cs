@@ -1,4 +1,6 @@
 ﻿using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore.Plugins;
+using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsStore.Platform;
 using Windows.UI.Xaml.Controls;
@@ -18,13 +20,13 @@ namespace FractalGen.UI.Store
 
         protected override void InitializeFirstChance()
         {
-            this.CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
+            CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
             base.InitializeFirstChance();
         }
 
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }
