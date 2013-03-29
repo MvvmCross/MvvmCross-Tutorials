@@ -2,6 +2,7 @@ using System;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Collections.Core.ViewModels.Samples.ListItems;
 using MonoTouch.Foundation;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Collections.Touch
 {

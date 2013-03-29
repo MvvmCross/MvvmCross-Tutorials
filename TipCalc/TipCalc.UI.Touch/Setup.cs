@@ -1,5 +1,7 @@
 using Cirrious.MvvmCross.ViewModels;
 using TipCalc.Core;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
 
 namespace TipCalc.UI.Touch
 {

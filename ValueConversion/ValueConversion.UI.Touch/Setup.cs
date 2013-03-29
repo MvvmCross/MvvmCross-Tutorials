@@ -4,13 +4,16 @@ using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Plugins.Color;
 using Cirrious.MvvmCross.ViewModels;
 using ValueConversion.Core;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
+using Cirrious.MvvmCross.Plugins.Visibility;
 
 namespace ValueConversion.UI.Touch
 {
     public class Setup : MvxTouchSetup
     {
-        public Setup(MvxApplicationDelegate dele, IMvxTouchViewPresenter presenter)
-            : base(dele, presenter)
+        public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
+			: base(applicationDelegate, presenter)
         {
         }
 
@@ -19,8 +22,8 @@ namespace ValueConversion.UI.Touch
             get
             {
                 var toReturn = base.ValueConverterAssemblies;
-                toReturn.Add(typeof (MvxNativeColorConverter).Assembly);
-                toReturn.Add(typeof (MvxVisibilityConverter).Assembly);
+                toReturn.Add(typeof (MvxNativeColorValueConverter).Assembly);
+                toReturn.Add(typeof (MvxVisibilityValueConverter).Assembly);
                 return toReturn;
             }
         }
@@ -39,7 +42,7 @@ namespace ValueConversion.UI.Touch
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<PluginLoader>();
+			pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Color.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

@@ -121,10 +121,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ValueConversion_UI_TouchViewController.cs" />
-    <Compile Include="ValueConversion_UI_TouchViewController.designer.cs">
-      <DependentUpon>ValueConversion_UI_TouchViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\DatesView.cs" />
@@ -149,7 +145,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="ValueConversion_UI_TouchViewController.xib" />
     <InterfaceDefinition Include="Views\DatesView.xib" />
     <InterfaceDefinition Include="Views\ColorsView.xib" />
     <InterfaceDefinition Include="Views\VisibilityView.xib" />

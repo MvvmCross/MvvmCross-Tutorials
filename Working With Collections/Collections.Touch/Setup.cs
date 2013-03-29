@@ -2,6 +2,8 @@ using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Plugins.DownloadCache;
 using Cirrious.MvvmCross.ViewModels;
 using Collections.Core;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
 
 namespace Collections.Touch
 {

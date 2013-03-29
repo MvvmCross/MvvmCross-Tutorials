@@ -145,11 +145,11 @@
     <Compile Include="Views\Samples\LargeFixedView.cs" />
     <Compile Include="Views\Samples\LargeDynamicView.cs" />
     <Compile Include="Views\Samples\SmallDynamicView.cs" />
-    <Compile Include="Views\Samples\PolymorphicListItemView.cs" />
     <Compile Include="Views\Samples\SpecificPositionsView.cs" />
     <Compile Include="Views\Samples\SpecificPositionsView.designer.cs">
       <DependentUpon>SpecificPositionsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Samples\PolymorphicListItemTypesView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
