@@ -1,4 +1,4 @@
-﻿namespace FractalGen.Core.Services
+﻿namespace FractalGen.Core.Services.Fractal
 {
     public interface IInterestingPointGenerator
     {

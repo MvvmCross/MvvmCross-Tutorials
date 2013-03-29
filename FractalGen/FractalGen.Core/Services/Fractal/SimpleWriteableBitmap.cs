@@ -1,7 +1,8 @@
 ﻿using System;
 using Cirrious.CrossCore.UI;
+using FractalGen.Core.Services.PlatformSpecific;
 
-namespace FractalGen.Core.Services
+namespace FractalGen.Core.Services.Fractal
 {
     public class SimpleWriteableBitmap : ISimpleWriteableBitmap
     {

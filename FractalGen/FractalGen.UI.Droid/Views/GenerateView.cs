@@ -4,7 +4,7 @@ using Android.OS;
 using Android.Views;
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.Droid.Views;
-using FractalGen.Core.Services;
+using FractalGen.Core.Services.PlatformSpecific;
 using FractalGen.Core.ViewModels;
 using FractalGen.UI.Droid.UIServices;
 

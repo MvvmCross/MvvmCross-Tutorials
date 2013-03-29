@@ -1,4 +1,6 @@
-namespace FractalGen.Core.Services
+using FractalGen.Core.Services.PlatformSpecific;
+
+namespace FractalGen.Core.Services.Fractal
 {
     public class WriteableBitmapGenerator : IWriteableBitmapGenerator
     {

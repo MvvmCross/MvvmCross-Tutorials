@@ -1,6 +1,6 @@
 ﻿using Cirrious.CrossCore.UI;
 
-namespace FractalGen.Core.Services
+namespace FractalGen.Core.Services.PlatformSpecific
 {
     public interface IMvxColorToIntService
     {

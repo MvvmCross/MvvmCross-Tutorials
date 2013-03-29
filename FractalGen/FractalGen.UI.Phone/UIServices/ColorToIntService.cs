@@ -1,5 +1,5 @@
 ﻿using Cirrious.CrossCore.UI;
-using FractalGen.Core.Services;
+using FractalGen.Core.Services.PlatformSpecific;
 
 namespace FractalGen.UI.Phone.UIServices
 {

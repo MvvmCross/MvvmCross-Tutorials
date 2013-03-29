@@ -1,4 +1,4 @@
-﻿namespace FractalGen.Core.Services
+﻿namespace FractalGen.Core.Services.PlatformSpecific
 {
     public interface IDisplayDimensionsService
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using FractalGen.Core.Services;
+using FractalGen.Core.Services.Fractal;
 
 namespace FractalGen.Core.ViewModels
 {

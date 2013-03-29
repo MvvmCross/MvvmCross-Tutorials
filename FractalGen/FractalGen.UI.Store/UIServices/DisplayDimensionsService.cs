@@ -1,4 +1,4 @@
-﻿using FractalGen.Core.Services;
+﻿using FractalGen.Core.Services.PlatformSpecific;
 using Windows.UI.Xaml;
 
 namespace FractalGen.UI.Store.UIServices

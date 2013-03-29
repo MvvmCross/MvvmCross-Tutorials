@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FractalGen.Core.Services
+namespace FractalGen.Core.Services.Fractal
 {
     public class InterestingPointGenerator : IInterestingPointGenerator
     {

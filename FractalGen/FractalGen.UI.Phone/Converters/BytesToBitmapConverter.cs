@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
-using FractalGen.Core.Services;
+using FractalGen.Core.Services.Fractal;
 
 namespace FractalGen.UI.Phone.Converters
 {

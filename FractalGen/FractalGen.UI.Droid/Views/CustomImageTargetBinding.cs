@@ -3,7 +3,7 @@ using Android.Graphics;
 using Android.Widget;
 using Cirrious.MvvmCross.Binding;
 using Cirrious.MvvmCross.Binding.Droid.Target;
-using FractalGen.Core.Services;
+using FractalGen.Core.Services.Fractal;
 
 namespace FractalGen.UI.Droid.Views
 {
