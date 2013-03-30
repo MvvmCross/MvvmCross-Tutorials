@@ -7,7 +7,7 @@ using Microsoft.Phone.Shell;
 
 namespace FractalGen.UI.Phone.Views
 {
-    // NOTE - the non-bindabl app bar here is easy to workaround - but not done here in order to 
+    // NOTE - the non-bindable app bar here is easy to workaround - but not done here in order to 
     //       minimise code dependencies
     public partial class GenerateView : MvxPhonePage
     {

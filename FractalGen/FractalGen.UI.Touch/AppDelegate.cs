@@ -49,6 +49,5 @@ namespace FractalGen.UI.Touch
 			return true;
 		}
 	}
-
 }
 
