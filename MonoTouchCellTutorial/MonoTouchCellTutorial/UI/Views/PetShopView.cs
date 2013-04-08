@@ -4,7 +4,6 @@ using MonoTouch.UIKit;
 using MonoTouchCellTutorial.Core.ViewModels;
 using MonoTouchCellTutorial.Core.Models.Kittens;
 using MonoTouchCellTutorial.Core.Models.Dogs;
-using System.Collections.Generic;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;

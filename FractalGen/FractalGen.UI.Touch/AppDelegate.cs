@@ -6,8 +6,8 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore;
 
 namespace FractalGen.UI.Touch
 {

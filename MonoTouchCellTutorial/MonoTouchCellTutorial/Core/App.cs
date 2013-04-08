@@ -2,6 +2,7 @@ using MonoTouchCellTutorial.Core.Interfaces;
 using MonoTouchCellTutorial.Core.Services;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore;
 
 namespace MonoTouchCellTutorial.Core
 {
