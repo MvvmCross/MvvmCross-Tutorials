@@ -161,9 +161,6 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
       <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid">
       <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
     </Reference>

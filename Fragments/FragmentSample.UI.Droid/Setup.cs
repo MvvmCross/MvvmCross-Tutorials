@@ -18,15 +18,9 @@ namespace FragmentSample.UI.Droid
             return new App();
         }
 
-        protected override IMvxNavigationSerializer CreateNavigationSerializer()
-        {
-            return new MvxJsonNavigationSerializer();
-        }
-
         public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.File.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

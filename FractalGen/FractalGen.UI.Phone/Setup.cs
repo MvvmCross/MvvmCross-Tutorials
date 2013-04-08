@@ -1,6 +1,5 @@
 ﻿using Cirrious.CrossCore.IoC;
 using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Plugins.Json;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.WindowsPhone.Platform;
 using Microsoft.Phone.Controls;
@@ -26,7 +25,6 @@ namespace FractalGen.UI.Phone
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

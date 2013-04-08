@@ -39,13 +39,7 @@ namespace FractalGen.UI.Droid
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
             base.LoadPlugins(pluginManager);
-        }
-
-        protected override IMvxNavigationSerializer CreateNavigationSerializer()
-        {
-            return new MvxJsonNavigationSerializer();
         }
     }
 }
