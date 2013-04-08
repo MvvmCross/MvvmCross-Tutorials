@@ -24,11 +24,6 @@ namespace FractalGen.UI.Phone
             base.InitializeFirstChance();
         }
 
-        protected override IMvxNavigationSerializer CreateNavigationSerializer()
-        {
-            return new MvxJsonNavigationSerializer();
-        }
-
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<PluginLoader>();

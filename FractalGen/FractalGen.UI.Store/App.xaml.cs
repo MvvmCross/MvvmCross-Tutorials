@@ -1,4 +1,4 @@
-﻿using Cirrious.CrossCore.IoC;
+﻿using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
