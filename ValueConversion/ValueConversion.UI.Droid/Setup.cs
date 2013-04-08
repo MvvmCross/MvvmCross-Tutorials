@@ -34,15 +34,9 @@ namespace ValueConversion.UI.Droid
             return new App();
         }
 
-        protected override IMvxNavigationSerializer CreateNavigationSerializer()
-        {
-            return new MvxJsonNavigationSerializer();
-        }
-
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             pluginManager.EnsurePluginLoaded<PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Json.PluginLoader>();
             pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }

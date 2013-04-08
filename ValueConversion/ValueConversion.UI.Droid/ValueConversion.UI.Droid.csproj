@@ -63,9 +63,6 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
       <HintPath>..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
       <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
     </Reference>
