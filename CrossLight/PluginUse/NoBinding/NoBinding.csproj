@@ -42,16 +42,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\lib\mvx\Portable\Debug\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.CrossCore.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Location">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Location.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />

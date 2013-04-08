@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
-using Cirrious.CrossCore.Interfaces.IoC;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using CrossLight.Framework;
 
@@ -9,7 +9,7 @@ namespace CrossLight.Views
     [Activity(Label = "CrossLight", MainLauncher = true, Icon = "@drawable/icon")]
     public class FooBarView : Activity
     {
-        private MvxBindingContext _bindingContext;
+        private MvxAndroidBindingContext _bindingContext;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -19,7 +19,7 @@ namespace CrossLight.Views
             Setup.Instance.EnsureInitialized(ApplicationContext);
             Mvx.Resolve<ITopActivity>().Activity = this;
 
-            _bindingContext = new MvxBindingContext(this, new LayoutInflaterProvider(LayoutInflater), new FooBarViewModel());
+            _bindingContext = new MvxAndroidBindingContext(this, new LayoutInflaterProvider(LayoutInflater), new FooBarViewModel());
             
             var view = _bindingContext.BindingInflate(Resource.Layout.Main, null);
             SetContentView(view);

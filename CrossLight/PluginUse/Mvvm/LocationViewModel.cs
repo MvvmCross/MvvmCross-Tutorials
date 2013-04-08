@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Windows.Input;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Plugins.Location;
-using Cirrious.CrossCore.Platform.Diagnostics;
 using Mvvm.Framework;
 
 namespace Mvvm
@@ -26,7 +26,7 @@ namespace Mvvm
             get { return _location; }
             set
             {
-				MvxTrace.Trace("Location received {0}", _location);
+				Mvx.Trace("Location received {0}", _location);
                 _location = value;
 				OnBackgroundPropertyChanged("Location");
             }

@@ -1,13 +1,12 @@
 using System;
 using Android.App;
-using Cirrious.CrossCore.Interfaces.Core;
+using Cirrious.CrossCore.Core;
 
 namespace CrossLight.Framework
 {
     public class AndroidTopActivity
         : ITopActivity
         , IMvxMainThreadDispatcher
-        , IMvxMainThreadDispatcherProvider
     {
         public Activity Activity { get; set; }
 

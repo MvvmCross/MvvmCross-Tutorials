@@ -1,5 +1,5 @@
 using Android.App;
-using Cirrious.CrossCore.Droid.Interfaces;
+using Cirrious.CrossCore.Droid.Platform;
 
 namespace NoBinding.Framework
 {

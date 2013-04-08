@@ -1,5 +1,5 @@
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.Interfaces.Views;
+using Cirrious.MvvmCross.Binding.Droid.Views;
 
 namespace Mvvm.Framework
 {

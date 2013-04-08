@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
-using Cirrious.CrossCore.Interfaces.IoC;
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Mvvm.Framework;
 
@@ -9,7 +10,7 @@ namespace Mvvm
     [Activity(Label = "PluginUse - Mvvm", MainLauncher = true, Icon = "@drawable/icon")]
     public class LocationView : Activity
     {
-        private MvxBindingContext _bindingContext;
+        private MvxAndroidBindingContext _bindingContext;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -26,7 +27,7 @@ namespace Mvvm
             var viewModel = Mvx.IocConstruct<LocationViewModel>();
 
             // create the databound UI
-            _bindingContext = new MvxBindingContext(this, new LayoutInflaterProvider(LayoutInflater), viewModel);            
+            _bindingContext = new MvxAndroidBindingContext(this, new LayoutInflaterProvider(LayoutInflater), viewModel);            
             var view = _bindingContext.BindingInflate(Resource.Layout.Main, null);
             SetContentView(view);
         }

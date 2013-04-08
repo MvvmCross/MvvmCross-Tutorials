@@ -2,7 +2,7 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
-using Cirrious.CrossCore.Interfaces.IoC;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Plugins.Location;
 
 namespace NoMvvm

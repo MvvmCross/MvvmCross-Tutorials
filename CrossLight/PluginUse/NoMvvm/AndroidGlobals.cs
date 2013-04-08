@@ -1,6 +1,6 @@
 using System.Reflection;
 using Android.Content;
-using Cirrious.CrossCore.Droid.Interfaces;
+using Cirrious.CrossCore.Droid;
 
 namespace NoMvvm
 {

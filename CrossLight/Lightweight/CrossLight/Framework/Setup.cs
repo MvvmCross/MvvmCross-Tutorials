@@ -1,10 +1,9 @@
 using Android.Content;
-using Cirrious.CrossCore.Droid.Interfaces;
-using Cirrious.CrossCore.Interfaces.Core;
-using Cirrious.CrossCore.Interfaces.Platform.Diagnostics;
-using Cirrious.CrossCore.Interfaces.Plugins;
+using Cirrious.CrossCore.Core;
+using Cirrious.CrossCore.Droid;
+using Cirrious.CrossCore.Droid.Platform;
 using Cirrious.CrossCore.IoC;
-using Cirrious.CrossCore.Platform.Diagnostics;
+using Cirrious.CrossCore.Platform;
 using Cirrious.CrossCore.Plugins;
 using Cirrious.MvvmCross.Binding.Droid;
 
@@ -26,16 +25,16 @@ namespace CrossLight.Framework
             var ioc = MvxSimpleIoCContainer.Initialise();
 
             ioc.RegisterSingleton<IMvxTrace>(new MvxDebugOnlyTrace());
-            ioc.RegisterSingleton<IMvxPluginManager>(new MvxFileBasedPluginManager("Droid"));
+            ioc.RegisterSingleton<IMvxPluginManager>(new MvxFilePluginManager(".Droid", ".dll"));
 
             ioc.RegisterSingleton<IMvxAndroidGlobals>(new AndroidGlobals(applicationContext));
 
             var topActivity = new AndroidTopActivity();
             ioc.RegisterSingleton<ITopActivity>(topActivity);
             ioc.RegisterSingleton<IMvxAndroidCurrentTopActivity>(topActivity);
-            ioc.RegisterSingleton<IMvxMainThreadDispatcherProvider>(topActivity);
+            ioc.RegisterSingleton<IMvxMainThreadDispatcher>(topActivity);
 
-            var builder = new MvxDroidBindingBuilder(ignored => { }, ignored => { }, ignored => { });
+            var builder = new MvxAndroidBindingBuilder(ignored => { }, ignored => { }, ignored => { });
             builder.DoRegistration();
         }
     }

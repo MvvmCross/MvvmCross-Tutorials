@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Android.App;
 using Android.OS;
 using Android.Widget;
-using Cirrious.CrossCore.Interfaces.IoC;
+using Cirrious.CrossCore;
 using NoBinding.Framework;
 
 namespace NoBinding

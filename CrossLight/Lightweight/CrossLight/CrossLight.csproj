@@ -38,17 +38,18 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\lib\mvx\Portable\Debug\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.CrossCore.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Localization.dll</HintPath>

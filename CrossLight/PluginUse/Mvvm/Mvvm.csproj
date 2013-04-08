@@ -38,26 +38,29 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\lib\mvx\Portable\Debug\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.CrossCore.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Location">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Location, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Location.Droid">
-      <HintPath>..\..\lib\mvx\Droid\Debug\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Location.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Mvx\Droid\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
