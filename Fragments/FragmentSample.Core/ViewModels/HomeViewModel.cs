@@ -2,6 +2,7 @@
 using Cirrious.MvvmCross.ViewModels;
 using FragmentSample.Core.ViewModels.Dialog;
 using FragmentSample.Core.ViewModels.Form;
+using FragmentSample.Core.ViewModels.Shakespeare;
 using FragmentSample.Core.ViewModels.Tab;
 
 namespace FragmentSample.Core.ViewModels
@@ -28,6 +29,11 @@ namespace FragmentSample.Core.ViewModels
         public ICommand ShowTabsCommand
         {
             get { return new MvxCommand(() => ShowViewModel<TabViewModel>()); }
+        }
+
+        public ICommand ShowShakespeareCommand
+        {
+            get { return new MvxCommand(() => ShowViewModel<TitlesViewModel>());}
         }
     }
 }

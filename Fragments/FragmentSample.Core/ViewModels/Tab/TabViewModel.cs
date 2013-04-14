@@ -1,4 +1,4 @@
-﻿using Cirrious.CrossCore.IoC;
+﻿using Cirrious.CrossCore;
 
 namespace FragmentSample.Core.ViewModels.Tab
 {

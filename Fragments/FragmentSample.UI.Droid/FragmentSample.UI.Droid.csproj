@@ -94,7 +94,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreenActivity.cs" />
+    <Compile Include="Views\DetailView.cs" />
     <Compile Include="Views\Frags\Dialog\NameDialogFragment.cs" />
+    <Compile Include="Views\Frags\Shakespeare\DetailFragment.cs" />
+    <Compile Include="Views\Frags\Shakespeare\TitlesFragment.cs" />
     <Compile Include="Views\Frags\Tabs\Tab1Fragment.cs" />
     <Compile Include="Views\SearchView.cs" />
     <Compile Include="Views\HomeView.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="Views\Frags\Tabs\Tab2Fragment.cs" />
     <Compile Include="Views\Frags\Tabs\Tab3Fragment.cs" />
     <Compile Include="Views\TabView.cs" />
+    <Compile Include="Views\TitlesView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -147,6 +151,21 @@
     <AndroidResource Include="Resources\Layout\tabs_3_big.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Page_TitlesView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Fragment_Titles.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Fragment_Detail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Page_DetailView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout-large\Page_TitlesView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -180,6 +199,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

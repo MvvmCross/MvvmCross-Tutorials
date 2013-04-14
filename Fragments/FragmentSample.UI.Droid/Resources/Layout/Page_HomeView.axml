@@ -19,6 +19,12 @@
       local:MvxBind="Click ShowTabsCommand"
             />
   <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Show (optional) SplitView"
+      local:MvxBind="Click ShowShakespeareCommand"
+            />
+  <Button
       android:id="@+id/DialogButton"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"

@@ -58,6 +58,8 @@
     <Compile Include="ViewModels\Dialog\NamesViewModel.cs" />
     <Compile Include="ViewModels\Form\SearchViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\Shakespeare\DetailViewModel.cs" />
+    <Compile Include="ViewModels\Shakespeare\TitlesViewModel.cs" />
     <Compile Include="ViewModels\Tab\FirstTabViewModel.cs" />
     <Compile Include="ViewModels\Tab\SecondTabViewModel.cs" />
     <Compile Include="ViewModels\Tab\BaseSubTabViewModel.cs" />
