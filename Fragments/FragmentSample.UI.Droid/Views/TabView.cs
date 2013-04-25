@@ -1,7 +1,6 @@
 using Android.App;
 using Android.OS;
 using Cirrious.MvvmCross.Droid.Fragging;
-using FragmentSample.Core.ViewModels;
 using FragmentSample.Core.ViewModels.Tab;
 
 namespace FragmentSample.UI.Droid.Views

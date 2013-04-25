@@ -1,9 +1,6 @@
 using Android.App;
-using Android.Views;
-using Android.Widget;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Droid.Fragging;
-using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.ViewModels;
 using FragmentSample.Core.ViewModels.Shakespeare;
 
@@ -55,6 +52,7 @@ namespace FragmentSample.UI.Droid.Views
             if (request.ViewModelType != typeof (DetailViewModel))
                 return false;
 
+            // TODO - replace this with extension method when available
             var loaderService = Mvx.Resolve<IMvxViewModelLoader>();
             var viewModel = loaderService.LoadViewModel(request, null /* saved state */);
             _detailFragment.ViewModel = viewModel;
