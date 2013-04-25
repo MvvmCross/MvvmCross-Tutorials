@@ -1,0 +1,35 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Distribution|iPhone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cirrious.Conference.UI.WP7/ConfResources/Text/Shared.json">
+    <Files>
+      <File FileName="Cirrious.Conference.UI.WP7/ConfResources/Text/Shared.json" Line="13" Column="59" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Android" expanded="True" />
+          <Node name="Touch" expanded="True">
+            <Node name="Cirrious.Conference.UI.Touch" expanded="True" selected="True">
+              <Node name="ConfResources" expanded="True">
+                <Node name="Text" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="WP7" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/imac/Documents/MvvmCross/Cirrious/Cirrious.MvvmCross.Binding/Binders/MvxFullBinding.cs" line="102" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
