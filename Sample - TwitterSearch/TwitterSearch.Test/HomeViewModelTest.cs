@@ -1,4 +1,5 @@
-﻿using Cirrious.MvvmCross.Test.Core;
+﻿using Cirrious.MvvmCross.Platform;
+using Cirrious.MvvmCross.Test.Core;
 using Cirrious.MvvmCross.Views;
 using Moq;
 using NUnit.Framework;
@@ -40,6 +41,8 @@ namespace TwitterSearch.Test
         public void GoCausesNavigationForNonEmptySearch()
         {
             ClearAll();
+
+            Ioc.RegisterSingleton<IMvxStringToTypeParser>(new MvxStringToTypeParser());
             var mockNavigation = CreateMockNavigation();
 
             var viewModel = new HomeViewModel();
