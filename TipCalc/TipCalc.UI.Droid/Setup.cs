@@ -1,7 +1,6 @@
 using Android.Content;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
-using TipCalc.Core;
 
 namespace TipCalc.UI.Droid
 {
@@ -13,7 +12,7 @@ namespace TipCalc.UI.Droid
 
         protected override IMvxApplication CreateApp()
         {
-            return new App();
+            return new Core.App();
         }
     }
 }

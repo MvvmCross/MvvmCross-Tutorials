@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("ValueConversion.UI.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("ValueConversion.UI.Droid.Resource", IsApplication=true)]
 
 namespace ValueConversion.UI.Droid
 {
@@ -19,9 +19,9 @@ namespace ValueConversion.UI.Droid
 	public partial class Resource
 	{
 		
-		Resource()
+		static Resource()
 		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues ();
+			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
 		public static void UpdateIdValues()
@@ -46,6 +46,11 @@ namespace ValueConversion.UI.Droid
 			// aapt resource value: 0x7f010004
 			public const int MvxSource = 2130771972;
 			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Attribute()
 			{
 			}
@@ -56,6 +61,11 @@ namespace ValueConversion.UI.Droid
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Drawable()
 			{
@@ -70,6 +80,11 @@ namespace ValueConversion.UI.Droid
 			
 			// aapt resource value: 0x7f040001
 			public const int MyButton = 2130968577;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Id()
 			{
@@ -103,6 +118,11 @@ namespace ValueConversion.UI.Droid
 			// aapt resource value: 0x7f030007
 			public const int View_Visibility = 2130903047;
 			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Layout()
 			{
 			}
@@ -116,6 +136,11 @@ namespace ValueConversion.UI.Droid
 			
 			// aapt resource value: 0x7f050000
 			public const int Hello = 2131034112;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private String()
 			{
@@ -150,6 +175,11 @@ namespace ValueConversion.UI.Droid
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Styleable()
 			{

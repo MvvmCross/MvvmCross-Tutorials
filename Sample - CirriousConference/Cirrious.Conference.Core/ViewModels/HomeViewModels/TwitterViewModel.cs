@@ -7,6 +7,7 @@ using Cirrious.Conference.Core.Models.Twitter;
 using Cirrious.CrossCore;
 using Cirrious.Conference.Core.ViewModels.Helpers;
 using Cirrious.MvvmCross.Plugins.Network;
+using Cirrious.MvvmCross.Plugins.Network.Reachability;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace Cirrious.Conference.Core.ViewModels.HomeViewModels

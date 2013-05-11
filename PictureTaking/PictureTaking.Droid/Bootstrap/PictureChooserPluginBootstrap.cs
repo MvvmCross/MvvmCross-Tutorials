@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.Plugins;
 
-namespace Bootstrap
+namespace PictureTaking.Droid.Bootstrap
 {
     public class PictureChooserPluginBootstrap
         : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.PictureChooser.PluginLoader>

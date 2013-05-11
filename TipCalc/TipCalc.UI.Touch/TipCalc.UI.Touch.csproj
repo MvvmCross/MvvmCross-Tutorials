@@ -80,6 +80,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <AssemblyName>TipCalc.UI.Touch</AssemblyName>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>TipCalcUITouch</AssemblyName>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />

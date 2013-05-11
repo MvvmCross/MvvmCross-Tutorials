@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.Plugins;
 
-namespace Bootstrap
+namespace PictureTaking.Phone.Bootstrap
 {
     public class PictureChooserPluginBootstrap
         : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.PictureChooser.PluginLoader>
