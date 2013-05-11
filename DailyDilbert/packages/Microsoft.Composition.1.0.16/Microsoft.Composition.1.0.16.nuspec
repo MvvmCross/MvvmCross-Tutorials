@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Composition</id>
+    <version>1.0.16</version>
+    <title>MEF for web and Windows Store apps</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkID=261795&amp;clcid=0x409</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Portable, lightweight, throughput-optimised composition container for MEF.</description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>MEF Microsoft System Composition IOC Dependency Injection DI WindowsStore Windows Store</tags>
+    <references>
+      <group targetFramework=".NETFramework4.5">
+        <reference file="System.Composition.AttributedModel.dll" />
+        <reference file="System.Composition.Convention.dll" />
+        <reference file="System.Composition.Hosting.dll" />
+        <reference file="System.Composition.Runtime.dll" />
+        <reference file="System.Composition.TypedParts.dll" />
+      </group>
+      <group targetFramework=".NETCore4.5">
+        <reference file="System.Composition.AttributedModel.dll" />
+        <reference file="System.Composition.Convention.dll" />
+        <reference file="System.Composition.Hosting.dll" />
+        <reference file="System.Composition.Runtime.dll" />
+        <reference file="System.Composition.TypedParts.dll" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+win8">
+        <reference file="System.Composition.AttributedModel.dll" />
+        <reference file="System.Composition.Convention.dll" />
+        <reference file="System.Composition.Hosting.dll" />
+        <reference file="System.Composition.Runtime.dll" />
+        <reference file="System.Composition.TypedParts.dll" />
+      </group>
+    </references>
+  </metadata>
+</package>

@@ -78,6 +78,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <AssemblyName>Navigation.UI.Touch</AssemblyName>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>NavigationUITouch</AssemblyName>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -120,6 +123,9 @@
       <HintPath>..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Windows">
+      <HintPath>..\..\Lib\Mvx\Touch\System.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
@@ -137,9 +143,7 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="Views\MainView.xib" />
     <InterfaceDefinition Include="Views\SimpleView.xib" />

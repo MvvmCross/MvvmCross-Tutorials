@@ -49,7 +49,10 @@ namespace FragmentSample.UI.Droid.Views
             if (_detailFragment == null)
                 return false;
 
-            if (request.ViewModelType != typeof (DetailViewModel))
+            if (!_detailFragment.IsVisible)
+                return false;
+
+            if (request.ViewModelType != typeof(DetailViewModel))
                 return false;
 
             // TODO - replace this with extension method when available

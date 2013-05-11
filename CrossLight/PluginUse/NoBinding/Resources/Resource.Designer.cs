@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("NoBinding.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("NoBinding.Resource", IsApplication=true)]
 
 namespace NoBinding
 {
@@ -19,9 +19,9 @@ namespace NoBinding
 	public partial class Resource
 	{
 		
-		Resource()
+		static Resource()
 		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues ();
+			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
 		public static void UpdateIdValues()
@@ -30,6 +30,11 @@ namespace NoBinding
 		
 		public partial class Attribute
 		{
+			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Attribute()
 			{
@@ -41,6 +46,11 @@ namespace NoBinding
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Drawable()
 			{
@@ -65,6 +75,11 @@ namespace NoBinding
 			// aapt resource value: 0x7f050004
 			public const int ToggleButton = 2131034116;
 			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Id()
 			{
 			}
@@ -75,6 +90,11 @@ namespace NoBinding
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Layout()
 			{
@@ -89,6 +109,11 @@ namespace NoBinding
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private String()
 			{

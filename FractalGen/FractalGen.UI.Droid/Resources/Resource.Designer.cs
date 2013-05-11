@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("FractalGen.UI.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("FractalGen.UI.Droid.Resource", IsApplication=true)]
 
 namespace FractalGen.UI.Droid
 {
@@ -19,9 +19,9 @@ namespace FractalGen.UI.Droid
 	public partial class Resource
 	{
 		
-		Resource()
+		static Resource()
 		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues ();
+			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
 		public static void UpdateIdValues()
@@ -46,6 +46,11 @@ namespace FractalGen.UI.Droid
 			// aapt resource value: 0x7f010004
 			public const int MvxSource = 2130771972;
 			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Attribute()
 			{
 			}
@@ -57,6 +62,11 @@ namespace FractalGen.UI.Droid
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Drawable()
 			{
 			}
@@ -67,6 +77,11 @@ namespace FractalGen.UI.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Id()
 			{
@@ -82,6 +97,11 @@ namespace FractalGen.UI.Droid
 			// aapt resource value: 0x7f030001
 			public const int View_Generate = 2130903041;
 			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Layout()
 			{
 			}
@@ -95,6 +115,11 @@ namespace FractalGen.UI.Droid
 			
 			// aapt resource value: 0x7f050000
 			public const int Hello = 2131034112;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private String()
 			{
@@ -129,6 +154,11 @@ namespace FractalGen.UI.Droid
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Styleable()
 			{

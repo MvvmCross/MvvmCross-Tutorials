@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("FragmentSample.UI.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("FragmentSample.UI.Droid.Resource", IsApplication=true)]
 
 namespace FragmentSample.UI.Droid
 {
@@ -19,9 +19,9 @@ namespace FragmentSample.UI.Droid
 	public partial class Resource
 	{
 		
-		Resource()
+		static Resource()
 		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues ();
+			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
 		public static void UpdateIdValues()
@@ -43,6 +43,11 @@ namespace FragmentSample.UI.Droid
 			// aapt resource value: 0x7f010003
 			public const int MvxSource = 2130771971;
 			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Attribute()
 			{
 			}
@@ -53,6 +58,11 @@ namespace FragmentSample.UI.Droid
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Drawable()
 			{
@@ -100,6 +110,11 @@ namespace FragmentSample.UI.Droid
 			
 			// aapt resource value: 0x7f040003
 			public const int when_line = 2130968579;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Id()
 			{
@@ -160,6 +175,11 @@ namespace FragmentSample.UI.Droid
 			// aapt resource value: 0x7f030010
 			public const int tabs_3_big = 2130903056;
 			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Layout()
 			{
 			}
@@ -173,6 +193,11 @@ namespace FragmentSample.UI.Droid
 			
 			// aapt resource value: 0x7f050000
 			public const int Hello = 2131034112;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private String()
 			{
@@ -203,6 +228,11 @@ namespace FragmentSample.UI.Droid
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Styleable()
 			{

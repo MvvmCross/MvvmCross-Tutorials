@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.Plugins;
 
-namespace Bootstrap
+namespace InternetMinute.Droid.Bootstrap
 {
     public class MessengerPluginBootstrap
         : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>

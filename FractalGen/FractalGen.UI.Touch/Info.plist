@@ -19,5 +19,21 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>3.2</string>
+	<key>CFBundleDisplayName</key>
+	<string>Fractal</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.cirrious.mvvmcross.conference</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>NSMainNibFile</key>
+	<string></string>
+	<key>NSMainNibFile~ipad</key>
+	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Resources/Default-568h@2x.png</string>
+	</array>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
 </dict>
 </plist>

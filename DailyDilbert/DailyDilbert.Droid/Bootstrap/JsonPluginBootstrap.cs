@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.Plugins;
 
-namespace Bootstrap
+namespace DailyDilbert.Droid.Bootstrap
 {
     public class JsonPluginBootstrap
         : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.Json.PluginLoader>

@@ -11,10 +11,12 @@
           android:layout_height="0dp"
             android:layout_weight="1"
             />
+  <!--
   <fragment class="FragmentSample.UI.Droid.Views.DetailFragment"
           android:id="@+id/detail_fragment"
           android:layout_width="fill_parent"
           android:layout_height="0dp"
             android:layout_weight="1"
             />
+            -->
 </LinearLayout>

@@ -31,7 +31,7 @@
             Source="{Binding Items}"/>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <x:String x:Key="AppName">Daily Dilbert</x:String>
     </Page.Resources>
 
     <!--

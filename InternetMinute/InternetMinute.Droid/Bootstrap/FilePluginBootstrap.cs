@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.Plugins;
 
-namespace Bootstrap
+namespace InternetMinute.Droid.Bootstrap
 {
     public class FilePluginBootstrap
         : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.File.PluginLoader>
