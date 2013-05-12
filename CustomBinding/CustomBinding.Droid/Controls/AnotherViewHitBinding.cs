@@ -1,4 +1,5 @@
 using System;
+using Android.Graphics;
 using Cirrious.MvvmCross.Binding;
 using Cirrious.MvvmCross.Binding.Droid.Target;
 
@@ -25,6 +26,7 @@ namespace CustomBinding.Droid.Controls
             var value = AnotherView.GetHitValue();
             if (value == _currentValue)
                 return;
+            _currentValue = value;
             FireValueChanged(value);
         }
 
@@ -39,8 +41,16 @@ namespace CustomBinding.Droid.Controls
                 return;
             }
 
+            if (_currentValue == stringValue)
+                return;
+
             _currentValue = stringValue;
             anotherView.HitMe(stringValue);
+            if (stringValue != null)
+            {
+                var color = stringValue.Length%2 == 0 ? Color.DarkBlue : Color.DarkRed;
+                AnotherView.SetTextColor(color);
+            }
         }
 
         protected override void Dispose(bool isDisposing)
