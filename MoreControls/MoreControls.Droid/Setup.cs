@@ -1,6 +1,7 @@
 using Android.Content;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using System.Collections.Generic;
 
 namespace MoreControls.Droid
 {
@@ -15,7 +16,7 @@ namespace MoreControls.Droid
             return new Core.App();
         }
 
-        protected override System.Collections.Generic.IDictionary<string, string> ViewNamespaceAbbreviations
+        protected override IDictionary<string, string> ViewNamespaceAbbreviations
         {
             get
             {
