@@ -65,7 +65,10 @@ namespace Cirrious.Conference.UI.Droid.Bindings
             if (isDisposing)
             {
                 var button = Button;
-                button.Click -= ButtonOnClick;
+                if (button != null)
+                {
+                    button.Click -= ButtonOnClick;
+                }
             }
             base.Dispose(isDisposing);
         }
