@@ -26,6 +26,48 @@ namespace CustomerManagement.AutoViews.Droid
 		
 		public static void UpdateIdValues()
 		{
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_disclosure = CustomerManagement.AutoViews.Droid.Resource.Drawable.dialog_disclosure;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_expander_ic_minimized = CustomerManagement.AutoViews.Droid.Resource.Drawable.dialog_expander_ic_minimized;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_icon = CustomerManagement.AutoViews.Droid.Resource.Drawable.dialog_icon;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_spinner_default_holo_dark = CustomerManagement.AutoViews.Droid.Resource.Drawable.dialog_spinner_default_holo_dark;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_spinner_default_holo_light = CustomerManagement.AutoViews.Droid.Resource.Drawable.dialog_spinner_default_holo_light;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_BoolField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_BoolField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Button = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_Button;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_DisclosureField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_DisclosureField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_HtmlField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_HtmlField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ImageLeft = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_ImageLeft;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ImageRight = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_ImageRight;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_LabelField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelPercentageField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_LabelPercentageField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelSubtextField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_LabelSubtextField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Panel = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_Panel;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_RadioButtonList = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_RadioButtonList;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_SliderField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_SliderField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Spinner = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_Spinner;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ValueField = CustomerManagement.AutoViews.Droid.Resource.Id.dialog_ValueField;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Id.iFormFieldValue = CustomerManagement.AutoViews.Droid.Resource.Id.iFormFieldValue;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_achievements = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_achievements;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldleft = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_boolfieldleft;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldright = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_boolfieldright;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldsubleft = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_boolfieldsubleft;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldsubright = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_boolfieldsubright;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_button = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_button;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_datefield = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_datefield;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_fieldsetlabel = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_fieldsetlabel;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_floatimage = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_floatimage;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_html = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_html;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labeldisclosure = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_labeldisclosure;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labelfieldbelow = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_labelfieldbelow;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labelfieldright = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_labelfieldright;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_multiline_labelfieldbelow = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_multiline_labelfieldbelow;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_onofffieldright = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_onofffieldright;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_panel = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_panel;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_root = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_root;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_selectlist = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_selectlist;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_selectlistfield = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_selectlistfield;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textarea = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_textarea;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textfieldbelow = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_textfieldbelow;
+			Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textfieldright = CustomerManagement.AutoViews.Droid.Resource.Layout.dialog_textfieldright;
 		}
 		
 		public partial class Attribute
@@ -69,31 +111,40 @@ namespace CustomerManagement.AutoViews.Droid
 			public const int dialog_expander_ic_minimized = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ic_menu_add = 2130837506;
+			public const int dialog_icon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int ic_menu_delete = 2130837507;
+			public const int dialog_spinner_default_holo_dark = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int ic_menu_edit = 2130837508;
+			public const int dialog_spinner_default_holo_light = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int ic_menu_mark = 2130837509;
+			public const int ic_menu_add = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int ic_menu_save = 2130837510;
+			public const int ic_menu_delete = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int icon = 2130837511;
+			public const int ic_menu_edit = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int spinner_default_holo_dark = 2130837512;
+			public const int ic_menu_mark = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int spinner_default_holo_light = 2130837513;
+			public const int ic_menu_save = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int splash = 2130837514;
+			public const int icon = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int spinner_default_holo_dark = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int spinner_default_holo_light = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int splash = 2130837517;
 			
 			static Drawable()
 			{

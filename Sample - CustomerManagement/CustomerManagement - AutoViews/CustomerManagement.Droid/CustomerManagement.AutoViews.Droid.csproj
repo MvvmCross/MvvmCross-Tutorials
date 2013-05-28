@@ -183,7 +183,6 @@
     <AndroidResource Include="Resources\Layout\Splash.axml" />
     <AndroidResource Include="Resources\Menu\customer_list_menu.xml" />
     <AndroidResource Include="Resources\Menu\customer_menu.xml" />
-    <AndroidResource Include="Resources\Layout\unused\dialog_multiline_labelfieldbelow.xml" />
     <AndroidResource Include="Resources\Drawable-hdpi\ic_menu_add.png" />
     <AndroidResource Include="Resources\Drawable-hdpi\ic_menu_delete.png" />
     <AndroidResource Include="Resources\Drawable-hdpi\ic_menu_edit.png" />
@@ -211,66 +210,6 @@
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_textfieldright.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_textfieldbelow.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_textarea.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_selectlistfield.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_selectlist.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_root.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_panel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_onofffieldright.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_labelfieldright.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_labelfieldbelow.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_floatimage.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_fieldsetlabel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_datefield.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_button.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_boolfieldsubright.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_boolfieldsubleft.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_boolfieldright.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\unused\dialog_boolfieldleft.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\dialog_disclosure.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\dialog_expander_ic_minimized.9.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
@@ -283,30 +222,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Menu\customer_edit_menu.xml" />
     <None Include="SupportLib\android-support-v4.jar" />
-    <AndroidResource Include="Resources\Layout\dialog_achievements.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_boolfieldleft.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_boolfieldright.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_boolfieldsubleft.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_boolfieldsubright.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_button.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_datefield.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_fieldsetlabel.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_floatimage.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_html.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_labeldisclosure.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_labelfieldbelow.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_labelfieldright.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_multiline_labelfieldbelow.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_onofffieldright.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_panel.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_root.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_selectlist.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_selectlistfield.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_textarea.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_textfieldbelow.xml" />
-    <AndroidResource Include="Resources\Layout\dialog_textfieldright.xml" />
-    <AndroidResource Include="Resources\Drawable\spinner_default_holo_dark.9.png" />
-    <AndroidResource Include="Resources\Drawable\spinner_default_holo_light.9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

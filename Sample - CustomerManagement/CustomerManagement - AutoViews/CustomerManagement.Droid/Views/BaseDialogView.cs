@@ -10,7 +10,7 @@ using CrossUI.Droid.Dialog.Elements;
 
 namespace CustomerManagement.AutoViews.Droid.Views
 {
-    public class BaseDialogView<TViewModel> : MvxDialogActivityView
+    public class BaseDialogView<TViewModel> : MvxDialogActivity
         where TViewModel : class, IMvxViewModel
     {
         public new TViewModel ViewModel
