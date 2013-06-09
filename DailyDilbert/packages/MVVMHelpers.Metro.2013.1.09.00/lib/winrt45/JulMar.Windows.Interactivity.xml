@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JulMar.Windows.Interactivity</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Interactivity.AttachedObject">
+            <summary>
+            This class represents an object that may be attached to a FrameworkElement
+            to extend or alter it's behavior.
+            Modeled after System.Windows.Interactivity: remove once that is available
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.#ctor(System.Type)">
+            <summary>
+            Constructor to attach to a specific type of object
+            </summary>
+            <param name="associatedObjectType">Type of object to attach to</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnAttached">
+            <summary>
+            Override called when behavior is attached
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.DataContextChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is used to refresh the binding when our parent's binding changes
+            For some reason in WinRT, when the parent's binding is changed due to 
+            inheritance, our binding does not get refreshed.  This code is an attempt
+            to work around that issue.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.AttachObject(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            This method attaches the behavior to a specific FrameworkElement and wires into 
+            the events it needs to monitor layout and loading.
+            </summary>
+            <param name="value">FrameworkElement to attach to</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnAssociatedObjectLayoutUpdated(System.Object,System.Object)">
+            <summary>
+            Called when the associated object's Layout changes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.SetupBinding">
+            <summary>
+            Setup the binding
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnDataContextChanged">
+            <summary>
+            Override to hook into data context changed
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.DetachExistingObject">
+            <summary>
+            This detaches the behavior from it's associated object
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnAssociatedObjectLoaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when the attached object  is loaded.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.AttachedObject.OnAssociatedObjectUnloaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when the associated object is unloaded
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.AttachedObject.AssociatedObjectType">
+            <summary>
+            Type of the associated object
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.AttachedObject.AssociatedObjectInternal">
+            <summary>
+            The associated object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.Behavior">
+            <summary>
+            An attachable behavior
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.Behavior.#ctor(System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="associatedObjectType"></param>
+        </member>
+        <member name="T:System.Windows.Interactivity.Behavior`1">
+            <summary>
+            A typed attachable behavior
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.Windows.Interactivity.Behavior`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.Behavior`1.AssociatedObject">
+            <summary>
+            Associated object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.BehaviorCollection">
+            <summary>
+            Collection of behaviors to apply to an object
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.BehaviorCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged"/> event with the provided arguments.
+            </summary>
+            <param name="e">Arguments of the event being raised.</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.BehaviorCollection.Attach(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            This attaches the behavior collection to a specific element
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.BehaviorCollection.Detach">
+            <summary>
+            This detaches the behavior collection from the owner object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.EventTrigger">
+            <summary>
+            A Blend Behavior trigger driven off an event.
+            This was taken and modified from the System.Windows.Interactivity support and may be removed
+            once true Blend behaviors are shipped.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerBase`1">
+            <summary>
+            Typesafe trigger
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerBase">
+            <summary>
+            This is the base class for all trigger types.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.TriggerBase.ActionsProperty">
+            <summary>
+            Backing storage for Actions collection
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerBase.#ctor(System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="associatedObjectTypeConstraint"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerBase.Attach(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Attach trigger to a specific object
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerBase.Detach">
+            <summary>
+            Detach trigger from an element
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerBase.InvokeActions(System.Object)">
+            <summary>
+            Method used to invoke the associated actions
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="E:System.Windows.Interactivity.TriggerBase.PreviewInvoke">
+            <summary>
+            Event raised prior to Invoke
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TriggerBase.Actions">
+            <summary>
+            Collection of actions to invoke
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerBase`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TriggerBase`1.AssociatedObject">
+            <summary>
+            Typed associated object
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.EventTrigger.EventNameProperty">
+            <summary>
+            EventName dependency property
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnEventNameChanged(System.Object,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Property change handler for EventName property
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnAttached">
+            <summary>
+            Override called when behavior is attached
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnEvent(System.Object)">
+            <summary>
+            This invokes the actions when the event is raised.
+            </summary>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnEventNameChanged(System.String,System.String)">
+            <summary>
+            This method registers the event handler for the specific named event
+            </summary>
+            <param name="oldEventName"></param>
+            <param name="newEventName"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.RegisterEvent(System.Object,System.String)">
+            <summary>
+            Register an event handler for a given object and event name.
+            </summary>
+            <param name="obj"></param>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.UnregisterEvent(System.Object,System.String)">
+            <summary>
+            Unregister an event handler for a given object and event name.
+            </summary>
+            <param name="obj"></param>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.LookForEventDeclaration(System.Object,System.String)">
+            <summary>
+            This searches the type for a given event - including ancestor classes.
+            </summary>
+            <param name="target"></param>
+            <param name="eventName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.GetEventMethod(System.Reflection.EventInfo)">
+            <summary>
+            Retrieves a delegate to our OnEventRaised method which may be used with a specific
+            EventHandler subtype based on an EventInfo.
+            </summary>
+            <param name="ei">Event to generate</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Interactivity.EventTrigger.OnEventRaised(System.Object,System.Object)">
+            <summary>
+            This is invoked by the event - it runs all the actions
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:System.Windows.Interactivity.EventTrigger.EventName">
+            <summary>
+            Name of the event to monitor which fires actions
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.Interaction">
+            <summary>
+            Manager for behaviors - attaches the collection of behaviors to an element.
+            Modeled after System.Windows.Interactivity: remove once that is available
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.Interaction.BehaviorsProperty">
+            <summary>
+            Behaviors collection backing storage
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.GetBehaviors(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Get the behavior list
+            </summary>
+            <param name="obj">Object to retrieve behavior collection from</param>
+            <returns>Behavior collection (empty if none)</returns>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.SetBehaviors(Windows.UI.Xaml.DependencyObject,System.Windows.Interactivity.BehaviorCollection)">
+            <summary>
+            Sets the behavior list.
+            </summary>
+            <param name="obj">Object to set behavior collection on</param>
+            <param name="value">Collection to assign</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.OnBehaviorListChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called when the behavior collection is changed on an object.
+            </summary>
+            <param name="dpo">FrameworkElement owner</param>
+            <param name="e"></param>
+        </member>
+        <member name="F:System.Windows.Interactivity.Interaction.TriggersProperty">
+            <summary>
+            Triggers property backing storage
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.GetTriggers(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Get the trigger list
+            </summary>
+            <param name="obj">Object to retrieve trigger collection from</param>
+            <returns>Behavior collection (empty if none)</returns>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.SetTriggers(Windows.UI.Xaml.DependencyObject,System.Windows.Interactivity.TriggerCollection)">
+            <summary>
+            Sets the behavior list.
+            </summary>
+            <param name="obj">Object to set behavior collection on</param>
+            <param name="value">Collection to assign</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.Interaction.OnTriggerListChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called when the behavior collection is changed on an object.
+            </summary>
+            <param name="dpo">FrameworkElement owner</param>
+            <param name="e"></param>
+        </member>
+        <member name="T:System.Windows.Interactivity.PreviewInvokeEventArgs">
+            <summary>
+            EventArgs passed with PreviewInvoke event
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.PreviewInvokeEventArgs.Cancelling">
+            <summary>
+            True if the event should be canceled.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TargetedTriggerAction">
+            <summary>
+            This represents a TriggerAction which has a separate Target to work on.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerAction">
+            <summary>
+            Action performed on behalf of a Blend trigger
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.TriggerAction.IsEnabledProperty">
+            <summary>
+            IsEnabled dependency property backing storage
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction.#ctor(System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="associatedObjectTypeConstraint"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction.Attach(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            This is used to attach this trigger to an object.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction.CallInvoke(System.Object)">
+            <summary>
+            This invokes the action
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction.Detach">
+            <summary>
+            This is used to detach the action from an object
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction.Invoke(System.Object)">
+            <summary>
+            Invoke method - must be overridden
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="P:System.Windows.Interactivity.TriggerAction.IsEnabled">
+            <summary>
+            True/False for enabled state
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TriggerAction.AssociatedObject">
+            <summary>
+            Associated object
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.TargetedTriggerAction.TargetObjectProperty">
+            <summary>
+            Target dependency property
+            </summary>
+        </member>
+        <member name="F:System.Windows.Interactivity.TargetedTriggerAction.TargetNameProperty">
+            <summary>
+            TargetName dependency property
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TargetedTriggerAction.#ctor(System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="associatedObjectTypeConstraint"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TargetedTriggerAction.OnTargetObjectChanged(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method called when the target object is changed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TargetedTriggerAction.OnTargetObjectChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change notification handler for the TargetObject.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:System.Windows.Interactivity.TargetedTriggerAction.TargetObject">
+            <summary>
+            Target object to work on
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TargetedTriggerAction.TargetName">
+            <summary>
+            TargetObject name
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TargetedTriggerAction.Target">
+            <summary>
+            Target object (either TargetObject or AssociatedObject)
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TargetedTriggerAction`1">
+            <summary>
+            Typesafe targeted trigger action
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.Windows.Interactivity.TargetedTriggerAction`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TargetedTriggerAction`1.Target">
+            <summary>
+            Target object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerAction`1">
+            <summary>
+            Typesafe trigger action
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerAction`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:System.Windows.Interactivity.TriggerAction`1.AssociatedObject">
+            <summary>
+            Associated object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerActionCollection">
+            <summary>
+            Collection of trigger actions
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerActionCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged"/> event with the provided arguments.
+            </summary>
+            <param name="e">Arguments of the event being raised.</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerActionCollection.Attach(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            This attaches the behavior collection to a specific element
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerActionCollection.Detach">
+            <summary>
+            This detaches the behavior collection from the owner object
+            </summary>
+        </member>
+        <member name="T:System.Windows.Interactivity.TriggerCollection">
+            <summary>
+            Collection of triggers - used by Interaction manager.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged"/> event with the provided arguments.
+            </summary>
+            <param name="e">Arguments of the event being raised.</param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerCollection.Attach(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            This attaches the behavior collection to a specific element
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:System.Windows.Interactivity.TriggerCollection.Detach">
+            <summary>
+            This detaches the behavior collection from the owner object
+            </summary>
+        </member>
+    </members>
+</doc>

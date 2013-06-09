@@ -159,29 +159,37 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\netcore45\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\netcore45\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.WindowsStore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\netcore45\Cirrious.CrossCore.WindowsStore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.WindowsStore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\netcore45\Cirrious.CrossCore.WindowsStore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\netcore45\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.8.1\lib\netcore45\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.6\lib\netcore45\Cirrious.MvvmCross.Localization.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\netcore45\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.WindowsStore">
-      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.6\lib\netcore45\Cirrious.MvvmCross.WindowsStore.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.WindowsStore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.8.1\lib\netcore45\Cirrious.MvvmCross.WindowsStore.dll</HintPath>
     </Reference>
-    <Reference Include="JulMar.Metro.Behaviors">
-      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.00.07\lib\winrt45\JulMar.Metro.Behaviors.dll</HintPath>
+    <Reference Include="JulMar.Metro.Behaviors, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.09.00\lib\winrt45\JulMar.Metro.Behaviors.dll</HintPath>
     </Reference>
-    <Reference Include="JulMar.Metro.Helpers">
-      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.00.07\lib\winrt45\JulMar.Metro.Helpers.dll</HintPath>
+    <Reference Include="JulMar.Metro.Helpers, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.09.00\lib\winrt45\JulMar.Metro.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="JulMar.Windows.Interactivity">
-      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.00.07\lib\winrt45\JulMar.Windows.Interactivity.dll</HintPath>
+    <Reference Include="JulMar.Windows.Interactivity, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MVVMHelpers.Metro.2013.1.09.00\lib\winrt45\JulMar.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.AttributedModel">
       <HintPath>..\packages\Microsoft.Composition.1.0.16\lib\netcore45\System.Composition.AttributedModel.dll</HintPath>

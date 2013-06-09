@@ -1,0 +1,1345 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JulMar.Metro.Behaviors</name>
+    </assembly>
+    <members>
+        <member name="T:JulMar.Windows.Interactivity.Actions.CallMethodAction">
+            <summary>
+            Call a method from a trigger
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Actions.CallMethodAction.MethodNameProperty">
+            <summary>
+            Backing storage for the method name
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Actions.CallMethodAction.AreMethodParamsValid(System.Reflection.ParameterInfo[])">
+            <summary>
+            Check the method parameters for the invoke.
+            </summary>
+            <param name="methodParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Actions.CallMethodAction.Invoke(System.Object)">
+            <summary>
+            Invoke method - must be overridden
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Actions.CallMethodAction.FindBestMethod(System.Object)">
+            <summary>
+            Locates the best method to invoke.  We first look for a 2-parameter method which takes the associated object type and parameter type.
+            If we can't find that, then we look for a no parameter method.
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Actions.CallMethodAction.IsMethodValid(System.Reflection.MethodInfo)">
+            <summary>
+            Check the method to see if it matches the name and has a void return type
+            </summary>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Actions.CallMethodAction.MethodName">
+            <summary>
+            Method name to invoke
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.ChangePropertyAction">
+            <summary>
+            Method used to change a property value when a trigger is fired.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ChangePropertyAction.DurationProperty">
+            <summary>
+            Backing storage for Duration property
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ChangePropertyAction.PropertyNameProperty">
+            <summary>
+            Backing storage for the PropertyName
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ChangePropertyAction.ValueProperty">
+            <summary>
+            Backing storage for the new value
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ChangePropertyAction.EaseProperty">
+            <summary>
+            Backing storage for the easing animation function
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.AnimatePropertyChange(System.Reflection.PropertyInfo,System.Object,System.Object)">
+            <summary>
+            This method is used to change the property value using an animation.
+            </summary>
+            <param name="propertyInfo"></param>
+            <param name="fromValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.CreateColorAnimation(Windows.UI.Color,Windows.UI.Color)">
+            <summary>
+            Creates a color animation
+            </summary>
+            <param name="fromValue"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.CreateDoubleAnimation(System.Double,System.Double)">
+            <summary>
+            Creates a double animation
+            </summary>
+            <param name="fromValue"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.CreateKeyFrameAnimation(System.Object,System.Object)">
+            <summary>
+            Creates a generic keyframe animation
+            </summary>
+            <param name="newValue"></param>
+            <param name="fromValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.CreatePointAnimation(Windows.Foundation.Point,Windows.Foundation.Point)">
+            <summary>
+            Creates a Point animation
+            </summary>
+            <param name="fromValue"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.GetCurrentPropertyValue(System.Object,System.Reflection.PropertyInfo)">
+            <summary>
+            Returns the current property value for a given object/Property.
+            </summary>
+            <param name="target"></param>
+            <param name="propertyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.Invoke(System.Object)">
+            <summary>
+            Invoke method - must be overridden
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.LookForPropertyDeclaration(System.Object,System.String)">
+            <summary>
+            This searches the type for a given property - including ancestor classes.
+            </summary>
+            <param name="target"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ChangePropertyAction.ValidateProperty(System.Reflection.PropertyInfo)">
+            <summary>
+            Validates the selected property
+            </summary>
+            <param name="propertyInfo"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ChangePropertyAction.Duration">
+            <summary>
+            Duration of the animation used
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ChangePropertyAction.PropertyName">
+            <summary>
+            Property to change
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ChangePropertyAction.Value">
+            <summary>
+            New value to set on property
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ChangePropertyAction.Ease">
+            <summary>
+            Optional easing function for the animation (used if duration is set)
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Input.KeyTrigger">
+            <summary>
+            A trigger based on a keystroke
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.KeyTrigger.FiredOnProperty">
+            <summary>
+            Backing storage for FiredOn property
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.KeyTrigger.KeyProperty">
+            <summary>
+            Backing storage for the key to watch for
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.KeyTrigger.ModifiersProperty">
+            <summary>
+            Backing storage for the modifiers
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.GetRoot(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Locate the root element
+            </summary>
+            <param name="current"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.OnEvent(System.Object)">
+            <summary>
+            This invokes the actions when the event is raised.
+            </summary>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.OnKeyPress(Windows.UI.Core.CoreWindow,Windows.UI.Core.KeyEventArgs)">
+            <summary>
+            Method called when a key is pressed/released
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Input.KeyTrigger.IsModifierKeyDown">
+            <summary>
+            Test for modifier keys
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Input.KeyTrigger.FiredOn">
+            <summary>
+            Determine when the trigger reacts
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Input.KeyTrigger.Key">
+            <summary>
+            Key to watch for
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Input.KeyTrigger.Modifiers">
+            <summary>
+            Additional keys (CTRL,Alt, Win,etc.)
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Input.KeyTriggerFiredOn">
+            <summary>
+            Type of key trigger to act on
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.KeyTriggerFiredOn.KeyDown">
+            <summary>
+            Key down
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.KeyTriggerFiredOn.KeyUp">
+            <summary>
+            Key up
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Input.ModifierKeys">
+            <summary>
+            This mirrors the VirtualKeyModifiers, but is based on int vs. uint
+            so it can be created in XAML.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.ModifierKeys.None">
+            <summary>
+            No modifier
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.ModifierKeys.Control">
+            <summary>
+            Ctrl key
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.ModifierKeys.Menu">
+            <summary>
+            ALT key
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.ModifierKeys.Shift">
+            <summary>
+            Shift key
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Input.ModifierKeys.Windows">
+            <summary>
+            Windows key
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.ComparisonConditionType">
+            <summary>
+            Comparison styles for the DataTrigger
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.Equal">
+            <summary>
+            ==
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.NotEqual">
+            <summary>
+            !=
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.LessThan">
+            <summary>
+            Less than
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.LessThanOrEqual">
+            <summary>
+            Less than or ==
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.GreaterThan">
+            <summary>
+            Greater than
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ComparisonConditionType.GreaterThanOrEqual">
+            <summary>
+            Greater than or ==
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior">
+            <summary>
+            This behavior provides a multi-selection binder to tie a ViewModel collection to
+            a multi-select list.  This includes ListBox, ListView, GridView, and anything
+            else which supports the Selector or MultiSelector base class.
+            
+            This can be attached through the normal Interaction.Behaviors mechanism 
+            or through the IsEnabled attached property (set to a collection).
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.CollectionProperty">
+            <summary>
+            Property to associate selected items
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.IsEnabledProperty">
+            <summary>
+            Property to associate selected items
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.GetIsEnabled(Windows.UI.Xaml.Controls.Primitives.Selector)">
+            <summary>
+            Get the collection value
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.SetIsEnabled(Windows.UI.Xaml.Controls.Primitives.Selector,System.Collections.IEnumerable)">
+            <summary>
+            Set the collection value
+            </summary>
+            <param name="control"></param>
+            <param name="collection"></param>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.BindsTwoWayProperty">
+            <summary>
+            True/False whether to go both directions in selection
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnEnabledChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is invoked when the behavior is attached through a property
+            instead of the full interaction syntax.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.GetSelectedItemsCollection">
+            <summary>
+            Retrieve the selected items collection from the associated
+            object if it supports multiple selection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnBackingCollectionChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the SelectedItems property is changed.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnBackingCollectionChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Called when the SelectedItems property is changed.
+            </summary>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.SynchronizeBackingStore(System.Boolean)">
+            <summary>
+            This synchronizes the backing collection with the ItemsControl
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.InvokeMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            Used to add/remove/clear items from unknown collection types
+            This is done through reflection so we can support IList, IList(OfT), Collection(OfT), etc.
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.GetDeclaredMethod(System.Object,System.String)">
+            <summary>
+            Lookup a method name via reflection that also searches
+            the base class type(s).
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnBackingStoreElementsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            This is called when the elements inside the backed storage collection change.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.OnSelectionChanged(System.Object,Windows.UI.Xaml.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Called when the Selection changed event is raised by the associated selector
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.Collection">
+            <summary>
+            Instance wrapper for selected items backing storage
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Interactivity.SynchronizedCollectionBehavior.BindsTwoWay">
+            <summary>
+            True/False whether to go both directions in selection
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior">
+            <summary>
+            Attached behavior to simulate the UpdateSourceTrigger feature of other XAML platforms.
+            DataBind to "BindableText" instead of Text and set the "Enabled" property to "true".
+            This works by hooking the TextChanged property of the associated TextBox and then pushing the value
+            to a new data-bindable property each time the value is changed.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.TextProperty">
+            <summary>
+            BindableText property key
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.OnAttached">
+            <summary>
+            Override called when behavior is attached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.OnBindableTextChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called to change the TextBox.Text value from a ViewModel's bound version
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.OnTextChanged(System.Object,Windows.UI.Xaml.Controls.TextChangedEventArgs)">
+            <summary>
+            Called when the TextBox.TextChanged event is raised. This copies
+            the current text from the TextBox into the BindableText property
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Interactivity.UpdateSourceTriggerBehavior.Text">
+            <summary>
+            Property wrapper for Text
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior">
+            <summary>
+            A behavior to add watermark text to a TextBox.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.TextProperty">
+            <summary>
+            Text property - set in XAML
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.GetText(Windows.UI.Xaml.Controls.TextBox)">
+            <summary>
+            Attached property version to attach the behavior to a TextBox
+            </summary>
+            <param name="tb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.SetText(Windows.UI.Xaml.Controls.TextBox,System.String)">
+            <summary>
+            Attached property version to attach the behavior to a TextBox
+            </summary>
+            <param name="tb"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.WatermarkColorProperty">
+            <summary>
+            Text color property - set in XAML
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnColorChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called when the watermark color is changed
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnTextChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called when the watermark text is changed on either a WatermarkTextboxBehavior
+            OR on a TextBox directly to attach/detach the behavior.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnAttached">
+            <summary>
+            Override called when behavior is attached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.TbOnLoaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when the TextBox is loaded - we associate the watermark
+            </summary>
+            <param name="sender"></param>
+            <param name="routedEventArgs"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnSetWatermarkText">
+            <summary>
+            Method to set the watermark text
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnChangeWatermarkColor">
+            <summary>
+            Used to change the foreground color at runtime.
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.OnRemoveWatermarkText">
+            <summary>
+            This is used to remove the watermark text
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.TbOnLostFocus(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when focus is lost - possibly add in watermark.
+            </summary>
+            <param name="sender"></param>
+            <param name="routedEventArgs"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.TbOnGotFocus(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Called when focus is gained - remove watermark
+            </summary>
+            <param name="sender"></param>
+            <param name="routedEventArgs"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.IsFocused">
+            <summary>
+            Helper method to determine our associated element, or any CHILD of our parent has focus.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.TbOnTextChanged(System.Object,Windows.UI.Xaml.Controls.TextChangedEventArgs)">
+            <summary>
+            Called if the code changes the text in the associated TextBox.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.WatermarkText">
+            <summary>
+            Get or set the watermark text on the behavior.
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Interactivity.WatermarkTextBehavior.WatermarkColor">
+            <summary>
+            Get or set the watermark text color.
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Internal.ComparisonLogic">
+            <summary>
+            This performs specific comparison logic
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.ComparisonLogic.Evaluate(System.Object,JulMar.Windows.Interactivity.ComparisonConditionType,System.Object)">
+            <summary>
+            Method to compare two objects
+            </summary>
+            <param name="leftOperand"></param>
+            <param name="operatorType"></param>
+            <param name="rightOperand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.ComparisonLogic.EvaluateComparable(System.IComparable,JulMar.Windows.Interactivity.ComparisonConditionType,System.IComparable)">
+            <summary>
+            Method to compare two operands using IComparable
+            </summary>
+            <param name="leftOperand"></param>
+            <param name="operatorType"></param>
+            <param name="rightOperand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Internal.DataBindingHelper">
+            <summary>
+            Binding helper
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Internal.TypeConverter">
+            <summary>
+            Very simple type conversion
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.TypeConverter.Convert(System.Type,System.Object)">
+            <summary>
+            Convert source to given type
+            </summary>
+            <param name="type"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.FindNearestStatefulControl(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Locate the nearest element with a VSM group
+            </summary>
+            <param name="contextElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.FindTemplatedParent(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Retrieve the parent object
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.GetVisualStateGroups(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Retrieve the VSM groups from an object
+            </summary>
+            <param name="targetObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.GoToState(Windows.UI.Xaml.FrameworkElement,System.String,System.Boolean)">
+            <summary>
+            Goto a state
+            </summary>
+            <param name="element"></param>
+            <param name="stateName"></param>
+            <param name="useTransitions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.HasVisualStateGroupsDefined(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Determine whether the element has VSM groups
+            </summary>
+            <param name="frameworkElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.ShouldContinueTreeWalk(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Helper to determine if we continue walking Visual Tree
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Internal.VisualStateUtilities.TryFindNearestStatefulControl(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.FrameworkElement@)">
+            <summary>
+            Find nearest control with VSM groups
+            </summary>
+            <param name="contextElement"></param>
+            <param name="resolvedControl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.ControlStoryboardAction">
+            <summary>
+            Storyboard action control
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.StoryboardAction">
+            <summary>
+            Action to work with a storyboard animation
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.StoryboardAction.StoryboardProperty">
+            <summary>
+            Backing storage for Storyboard
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardAction.OnStoryboardChanged(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method called when storyboard changes.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardAction.OnStoryboardChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change notification handler for Storyboard property
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Media.StoryboardAction.Storyboard">
+            <summary>
+            Storyboard to work with
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardAction.ControlStoryboardProperty">
+            <summary>
+            Backing storage for the ControlStoryboard property
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardAction._isPaused">
+            <summary>
+            Current play progress
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.ControlStoryboardAction.OnStoryboardChanged(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method called when storyboard changes.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.ControlStoryboardAction.Invoke(System.Object)">
+            <summary>
+            Invoke method - must be overridden
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Media.ControlStoryboardAction.ControlStoryboardOption">
+            <summary>
+            Type of control to perform on storyboard
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.ControlStoryboardOption">
+            <summary>
+            Options to control storyboard actions
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.Play">
+            <summary>
+            Play
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.Stop">
+            <summary>
+            Stop
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.TogglePlayPause">
+            <summary>
+            Toggle Play vs. Pause
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.Pause">
+            <summary>
+            Pause
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.Resume">
+            <summary>
+            Resume
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.ControlStoryboardOption.SkipToFill">
+            <summary>
+            Skip to end action
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.PlaySoundAction">
+            <summary>
+            This action plays a sound
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.PlaySoundAction.SourceProperty">
+            <summary>
+            Backing storage for the Source
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.PlaySoundAction.VolumeProperty">
+            <summary>
+            Backing storage for the volume
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.PlaySoundAction.Invoke(System.Object)">
+            <summary>
+            Invoke method - must be overridden
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.PlaySoundAction.SetMediaElementProperties(Windows.UI.Xaml.Controls.MediaElement)">
+            <summary>
+            Change the media properties
+            </summary>
+            <param name="mediaElement"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Media.PlaySoundAction.Source">
+            <summary>
+            URI source for the sound
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Media.PlaySoundAction.Volume">
+            <summary>
+            Volume for the sound
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.StoryboardCompletedTrigger">
+            <summary>
+            Trigger to run an action when a storyboard finishes.
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.Media.StoryboardTrigger">
+            <summary>
+            Storyboard trigger
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.Media.StoryboardTrigger.StoryboardProperty">
+            <summary>
+            Backing storage for the Storyboard
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardTrigger.OnStoryboardChanged(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method called when the storyboard is changed
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardTrigger.OnStoryboardChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change notification handler for the storyboard
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.Media.StoryboardTrigger.Storyboard">
+            <summary>
+            Storyboard to work with
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardCompletedTrigger.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardCompletedTrigger.OnStoryboardChanged(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Method called when the storyboard is changed
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.Media.StoryboardCompletedTrigger.StoryboardCompleted(System.Object,System.Object)">
+            <summary>
+            Method called when the storyboard completes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.BindingTrigger">
+            <summary>
+            This provides a Blend trigger based on a Data Binding expression with no comparison
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.PropertyChangedTrigger">
+            <summary>
+            Trigger which monitors a specific binding change
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.PropertyChangedTrigger.BindingProperty">
+            <summary>
+            Backing storage for the Binding
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.EvaluateBindingChange(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the binding changes
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.OnAttached">
+            <summary>
+            Override called when behavior is attached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.OnDataContextChanged">
+            <summary>
+            Override to hook into data context changed
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.OnBindingChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handler method for the binding change
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.PropertyChangedTrigger.OnPreviewInvoke(System.Object,System.Windows.Interactivity.PreviewInvokeEventArgs)">
+            <summary>
+            This is raised just before the invoke and ensures the bindings are all valid
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.PropertyChangedTrigger.Binding">
+            <summary>
+            Binding to monitor
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.BindingTrigger.EvaluateBindingChange(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This method is called each time our source binding changes
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.DataTrigger">
+            <summary>
+            This provides a Blend trigger based on a Data Binding expression + comparison
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.DataTrigger.ComparisonProperty">
+            <summary>
+            Backing storage for the comparison type
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.DataTrigger.ValueProperty">
+            <summary>
+            Backing storage for the value to compare against
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DataTrigger.Compare">
+            <summary>
+            Method which performs the comparison
+            </summary>
+            <returns>True/False for equality</returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DataTrigger.EvaluateBindingChange(Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This method is called each time our source binding changes
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DataTrigger.OnComparisonChanged(System.Object,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change handler for the Comparison condition
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DataTrigger.OnValueChanged(System.Object,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change handler for the comparison value
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.DataTrigger.Comparison">
+            <summary>
+            Comparison condition to perform
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.DataTrigger.Value">
+            <summary>
+            Value to compare to
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.DragPositionBehavior">
+            <summary>
+            This Blend behavior provides positional translation for elements through a 
+            RenderTransform using Drag/Drop semantics.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.DragPositionBehavior.IsEnabledProperty">
+            <summary>
+            This property allows the behavior to be used as a traditional
+            attached property behavior.
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.GetIsEnabled(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Returns whether DragPositionBehavior is enabled via attached property
+            </summary>
+            <param name="uie">Element</param>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.SetIsEnabled(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Adds DragPositionBehavior to an element
+            </summary>
+            <param name="uie">Element to apply</param>
+            <param name="value">True/False</param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.OnIsEnabledChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            This is called when the IsEnabled property has changed.
+            </summary>
+            <param name="dpo"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DragPositionBehavior.OnPointerPressed(System.Object,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Handles the MouseDown event
+            </summary>
+            <param name="sender">UIElement</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.DragPositionBehavior.ElementMouseDrag">
+            <summary>
+            This class encapsulates the drag data + logic for a given element.
+            It saves memory space as it is only allocated while the object is
+            being dragged around.
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.GoToStateAction">
+            <summary>
+            This method provides a VSM change based on a trigger action
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.GoToStateAction.StateNameProperty">
+            <summary>
+            Backing storage for the state name to transition to
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.GoToStateAction.UseTransitionsProperty">
+            <summary>
+            Backing storage for the UseTransition property
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.GoToStateAction.Invoke(System.Object)">
+            <summary>
+            This method invokes our VSM state
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.GoToStateAction.StateName">
+            <summary>
+            New state name to transition to
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.GoToStateAction.UseTransitions">
+            <summary>
+            True to use transitions when changing states
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.InvokeCommand">
+            <summary>
+            This trigger action binds a command/command parameter for MVVM usage with 
+            a Blend based trigger.  This can be used as an alternative to EventCommander.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.InvokeCommand.CommandProperty">
+            <summary>
+            ICommand to execute
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.InvokeCommand.CommandParameterProperty">
+            <summary>
+            Command parameter to pass to command execution
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.InvokeCommand.CommandParameterPathProperty">
+            <summary>
+            Path for CommandParameter when using Trigger Parameter
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.InvokeCommand.Invoke(System.Object)">
+            <summary>
+            This is called to execute the command when the trigger conditions are satisfied.
+            </summary>
+            <param name="parameter">parameter (not used)</param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.InvokeCommand.Command">
+            <summary>
+            Command to execute
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.InvokeCommand.CommandParameter">
+            <summary>
+            Command parameter
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.InvokeCommand.CommandParameterPath">
+            <summary>
+            Path for final command parameter
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.ClickTrigger">
+            <summary>
+            This is a Blend/VS.NET behavior which drives a Click event to 
+            some interactive action
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ClickTrigger.ClickModeProperty">
+            <summary>
+            The DependencyProperty for the ClickMode property.
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ClickTrigger.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ClickTrigger.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ClickTrigger.HandlePointerPressed(System.Object,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Mark that a PointerPressed event occurred.
+            </summary>
+            <param name="sender">UIElement</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ClickTrigger.HandlePointerHolding(System.Object,Windows.UI.Xaml.Input.HoldingRoutedEventArgs)">
+            <summary>
+            Mark that a Holding event occurred.
+            </summary>
+            <param name="sender">UIElement</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ClickTrigger.HandlePointerReleased(System.Object,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Mark that a PointerReleased occurred.
+            </summary>
+            <param name="sender">UIElement</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ClickTrigger.ClickMode">
+            <summary> 
+            ClickMode specify when the Click event should fire 
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.DoubleClickTrigger">
+            <summary>
+            This is a Blend/VS.NET behavior which drives a DoubleClick event to 
+            some interactive action
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DoubleClickTrigger.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DoubleClickTrigger.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.DoubleClickTrigger.AssociatedObjectOnDoubleTapped(System.Object,Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs)">
+            <summary>
+            This handles the UIElement.LeftButtonDown event to test for a double-click event.
+            </summary>
+            <param name="sender">UIElement</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.TimerTrigger">
+            <summary>
+            Trigger which runs off a timer
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.TimerTrigger.MillisecondsPerTickProperty">
+            <summary>
+            Backing storage for the counter
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.TimerTrigger.TotalTicksProperty">
+            <summary>
+            Backing storage for the total ticks counter
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.TimerTrigger.OnDetaching">
+            <summary>
+            Override called when behavior is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.TimerTrigger.OnEvent(System.Object)">
+            <summary>
+            This invokes the actions when the event is raised.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.TimerTrigger.OnTimerTick(System.Object,System.Object)">
+            <summary>
+            Called when the timer elapses
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.TimerTrigger.StartTimer">
+            <summary>
+            Called to start the timer
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.TimerTrigger.StopTimer">
+            <summary>
+            Called to stop the timer
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.TimerTrigger.MillisecondsPerTick">
+            <summary>
+            Milliseconds
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.TimerTrigger.TotalTicks">
+            <summary>
+            Total ticks elapsed
+            </summary>
+        </member>
+        <member name="T:JulMar.Windows.Interactivity.ViewModelTrigger">
+            <summary>
+            This is a Blend trigger that binds to an event within a ViewModel and invokes actions when it 
+            is raised by the ViewModel.  This allows the VM to trigger behaviors in the View easily.
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ViewModelTrigger.TargetProperty">
+            <summary>
+            The DependencyProperty used to hold the target object (VM).
+            </summary>
+        </member>
+        <member name="F:JulMar.Windows.Interactivity.ViewModelTrigger.EventNameProperty">
+            <summary>
+            The DependencyProperty used to hold the IViewModelTrigger.
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnAttached">
+            <summary>
+            This is called when the trigger is attached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnDetaching">
+            <summary>
+            Called when the trigger is detached
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnEventNameChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change handler for the event name
+            </summary>
+            <param name="dpo">VMTrigger object</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnTargetChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Change handler for the event name
+            </summary>
+            <param name="dpo">VMTrigger object</param>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.RegisterEvent(System.Object,System.String)">
+            <summary>
+            Register an event handler
+            </summary>
+            <param name="obj"></param>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.UnregisterEvent(System.Object,System.String)">
+            <summary>
+            Unregister an event handler
+            </summary>
+            <param name="obj"></param>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.LookForEventDeclaration(System.Object,System.String)">
+            <summary>
+            This searches the type for a given event - including ancestor classes.
+            </summary>
+            <param name="target"></param>
+            <param name="eventName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.GetEventMethod(System.Reflection.EventInfo)">
+            <summary>
+            Retrieves a delegate to our OnEventRaised method which may be used with a specific
+            EventHandler subtype based on an EventInfo.
+            </summary>
+            <param name="ei">Event to generate</param>
+            <returns></returns>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnEventRaisedWithParameter(System.Object)">
+            <summary>
+            This is invoked by the event - it runs all the actions
+            </summary>
+        </member>
+        <member name="M:JulMar.Windows.Interactivity.ViewModelTrigger.OnEventRaisedWithNoParameter">
+            <summary>
+            This is invoked by the event - it runs all the actions
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ViewModelTrigger.Target">
+            <summary> 
+            Object holding event
+            </summary>
+        </member>
+        <member name="P:JulMar.Windows.Interactivity.ViewModelTrigger.EventName">
+            <summary> 
+            Name of the event to hook into.
+            </summary>
+        </member>
+    </members>
+</doc>
