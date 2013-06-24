@@ -17,7 +17,6 @@ namespace NoMvvm
 
             var ioc = MvxSimpleIoCContainer.Initialise();
 
-            ioc.RegisterSingleton<IMvxTrace>(new MvxDebugOnlyTrace());
             ioc.RegisterSingleton<IMvxPluginManager>(new MvxFilePluginManager(".Droid", ".dll"));
 	
 			ioc.RegisterSingleton<IMvxAndroidGlobals>(new AndroidGlobals(applicationContext, GetType().Namespace));

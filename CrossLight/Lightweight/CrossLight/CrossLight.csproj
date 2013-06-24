@@ -71,8 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FooBarViewModel.cs" />
     <Compile Include="Framework\AndroidGlobals.cs" />
-    <Compile Include="Framework\AndroidTopActivity.cs" />
-    <Compile Include="Framework\ITopActivity.cs" />
     <Compile Include="Framework\LayoutInflaterProvider.cs" />
     <Compile Include="Framework\Setup.cs" />
   </ItemGroup>

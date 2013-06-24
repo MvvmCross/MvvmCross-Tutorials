@@ -1,6 +1,5 @@
 ﻿using Android.App;
 using Android.OS;
-using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using CrossLight.Framework;
 
@@ -17,7 +16,6 @@ namespace CrossLight.Views
 
             // setup the application
             Setup.Instance.EnsureInitialized(ApplicationContext);
-            Mvx.Resolve<ITopActivity>().Activity = this;
 
             _bindingContext = new MvxAndroidBindingContext(this, new LayoutInflaterProvider(LayoutInflater), new FooBarViewModel());
             

@@ -31,7 +31,6 @@ namespace NoBinding
 
             var topActivity = new AndroidTopActivity();
             ioc.RegisterSingleton<ITopActivity>(topActivity);
-            ioc.RegisterSingleton<IMvxAndroidCurrentTopActivity>(topActivity);
             ioc.RegisterSingleton<IMvxMainThreadDispatcher>(topActivity);
        }
     }
