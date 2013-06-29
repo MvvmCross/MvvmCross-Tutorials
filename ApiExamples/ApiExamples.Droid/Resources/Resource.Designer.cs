@@ -119,31 +119,34 @@ namespace ApiExamples.Droid
 			public const int Test_ContainsSub = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Test_Date = 2130903046;
+			public const int Test_ConvertThis = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int Test_Frame = 2130903047;
+			public const int Test_Date = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Test_LinearLayout = 2130903048;
+			public const int Test_Frame = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Test_List = 2130903049;
+			public const int Test_LinearLayout = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int Test_Relative = 2130903050;
+			public const int Test_List = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int Test_Seek = 2130903051;
+			public const int Test_Relative = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int Test_Spinner = 2130903052;
+			public const int Test_Seek = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Test_Text = 2130903053;
+			public const int Test_Spinner = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Test_Time = 2130903054;
+			public const int Test_Text = 2130903054;
+			
+			// aapt resource value: 0x7f03000f
+			public const int Test_Time = 2130903055;
 			
 			static Layout()
 			{

@@ -24,7 +24,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textSize="40dp"
-    local:MvxBind="Text Property"
+    local:MvxBind="Text Format('{0:hhmm}',Property)"
     />
   <Button
     android:layout_width="fill_parent"

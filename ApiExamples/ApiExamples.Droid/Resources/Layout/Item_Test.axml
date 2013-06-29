@@ -5,5 +5,5 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:textSize="30dp"
-    local:MvxBind="Text Name"
+    local:MvxBind="Text Strip(Name, 'ViewModel')"
     />

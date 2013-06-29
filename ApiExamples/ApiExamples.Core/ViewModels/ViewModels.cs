@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Cirrious.CrossCore;
+using Cirrious.CrossCore.Converters;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace ApiExamples.Core.ViewModels
 {
+    public class StripConverter : MvxValueConverter<string, string>
+    {
+        protected override string Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return value.Replace((string)parameter, string.Empty);
+        }
+    }
+
     public class FirstViewModel 
 		: MvxViewModel
     {
@@ -211,6 +220,30 @@ namespace ApiExamples.Core.ViewModels
                 get { return _secondPerson; }
                 set { _secondPerson = value; RaisePropertyChanged(() => SecondPerson); }
             }
+        }
+    }
+
+    public class PlusTenValueConverter
+        : MvxValueConverter
+    {
+        public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return ((int)value) + 10;
+        }
+
+        public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return int.Parse((string)value) - 10;
+        }
+    }
+
+    public class ConvertThisViewModel : TestViewModel
+    {
+        private int _value = 21;
+        public int Value
+        {
+            get { return _value; }
+            set { _value = value; RaisePropertyChanged(() => Value); }
         }
     }
 }

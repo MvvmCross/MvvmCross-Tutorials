@@ -112,5 +112,15 @@ namespace ApiExamples.Droid.Views
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Test_ContainsSub);
         }
-    } 
+    }
+
+    [Activity(NoHistory = true)]
+    public class ConvertThisView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_ConvertThis);
+        }
+    }
 }

@@ -102,6 +102,7 @@
     <AndroidResource Include="Resources\Layout\Test_Seek.axml" />
     <AndroidResource Include="Resources\Layout\Test_ContainsSub.axml" />
     <AndroidResource Include="Resources\Layout\Item_Person.axml" />
+    <AndroidResource Include="Resources\Layout\Test_ConvertThis.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
