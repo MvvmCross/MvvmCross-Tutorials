@@ -39,7 +39,9 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="Services\AllTestsService.cs" />
+    <Compile Include="ViewModels\ViewModels.cs" />
+    <Compile Include="Services\IAllTestsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
