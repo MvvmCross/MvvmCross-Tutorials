@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Android.App;
 using Android.OS;
 using Cirrious.MvvmCross.Binding.BindingContext;
@@ -16,11 +17,7 @@ namespace DialogExamples.Droid.Views
 
             var bindings = this.CreateInlineBindingTarget<SecondViewModel>();
 
-            var floater = new FloatElement("Float?").Bind(bindings, vm => vm.Temperature);
-            floater.MinValue = 32;
-            floater.MaxValue = 212;
-
-            Root = new RootElement("Example Root")
+            Root = new RootElement("Second Root")
                 {
                     new Section("Date")
                         {
@@ -34,7 +31,11 @@ namespace DialogExamples.Droid.Views
                         },
                     new Section("Float")
                         {
-                            floater,
+                            new FloatElement("Float?")
+                            {
+                                MinValue = 32,
+                                MaxValue = 212
+                            }.Bind(bindings, vm => vm.Temperature),
                             new StringElement("Float is").Bind(bindings, vm => vm.Temperature),
                         },
                     new Section("Todo:")

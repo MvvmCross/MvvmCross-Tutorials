@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
 
@@ -6,9 +7,14 @@ namespace DialogExamples.Core.ViewModels
     public class FirstViewModel 
 		: MvxViewModel
     {
-        public ICommand GoCommand
+        public ICommand GoSecondCommand
         {
             get { return new MvxCommand(() => ShowViewModel<SecondViewModel>());}
+        }
+
+        public ICommand BindableElementsCommand
+        {
+            get { return new MvxCommand(() => ShowViewModel<ThirdViewModel>()); }
         }
 
         private bool _switchThis;
@@ -18,14 +24,14 @@ namespace DialogExamples.Core.ViewModels
             set { _switchThis = value; RaisePropertyChanged(() => SwitchThis); }
         }
 
-        private string _textProperty;
+        private string _textProperty = "T";
         public string TextProperty
         {
             get { return _textProperty; }
             set { _textProperty = value; RaisePropertyChanged(() => TextProperty); }
         }
 
-        private string _passwordProperty;
+        private string _passwordProperty = "P";
         public string PasswordProperty
         {
             get { return _passwordProperty; }
@@ -37,6 +43,25 @@ namespace DialogExamples.Core.ViewModels
         {
             get { return _checkThis; }
             set { _checkThis = value; RaisePropertyChanged(() => CheckThis); }
+        }
+
+        private readonly List<string> _dessertChoices = new List<string>()
+            {
+                "Cake",
+                "Chocolate",
+                "Ice cream",
+                "Strawberries"
+            };
+        public List<string> DessertChoices
+        {
+            get { return _dessertChoices; }
+        }
+
+        private int _currentDessertIndex = 2;
+        public int CurrentDessertIndex 
+        {   
+            get { return _currentDessertIndex; }
+            set { _currentDessertIndex = value; RaisePropertyChanged(() => CurrentDessertIndex); }
         }
     }
 }
