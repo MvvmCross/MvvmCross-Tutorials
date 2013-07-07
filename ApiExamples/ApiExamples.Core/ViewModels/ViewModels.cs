@@ -82,21 +82,50 @@ namespace ApiExamples.Core.ViewModels
     public class SpinnerViewModel
         : TestViewModel
     {
-        private List<string> _items = new List<string>()
+        public class Thing
+        {
+            public Thing(string caption)
             {
-                "One",
-                "Two",
-                "Three",
-                "Four"
+                Caption = caption;
+            }
+
+            public string Caption { get; private set; }
+
+            public override string ToString()
+            {
+                return Caption;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var rhs = obj as Thing;
+                if (rhs == null)
+                    return false;
+                return rhs.Caption == Caption;
+            }
+
+            public override int GetHashCode()
+            {
+                if (Caption == null)
+                    return 0;
+                return Caption.GetHashCode();
+            }
+        }
+        private List<Thing> _items = new List<Thing>()
+            {
+                new Thing("One"),
+                new Thing("Two"),
+                new Thing("Three"),
+                new Thing("Four"),
             };
-        public List<string> Items
+        public List<Thing> Items
         {
             get { return _items; }
             set { _items = value; RaisePropertyChanged(() => Items); }
         }
 
-        private string _selectedItem = "One";
-        public string SelectedItem
+        private Thing _selectedItem = new Thing("Three");
+        public Thing SelectedItem
         {
             get { return _selectedItem; }
             set { _selectedItem = value; RaisePropertyChanged(() => SelectedItem); }
