@@ -43,19 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.5-beta\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.9-beta6\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.8.5-beta\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.9-beta6\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.AutoView">
-      <HintPath>..\packages\MvvmCross.HotTuna.AutoViews.3.0.8.5-beta\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.AutoView.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.AutoViews.3.0.9-beta6\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.AutoView.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.5-beta\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.9-beta6\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="CrossUI.Core">
-      <HintPath>..\packages\MvvmCross.HotTuna.AutoViews.3.0.8.5-beta\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\CrossUI.Core.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.AutoViews.3.0.9-beta6\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\CrossUI.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
