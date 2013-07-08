@@ -9,6 +9,11 @@ namespace DialogExamples.Touch.Views
     [Register("SecondView")]
     public class SecondView : MvxDialogViewController
     {
+        public SecondView()
+            : base(pushing:true)
+        {
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();

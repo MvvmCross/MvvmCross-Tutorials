@@ -10,6 +10,11 @@ namespace DialogExamples.Touch.Views
     [Register("ThirdView")]
     public class ThirdView : MvxDialogViewController
     {
+        public ThirdView()
+            : base(pushing:true)
+        {
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
