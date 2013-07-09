@@ -123,4 +123,34 @@ namespace ApiExamples.Droid.Views
             SetContentView(Resource.Layout.Test_ConvertThis);
         }
     }
+
+    [Activity(NoHistory = true)]
+    public class ObservableCollectionView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_ObservableCollection);
+        }
+    }
+
+    [Activity(NoHistory = true)]
+    public class ObservableDictionaryView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_ObservableDictionary);
+        }
+    }
+
+    [Activity(NoHistory = true)]
+    public class WithErrorsView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_WithErrors);
+        }
+    }
 }

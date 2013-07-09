@@ -103,6 +103,15 @@
     <AndroidResource Include="Resources\Layout\Test_ContainsSub.axml" />
     <AndroidResource Include="Resources\Layout\Item_Person.axml" />
     <AndroidResource Include="Resources\Layout\Test_ConvertThis.axml" />
+    <AndroidResource Include="Resources\Layout\Test_ObservableCollection.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Test_ObservableDictionary.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Test_WithErrors.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />

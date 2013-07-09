@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 using System.Windows.Input;
+using ApiExamples.Core.ViewModels.Helpers;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Converters;
 using Cirrious.MvvmCross.ViewModels;
@@ -181,6 +183,171 @@ namespace ApiExamples.Core.ViewModels
         
         public class RelativeViewModel : BaseListTestViewModel
         { }
+
+        public class ObservableCollectionViewModel : TestViewModel
+        {
+            private ObservableCollection<string> _items;
+            public ObservableCollection<string> Items
+            {
+                get { return _items; }
+                set { _items = value; RaisePropertyChanged(() => Items); }
+            }
+
+            public ICommand ReplaceAllCommand
+            {
+                get { return new MvxCommand(() =>
+                    {
+                        Items = new ObservableCollection<string>()
+                            {
+                                "One " + Guid.NewGuid().ToString(), 
+                                "Two " + Guid.NewGuid().ToString(), 
+                                "Three " + Guid.NewGuid().ToString() 
+                            };
+                    }); }
+            }
+
+            public ICommand ReplaceEachCommand
+            {
+                get { return new MvxCommand(() =>
+                    {
+                        if (Items == null)
+                        {
+                            Items = new ObservableCollection<string>();
+                            Items.Add("1 " + Guid.NewGuid().ToString());
+                            Items.Add("2 " + Guid.NewGuid().ToString());
+                            Items.Add("3 " + Guid.NewGuid().ToString());
+                            return;
+                        }
+
+                        Items[0] = "1 " + Guid.NewGuid().ToString();
+                        Items[1] = "2 " + Guid.NewGuid().ToString();
+                        Items[2] = "3 " + Guid.NewGuid().ToString();
+                    });
+                }
+            }
+
+            public ICommand MakeNullCommand
+            {
+                get
+                {
+                    return new MvxCommand(() =>
+                    {
+                        Items = null;
+                    });
+                }
+            }
+        }
+
+        public class ObservableDictionaryViewModel : TestViewModel
+        {
+            private ObservableDictionary<string,string> _items;
+            public ObservableDictionary<string, string> Items
+            {
+                get { return _items; }
+                set { _items = value; RaisePropertyChanged(() => Items); }
+            }
+
+            public ICommand ReplaceAllCommand
+            {
+                get
+                {
+                    return new MvxCommand(() =>
+                    {
+                        Items = new ObservableDictionary<string, string>()
+                            {
+                                {"One", "One " + Guid.NewGuid().ToString() }, 
+                                {"Two","Two " + Guid.NewGuid().ToString() },
+                                {"Three","Three " + Guid.NewGuid().ToString() }
+                            };
+                    });
+                }
+            }
+
+            public ICommand ReplaceEachCommand
+            {
+                get
+                {
+                    return new MvxCommand(() =>
+                    {
+                        if (Items == null)
+                        {
+                            Items = new ObservableDictionary<string,string>() {
+                                {"One", "One " + Guid.NewGuid().ToString() }, 
+                                {"Two","Two " + Guid.NewGuid().ToString() },
+                                {"Three","Three " + Guid.NewGuid().ToString() }
+                            };
+                            return;
+                        }
+
+                        Items["One"] = "1 " + Guid.NewGuid().ToString();
+                        Items["Two"] = "2 " + Guid.NewGuid().ToString();
+                        Items["Three"] = "3 " + Guid.NewGuid().ToString();
+                    });
+                }
+            }
+
+            public ICommand MakeNullCommand
+            {
+                get
+                {
+                    return new MvxCommand(() =>
+                    {
+                        Items = null;
+                    });
+                }
+            }
+        }
+
+        public class WithErrorsViewModel : TestViewModel
+        {
+            private ObservableDictionary<string, string> _errors = new ObservableDictionary<string, string>();
+            public ObservableDictionary<string, string> Errors
+            {
+                get { return _errors; }
+                set { _errors = value; RaisePropertyChanged(() => Errors); }
+            }
+
+            private string _email = "Enter Email Here";
+            public string Email
+            {
+                get { return _email; }
+                set { _email = value; RaisePropertyChanged(() => Email); Validate(); }
+            }
+
+            private bool _acceptTerms;
+            public bool AcceptTerms 
+            {   
+                get { return _acceptTerms; }
+                set { _acceptTerms = value; RaisePropertyChanged(() => AcceptTerms); Validate(); }
+            }
+
+            public WithErrorsViewModel()
+            {
+                Validate();
+            }
+
+            private void Validate()
+            {
+                var regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                var match = regex.Match(_email);
+                UpdateError(!match.Success, "Email", "Please enter a valid Email address");
+                UpdateError(!_acceptTerms, "AcceptTerms", "Please accept the terms");
+            }
+
+            private void UpdateError(bool isInError, string propertyName, string errorMessage)
+            {
+                if (isInError)
+                {
+                    Errors[propertyName] = errorMessage;
+                }
+                else
+                {
+                    if (Errors.ContainsKey(propertyName))
+                        Errors.Remove(propertyName);
+                }
+            }
+        }
+
 
         public class TextViewModel : TestViewModel
         {
