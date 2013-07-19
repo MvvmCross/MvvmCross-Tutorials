@@ -375,7 +375,7 @@ namespace ApiExamples.Core.ViewModels
 
     public class SeekViewModel : TestViewModel
     {
-        private double _seekProperty;
+        private double _seekProperty = 12;
         public double SeekProperty
         {
             get { return _seekProperty; }
