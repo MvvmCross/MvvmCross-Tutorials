@@ -72,12 +72,12 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var textView = new UITextField(new RectangleF(10, 40, 300, 30));
+            var textView = new UITextField(new RectangleF(10, 90, 300, 30));
             Add(textView);
             var datePicker = new UIDatePicker();
             datePicker.Mode = UIDatePickerMode.Date;
             textView.InputView = datePicker;
-            var label = new UILabel(new RectangleF(10, 70, 300, 30));
+            var label = new UILabel(new RectangleF(10, 120, 300, 30));
             Add(label);
 
             var set = this.CreateBindingSet<DateTimeView, DateTimeViewModel>();
@@ -103,12 +103,12 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var textView = new UITextField(new RectangleF(10, 40, 300, 30));
+            var textView = new UITextField(new RectangleF(10, 90, 300, 30));
             Add(textView);
             var datePicker = new UIDatePicker();
             datePicker.Mode = UIDatePickerMode.Time;
             textView.InputView = datePicker;
-            var label = new UILabel(new RectangleF(10, 70, 300, 30));
+            var label = new UILabel(new RectangleF(10, 120, 300, 30));
             Add(label);
 
             var set = this.CreateBindingSet<TimeView, TimeViewModel>();
