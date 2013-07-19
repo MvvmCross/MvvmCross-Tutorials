@@ -5,8 +5,19 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:textSize="30dp"
-    local:MvxBind="Text Name"
     >
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ff00ff"
+      local:MvxBind="Text "
+  />
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffff00"
+      local:MvxBind="Text ."
+  />
   <EditText
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"

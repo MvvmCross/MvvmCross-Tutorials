@@ -18,8 +18,8 @@ namespace ApiExamples.Core.ViewModels
         }
     }
 
-    public class FirstViewModel 
-		: MvxViewModel
+    public class FirstViewModel
+        : MvxViewModel
     {
         public FirstViewModel(IAllTestsService service)
         {
@@ -32,7 +32,7 @@ namespace ApiExamples.Core.ViewModels
             get { return _tests; }
             set { _tests = value; RaisePropertyChanged(() => Tests); }
         }
-        
+
         public ICommand GotoTestCommand
         {
             get { return new MvxCommand<Type>(type => ShowViewModel(type)); }
@@ -161,261 +161,267 @@ namespace ApiExamples.Core.ViewModels
 
         public ICommand RemoveCommand
         {
-            get 
-            { 
+            get
+            {
                 return new MvxCommand(() =>
                 {
                     if (Items.Count == 0)
                         return;
                     Items.RemoveAt(0);
-                }); 
+                });
             }
         }
 
-        public class ListViewModel : BaseListTestViewModel
-        { }
-        
-        public class LinearLayoutViewModel : BaseListTestViewModel
-        { }
-        
-        public class FrameViewModel : BaseListTestViewModel
-        { }
-        
-        public class RelativeViewModel : BaseListTestViewModel
-        { }
 
-        public class ObservableCollectionViewModel : TestViewModel
+    }
+    public class ListViewModel : BaseListTestViewModel
+    { }
+
+    public class LinearLayoutViewModel : BaseListTestViewModel
+    { }
+
+    public class FrameViewModel : BaseListTestViewModel
+    { }
+
+    public class RelativeViewModel : BaseListTestViewModel
+    { }
+
+    public class ObservableCollectionViewModel : TestViewModel
+    {
+        private ObservableCollection<string> _items;
+        public ObservableCollection<string> Items
         {
-            private ObservableCollection<string> _items;
-            public ObservableCollection<string> Items
-            {
-                get { return _items; }
-                set { _items = value; RaisePropertyChanged(() => Items); }
-            }
+            get { return _items; }
+            set { _items = value; RaisePropertyChanged(() => Items); }
+        }
 
-            public ICommand ReplaceAllCommand
+        public ICommand ReplaceAllCommand
+        {
+            get
             {
-                get { return new MvxCommand(() =>
-                    {
-                        Items = new ObservableCollection<string>()
+                return new MvxCommand(() =>
+                {
+                    Items = new ObservableCollection<string>()
                             {
                                 "One " + Guid.NewGuid().ToString(), 
                                 "Two " + Guid.NewGuid().ToString(), 
                                 "Three " + Guid.NewGuid().ToString() 
                             };
-                    }); }
-            }
-
-            public ICommand ReplaceEachCommand
-            {
-                get { return new MvxCommand(() =>
-                    {
-                        if (Items == null)
-                        {
-                            Items = new ObservableCollection<string>();
-                            Items.Add("1 " + Guid.NewGuid().ToString());
-                            Items.Add("2 " + Guid.NewGuid().ToString());
-                            Items.Add("3 " + Guid.NewGuid().ToString());
-                            return;
-                        }
-
-                        Items[0] = "1 " + Guid.NewGuid().ToString();
-                        Items[1] = "2 " + Guid.NewGuid().ToString();
-                        Items[2] = "3 " + Guid.NewGuid().ToString();
-                    });
-                }
-            }
-
-            public ICommand MakeNullCommand
-            {
-                get
-                {
-                    return new MvxCommand(() =>
-                    {
-                        Items = null;
-                    });
-                }
+                });
             }
         }
 
-        public class ObservableDictionaryViewModel : TestViewModel
+        public ICommand ReplaceEachCommand
         {
-            private ObservableDictionary<string,string> _items;
-            public ObservableDictionary<string, string> Items
+            get
             {
-                get { return _items; }
-                set { _items = value; RaisePropertyChanged(() => Items); }
-            }
-
-            public ICommand ReplaceAllCommand
-            {
-                get
+                return new MvxCommand(() =>
                 {
-                    return new MvxCommand(() =>
+                    if (Items == null)
                     {
-                        Items = new ObservableDictionary<string, string>()
+                        Items = new ObservableCollection<string>();
+                        Items.Add("1 " + Guid.NewGuid().ToString());
+                        Items.Add("2 " + Guid.NewGuid().ToString());
+                        Items.Add("3 " + Guid.NewGuid().ToString());
+                        return;
+                    }
+
+                    Items[0] = "1 " + Guid.NewGuid().ToString();
+                    Items[1] = "2 " + Guid.NewGuid().ToString();
+                    Items[2] = "3 " + Guid.NewGuid().ToString();
+                });
+            }
+        }
+
+        public ICommand MakeNullCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    Items = null;
+                });
+            }
+        }
+    }
+
+    public class ObservableDictionaryViewModel : TestViewModel
+    {
+        private ObservableDictionary<string, string> _items;
+        public ObservableDictionary<string, string> Items
+        {
+            get { return _items; }
+            set { _items = value; RaisePropertyChanged(() => Items); }
+        }
+
+        public ICommand ReplaceAllCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    Items = new ObservableDictionary<string, string>()
                             {
                                 {"One", "One " + Guid.NewGuid().ToString() }, 
                                 {"Two","Two " + Guid.NewGuid().ToString() },
                                 {"Three","Three " + Guid.NewGuid().ToString() }
                             };
-                    });
-                }
+                });
             }
+        }
 
-            public ICommand ReplaceEachCommand
+        public ICommand ReplaceEachCommand
+        {
+            get
             {
-                get
+                return new MvxCommand(() =>
                 {
-                    return new MvxCommand(() =>
+                    if (Items == null)
                     {
-                        if (Items == null)
-                        {
-                            Items = new ObservableDictionary<string,string>() {
+                        Items = new ObservableDictionary<string, string>() {
                                 {"One", "One " + Guid.NewGuid().ToString() }, 
                                 {"Two","Two " + Guid.NewGuid().ToString() },
                                 {"Three","Three " + Guid.NewGuid().ToString() }
                             };
-                            return;
-                        }
+                        return;
+                    }
 
-                        Items["One"] = "1 " + Guid.NewGuid().ToString();
-                        Items["Two"] = "2 " + Guid.NewGuid().ToString();
-                        Items["Three"] = "3 " + Guid.NewGuid().ToString();
-                    });
-                }
-            }
-
-            public ICommand MakeNullCommand
-            {
-                get
-                {
-                    return new MvxCommand(() =>
-                    {
-                        Items = null;
-                    });
-                }
+                    Items["One"] = "1 " + Guid.NewGuid().ToString();
+                    Items["Two"] = "2 " + Guid.NewGuid().ToString();
+                    Items["Three"] = "3 " + Guid.NewGuid().ToString();
+                });
             }
         }
 
-        public class WithErrorsViewModel : TestViewModel
+        public ICommand MakeNullCommand
         {
-            private ObservableDictionary<string, string> _errors = new ObservableDictionary<string, string>();
-            public ObservableDictionary<string, string> Errors
+            get
             {
-                get { return _errors; }
-                set { _errors = value; RaisePropertyChanged(() => Errors); }
-            }
-
-            private string _email = "Enter Email Here";
-            public string Email
-            {
-                get { return _email; }
-                set { _email = value; RaisePropertyChanged(() => Email); Validate(); }
-            }
-
-            private bool _acceptTerms;
-            public bool AcceptTerms 
-            {   
-                get { return _acceptTerms; }
-                set { _acceptTerms = value; RaisePropertyChanged(() => AcceptTerms); Validate(); }
-            }
-
-            public WithErrorsViewModel()
-            {
-                Validate();
-            }
-
-            private void Validate()
-            {
-                var regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-                var match = regex.Match(_email);
-                UpdateError(!match.Success, "Email", "Please enter a valid Email address");
-                UpdateError(!_acceptTerms, "AcceptTerms", "Please accept the terms");
-            }
-
-            private void UpdateError(bool isInError, string propertyName, string errorMessage)
-            {
-                if (isInError)
+                return new MvxCommand(() =>
                 {
-                    Errors[propertyName] = errorMessage;
-                }
-                else
-                {
-                    if (Errors.ContainsKey(propertyName))
-                        Errors.Remove(propertyName);
-                }
+                    Items = null;
+                });
+            }
+        }
+    }
+
+    public class WithErrorsViewModel : TestViewModel
+    {
+        private ObservableDictionary<string, string> _errors = new ObservableDictionary<string, string>();
+        public ObservableDictionary<string, string> Errors
+        {
+            get { return _errors; }
+            set { _errors = value; RaisePropertyChanged(() => Errors); }
+        }
+
+        private string _email = "Enter Email Here";
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; RaisePropertyChanged(() => Email); Validate(); }
+        }
+
+        private bool _acceptTerms;
+        public bool AcceptTerms
+        {
+            get { return _acceptTerms; }
+            set { _acceptTerms = value; RaisePropertyChanged(() => AcceptTerms); Validate(); }
+        }
+
+        public WithErrorsViewModel()
+        {
+            Validate();
+        }
+
+        private void Validate()
+        {
+            var regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            var match = regex.Match(_email);
+            UpdateError(!match.Success, "Email", "Please enter a valid Email address");
+            UpdateError(!_acceptTerms, "AcceptTerms", "Please accept the terms");
+        }
+
+        private void UpdateError(bool isInError, string propertyName, string errorMessage)
+        {
+            if (isInError)
+            {
+                Errors[propertyName] = errorMessage;
+            }
+            else
+            {
+                if (Errors.ContainsKey(propertyName))
+                    Errors.Remove(propertyName);
+            }
+        }
+    }
+
+
+    public class TextViewModel : TestViewModel
+    {
+        private string _stringProperty = "Hello";
+        public string StringProperty
+        {
+            get { return _stringProperty; }
+            set { _stringProperty = value; RaisePropertyChanged(() => StringProperty); }
+        }
+
+        private double _doubleProperty = 42.12;
+        public double DoubleProperty
+        {
+            get { return _doubleProperty; }
+            set { _doubleProperty = value; RaisePropertyChanged(() => DoubleProperty); }
+        }
+    }
+
+    public class SeekViewModel : TestViewModel
+    {
+        private double _seekProperty;
+        public double SeekProperty
+        {
+            get { return _seekProperty; }
+            set { _seekProperty = value; RaisePropertyChanged(() => SeekProperty); }
+        }
+    }
+
+    public class ContainsSubViewModel : TestViewModel
+    {
+        public class PersonViewModel : MvxNotifyPropertyChanged
+        {
+            private string _firstName;
+            public string FirstName
+            {
+                get { return _firstName; }
+                set { _firstName = value; RaisePropertyChanged(() => FirstName); }
+            }
+
+            private string _lastName;
+            public string LastName
+            {
+                get { return _lastName; }
+                set { _lastName = value; RaisePropertyChanged(() => LastName); }
             }
         }
 
-
-        public class TextViewModel : TestViewModel
+        private PersonViewModel _firstPerson = new PersonViewModel()
         {
-            private string _stringProperty = "Hello";
-            public string StringProperty
-            {
-                get { return _stringProperty; }
-                set { _stringProperty = value; RaisePropertyChanged(() => StringProperty); }
-            }
-
-            private double _doubleProperty = 42.12;
-            public double DoubleProperty
-            {
-                get { return _doubleProperty; }
-                set { _doubleProperty = value; RaisePropertyChanged(() => DoubleProperty); }
-            }
+            FirstName = "Fred",
+            LastName = "Flintstone"
+        };
+        public PersonViewModel FirstPerson
+        {
+            get { return _firstPerson; }
+            set { _firstPerson = value; RaisePropertyChanged(() => FirstPerson); }
         }
 
-        public class SeekViewModel : TestViewModel
+        private PersonViewModel _secondPerson = new PersonViewModel()
         {
-            private double _seekProperty;
-            public double SeekProperty
-            {
-                get { return _seekProperty; }
-                set { _seekProperty = value; RaisePropertyChanged(() => SeekProperty); }
-            }
-        }
-
-        public class ContainsSubViewModel : TestViewModel
+            FirstName = "Barney",
+            LastName = "Rubble"
+        };
+        public PersonViewModel SecondPerson
         {
-            public class PersonViewModel : MvxNotifyPropertyChanged
-            {
-                private string _firstName;
-                public string FirstName
-                {
-                    get { return _firstName; }
-                    set { _firstName = value; RaisePropertyChanged(() => FirstName); }
-                }
-
-                private string _lastName;
-                public string LastName
-                {
-                    get { return _lastName; }
-                    set { _lastName = value; RaisePropertyChanged(() => LastName); }
-                }
-            }
-
-            private PersonViewModel _firstPerson = new PersonViewModel()
-            {
-                FirstName = "Fred",
-                LastName = "Flintstone"
-            };
-            public PersonViewModel FirstPerson
-            {
-                get { return _firstPerson; }
-                set { _firstPerson = value; RaisePropertyChanged(() => FirstPerson); }
-            }
-
-            private PersonViewModel _secondPerson = new PersonViewModel()
-                {
-                    FirstName = "Barney",
-                    LastName = "Rubble"
-                };
-            public PersonViewModel SecondPerson
-            {
-                get { return _secondPerson; }
-                set { _secondPerson = value; RaisePropertyChanged(() => SecondPerson); }
-            }
+            get { return _secondPerson; }
+            set { _secondPerson = value; RaisePropertyChanged(() => SecondPerson); }
         }
     }
 
