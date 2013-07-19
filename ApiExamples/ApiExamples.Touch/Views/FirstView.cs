@@ -429,7 +429,7 @@ namespace ApiExamples.Touch.Views
             base.ViewDidLoad();
 
             var label = new UILabel(new RectangleF(10, 100, 100, 30));
-            label.Text = "Some text:";
+            label.Text = "Slide me:";
             Add(label);
             var seek = new UISlider(new RectangleF(110, 100, 200, 30));
             seek.MinValue = 0;
