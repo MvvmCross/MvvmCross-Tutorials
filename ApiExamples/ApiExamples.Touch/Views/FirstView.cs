@@ -33,6 +33,9 @@ namespace ApiExamples.Touch.Views
             View.BackgroundColor = UIColor.White;
             base.ViewDidLoad();
 
+            var title = ViewModel.GetType().Name.Replace("ViewModel", string.Empty);
+            Title = title;
+
             var explain = new UILabel(new RectangleF(10, 40, 300,  60))
                 {
                     Text = ExplainText,
