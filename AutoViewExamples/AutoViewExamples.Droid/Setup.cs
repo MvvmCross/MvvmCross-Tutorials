@@ -23,5 +23,6 @@ namespace AutoViewExamples.Droid
             var autoViewSetup = new MvxAutoViewSetup();
             autoViewSetup.Initialize(typeof(Resource.Layout));
         }
+
     }
 }
