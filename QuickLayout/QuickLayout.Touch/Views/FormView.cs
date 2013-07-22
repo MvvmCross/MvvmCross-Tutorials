@@ -34,22 +34,22 @@ namespace QuickLayout.Touch.Views
             var zipLabel = new UILabel {Text = "Zip"};
             Add(zipLabel);
 
-            var fNameField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var fNameField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(fNameField);
 
-            var sNameField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var sNameField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(sNameField);
 
-            var numberField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var numberField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(numberField);
 
-            var streetField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var streetField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(streetField);
 
-            var townField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var townField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(townField);
 
-            var zipField = new UITextField() { BackgroundColor = UIColor.LightGray };
+            var zipField = new UITextField() { BackgroundColor = UIColor.LightGray, BorderStyle = UITextBorderStyle.RoundedRect };
             Add(zipField);
 
             var debug = new UILabel() { BackgroundColor = UIColor.White, Lines = 0 };
@@ -130,7 +130,8 @@ namespace QuickLayout.Touch.Views
     }
 
     /*
-     *             View.AddConstraints(
+     * 
+                View.AddConstraints(
 
                 fNameLabel.Left().EqualTo().LeftOf(View).Plus(hMargin),
                 fNameLabel.Right().EqualTo().LeftOf(sNameLabel).Minus(hMargin),

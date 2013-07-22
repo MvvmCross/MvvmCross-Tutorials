@@ -20,7 +20,7 @@ namespace QuickLayout.Touch.Views
             button.SetTitle("Search", UIControlState.Normal);
             Add(button);
 
-            var text = new UITextField();
+            var text = new UITextField() { BorderStyle = UITextBorderStyle.RoundedRect };
             Add(text);
 
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();

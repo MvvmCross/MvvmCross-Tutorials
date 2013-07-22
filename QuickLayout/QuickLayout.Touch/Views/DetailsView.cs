@@ -39,6 +39,7 @@ namespace QuickLayout.Touch.Views
                 Add(introLabel);
                 var textField = new UITextField
                     {
+                        BorderStyle = UITextBorderStyle.RoundedRect,
                         TranslatesAutoresizingMaskIntoConstraints = false,
                         BackgroundColor = UIColor.LightGray
                     };

@@ -16,7 +16,7 @@ namespace QuickLayout.Touch.Views
             View.BackgroundColor = UIColor.White;
             base.ViewDidLoad();
 
-            var subTotal = new UITextField();
+            var subTotal = new UITextField() { BorderStyle = UITextBorderStyle.RoundedRect };
             subTotal.KeyboardType = UIKeyboardType.DecimalPad;
             Add(subTotal);
 
