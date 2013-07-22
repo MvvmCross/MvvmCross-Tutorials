@@ -125,7 +125,7 @@ namespace Cirrious.FluentLayouts.Touch
                 yield return view.Left().EqualTo().LeftOf(parentView).Plus(margins.Left);
                 yield return view.Width().EqualTo().WidthOf(parentView).Minus(margins.Right + margins.Left);
                 if (previous != null)
-                    yield return view.Top().EqualTo().BottomOf(previous).Plus(margins.Top);
+                    yield return view.Top().EqualTo().BottomOf(previous).Plus(margins.VSpacing);
                 else
                     yield return view.Top().EqualTo().TopOf(parentView).Plus(margins.Top);
                 previous = view;
