@@ -14,5 +14,10 @@ namespace QuickLayout.Core.ViewModels
         {
             ShowViewModel<FormViewModel>();
         }
+
+        public void GoSearch()
+        {
+            ShowViewModel<SearchViewModel>();
+        }
     }
 }

@@ -22,17 +22,17 @@ namespace Cirrious.FluentLayouts
 
         public FluentLayout EqualTo(float constant = 0f)
         {
-            return new FluentLayout(View, Attribute, NSLayoutRelation.Equal);
+            return new FluentLayout(View, Attribute, NSLayoutRelation.Equal, constant);
         }
 
         public FluentLayout GreaterThanOrEqualTo(float constant = 0f)
         {
-            return new FluentLayout(View, Attribute, NSLayoutRelation.GreaterThanOrEqual);
+            return new FluentLayout(View, Attribute, NSLayoutRelation.GreaterThanOrEqual, constant);
         }
 
         public FluentLayout LessThanOrEqualTo(float constant = 0f)
         {
-            return new FluentLayout(View, Attribute, NSLayoutRelation.LessThanOrEqual);
+            return new FluentLayout(View, Attribute, NSLayoutRelation.LessThanOrEqual, constant);
         }
     }
 }

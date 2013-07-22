@@ -17,17 +17,22 @@ namespace QuickLayout.Touch.Views
 
             var buttonF = new UIButton(UIButtonType.RoundedRect);
             buttonF.SetTitle("Form", UIControlState.Normal);
-            buttonF.TranslatesAutoresizingMaskIntoConstraints = false;
             Add(buttonF);
 
             var buttonD = new UIButton(UIButtonType.RoundedRect);
             buttonD.SetTitle("Details", UIControlState.Normal);
-            buttonD.TranslatesAutoresizingMaskIntoConstraints = false;
             Add(buttonD);
+
+            var buttonS = new UIButton(UIButtonType.RoundedRect);
+            buttonS.SetTitle("Search", UIControlState.Normal);
+            Add(buttonS);
+
+            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             var set = this.CreateBindingSet<FirstView, FirstViewModel>();
             set.Bind(buttonF).To("GoForm");
             set.Bind(buttonD).To("GoDetails");
+            set.Bind(buttonS).To("GoSearch");
             set.Apply();
 
             var constraints = View.VerticalStackPanelConstraints(

@@ -83,6 +83,7 @@
     <Compile Include="Views\DetailsView.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FormView.cs" />
+    <Compile Include="Views\SearchView.cs" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />

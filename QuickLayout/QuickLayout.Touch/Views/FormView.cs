@@ -69,6 +69,7 @@ namespace QuickLayout.Touch.Views
             var hMargin = 10;
             var vMargin = 10;
 
+
             View.AddConstraints(
 
                 fNameLabel.AtTopOf(View, vMargin),
