@@ -7,7 +7,7 @@
 
 using MonoTouch.UIKit;
 
-namespace Cirrious.FluentLayouts
+namespace Cirrious.FluentLayouts.Touch
 {
     public class UIViewAndLayoutAttribute
     {

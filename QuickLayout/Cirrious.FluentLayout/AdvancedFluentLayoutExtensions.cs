@@ -8,7 +8,7 @@
 using System.Collections.Generic;
 using MonoTouch.UIKit;
 
-namespace Cirrious.FluentLayouts
+namespace Cirrious.FluentLayouts.Touch
 {
     public static class AdvancedFluentLayoutExtensions
     {
@@ -81,7 +81,7 @@ namespace Cirrious.FluentLayouts
         {
             return view.Width().EqualTo().WidthOf(previous).WithMultiplier(scale);
         }
-        
+
         public static FluentLayout WithSameHeight(this UIView view, UIView previous)
         {
             return view.Height().EqualTo().HeightOf(previous);
@@ -91,7 +91,7 @@ namespace Cirrious.FluentLayouts
         {
             return view.Height().EqualTo().HeightOf(previous).WithMultiplier(scale);
         }
-       
+
         public static FluentLayout ToRightOf(this UIView view, UIView previous, float margin = 0f)
         {
             return view.Left().EqualTo().RightOf(previous).Plus(margin);

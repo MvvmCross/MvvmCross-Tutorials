@@ -1,4 +1,5 @@
 using Cirrious.FluentLayouts;
+using Cirrious.FluentLayouts.Touch;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
 using MonoTouch.Foundation;
@@ -27,12 +28,17 @@ namespace QuickLayout.Touch.Views
             buttonS.SetTitle("Search", UIControlState.Normal);
             Add(buttonS);
 
+            var buttonT = new UIButton(UIButtonType.RoundedRect);
+            buttonT.SetTitle("Tip", UIControlState.Normal);
+            Add(buttonT);
+
             View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
             var set = this.CreateBindingSet<FirstView, FirstViewModel>();
             set.Bind(buttonF).To("GoForm");
             set.Bind(buttonD).To("GoDetails");
             set.Bind(buttonS).To("GoSearch");
+            set.Bind(buttonT).To("GoTip");
             set.Apply();
 
             var constraints = View.VerticalStackPanelConstraints(

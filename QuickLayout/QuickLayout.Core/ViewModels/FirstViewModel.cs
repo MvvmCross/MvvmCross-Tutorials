@@ -19,5 +19,10 @@ namespace QuickLayout.Core.ViewModels
         {
             ShowViewModel<SearchViewModel>();
         }
+
+        public void GoTip()
+        {
+            ShowViewModel<TipViewModel>();
+        }
     }
 }

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.UIKit;
 
-namespace Cirrious.FluentLayouts
+namespace Cirrious.FluentLayouts.Touch
 {
     public static class FluentLayoutExtensions
     {

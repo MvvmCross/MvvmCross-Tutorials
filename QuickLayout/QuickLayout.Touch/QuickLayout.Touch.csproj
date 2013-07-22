@@ -84,6 +84,7 @@
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FormView.cs" />
     <Compile Include="Views\SearchView.cs" />
+    <Compile Include="Views\TipView.cs" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
@@ -139,9 +140,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cirrious.FluentLayout\Cirrious.FluentLayouts.csproj">
+    <ProjectReference Include="..\Cirrious.FluentLayout\Cirrious.FluentLayouts.Touch.csproj">
       <Project>{75d2da9d-dfd4-49a1-98fb-fe0f0677ef0f}</Project>
-      <Name>Cirrious.FluentLayouts</Name>
+      <Name>Cirrious.FluentLayouts.Touch</Name>
     </ProjectReference>
     <ProjectReference Include="..\QuickLayout.Core\QuickLayout.Core.csproj">
       <Project>{849afb57-994a-42d9-a786-ef34fc951cde}</Project>

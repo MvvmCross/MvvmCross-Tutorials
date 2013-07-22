@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Cirrious.FluentLayouts
+namespace Cirrious.FluentLayouts.Touch
 {
     public class FluentLayout
     {
@@ -74,7 +74,7 @@ namespace Cirrious.FluentLayouts
             return this;
         }
 
-        public FluentLayout SetPriority(Priority priority)
+        public FluentLayout SetPriority(UILayoutPriority priority)
         {
             Priority = (float) priority;
             return this;
