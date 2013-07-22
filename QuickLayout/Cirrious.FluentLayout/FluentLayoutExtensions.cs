@@ -81,18 +81,6 @@ namespace Cirrious.FluentLayouts
             return new UIViewAndLayoutAttribute(view, attribute);
         }
 
-        public static IEnumerable<FluentLayout> FullWidthWithMargin(this UIView view, UIView parent, float margin)
-        {
-            yield return view.Left().EqualTo().LeftOf(parent).Plus(margin);
-            yield return view.Right().EqualTo().RightOf(parent).Minus(margin);
-        }
-
-        public static IEnumerable<FluentLayout> FullHeightWithMargin(this UIView view, UIView parent, float margin)
-        {
-            yield return view.Top().EqualTo().TopOf(parent).Plus(margin);
-            yield return view.Bottom().EqualTo().BottomOf(parent).Minus(margin);
-        }
-
         public static void AddConstraints(this UIView view, params FluentLayout[] fluentLayouts)
         {
             view.AddConstraints(fluentLayouts
