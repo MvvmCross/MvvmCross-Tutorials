@@ -104,6 +104,8 @@
     <AndroidResource Include="Resources\Layout\FirstView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Item_Radio.axml" />
+    <AndroidResource Include="Resources\Layout\Test_RadioGroup.axml" />
     <AndroidResource Include="Resources\Layout\Test_Time.axml" />
     <AndroidResource Include="Resources\Layout\Item_Test.axml">
       <SubType>Designer</SubType>
