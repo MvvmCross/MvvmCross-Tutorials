@@ -163,6 +163,16 @@ namespace ApiExamples.Droid.Views
             SetContentView(Resource.Layout.Test_If);
         }
     }
+    
+    [Activity(NoHistory = true)]
+    public class RadioGroupView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_RadioGroup);
+        }
+    }
 
     [Activity(NoHistory = true)]
     public class MathsView : MvxActivity
