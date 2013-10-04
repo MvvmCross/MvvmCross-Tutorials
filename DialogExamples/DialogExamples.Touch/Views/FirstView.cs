@@ -43,7 +43,7 @@ namespace DialogExamples.Touch.Views
                                         {
                                             radioChoices
                                         }
-                                }.Bind(bindings, e => e.RadioSelected, vm => vm.CurrentDessertIndex)
+                                }.Bind(bindings, e => e.RadioSelected, vm => vm.CurrentDessertIndex) as Element
                         },
                     new Section("Action")
                         {
