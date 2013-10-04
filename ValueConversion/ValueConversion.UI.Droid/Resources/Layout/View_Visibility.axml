@@ -4,16 +4,13 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-  
-  <CheckBox
+    <CheckBox
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Checked MakeItVisible"></CheckBox>
-
-  <FrameLayout
+        local:MvxBind="Checked MakeItVisible" />
+    <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         android:background="#ff0000"
         local:MvxBind="Visibility MakeItVisible, Converter=Visibility" />
-  
 </LinearLayout>

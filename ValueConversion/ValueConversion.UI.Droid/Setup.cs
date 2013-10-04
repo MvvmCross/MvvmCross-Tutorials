@@ -2,6 +2,7 @@
 using System.Reflection;
 using Android.Content;
 using Cirrious.CrossCore.Plugins;
+using Cirrious.MvvmCross.Dialog.Droid;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.Plugins.Color;
 using Cirrious.MvvmCross.Plugins.Visibility;
@@ -12,7 +13,7 @@ using PluginLoader = Cirrious.MvvmCross.Plugins.Color.PluginLoader;
 namespace ValueConversion.UI.Droid
 {
     public class Setup
-        : MvxAndroidSetup
+        : MvxAndroidDialogSetup
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
