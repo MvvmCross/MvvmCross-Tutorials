@@ -153,4 +153,24 @@ namespace ApiExamples.Droid.Views
             SetContentView(Resource.Layout.Test_WithErrors);
         }
     }
+
+    [Activity(NoHistory = true)]
+    public class IfView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_If);
+        }
+    }
+
+    [Activity(NoHistory = true)]
+    public class MathsView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_Maths);
+        }
+    }
 }

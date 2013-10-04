@@ -580,4 +580,141 @@ namespace ApiExamples.Touch.Views
         }
     }
 
+    [Register("IfView")]
+    public class IfView : TestViewController
+    {
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            var label1 = new UILabel(new RectangleF(10, 100, 100, 30));
+            Add(label1);
+            var seek1 = new UISlider(new RectangleF(110, 100, 200, 30));
+            seek1.MinValue = 0;
+            seek1.MaxValue = 10;
+            Add(seek1);
+
+            var label2 = new UILabel(new RectangleF(10, 100, 100, 30));
+            Add(label2);
+            var seek2 = new UISlider(new RectangleF(110, 100, 200, 30));
+            seek2.MinValue = 0;
+            seek2.MaxValue = 10;
+            Add(seek2);
+
+            var labelA = new UILabel(new RectangleF(10, 130, 300, 30));
+            Add(labelA);
+            var labelB = new UILabel(new RectangleF(10, 160, 300, 30));
+            Add(labelB);
+            var labelC = new UILabel(new RectangleF(10, 190, 300, 30));
+            Add(labelC);
+            var labelD = new UILabel(new RectangleF(10, 220, 300, 30));
+            Add(labelD);
+            var labelE = new UILabel(new RectangleF(10, 250, 300, 30));
+            Add(labelE);
+            var labelF = new UILabel(new RectangleF(10, 280, 300, 30));
+            Add(labelF);
+            var labelG = new UILabel(new RectangleF(10, 310, 300, 30));
+            Add(labelG);
+            var labelH = new UILabel(new RectangleF(10, 340, 300, 30));
+            Add(labelH);
+            var labelI = new UILabel(new RectangleF(10, 370, 300, 30));
+            Add(labelI);
+            var labelJ = new UILabel(new RectangleF(10, 400, 300, 30));
+            Add(labelJ);
+
+            var set = this.CreateBindingSet<IfView, IfViewModel>();
+            set.Bind(label1).To(vm => vm.TestVal1);
+            set.Bind(seek1).To(vm => vm.TestVal1);
+            set.Bind(label2).To(vm => vm.TestVal2);
+            set.Bind(seek2).To(vm => vm.TestVal2);
+            labelA.Text = "Smallest? (Second if equal)";
+            set.Bind(labelB).Described("If(TestVal1 < TestVal2, 'First', 'Second')");
+            labelC.Text = "Largest? (Second if equal)";
+            set.Bind(labelD).Described("If(TestVal1 > TestVal2, 'First', 'Second')");
+            labelE.Text = "Smallest? (First if equal)";
+            set.Bind(labelF).Described("If(TestVal1 <= TestVal2, 'First', 'Second')");
+            labelG.Text = "Largest? (First if equal)";
+            set.Bind(labelH).Described("If(TestVal1 >= TestVal2, 'First', 'Second')");
+            labelI.Text = "Equal?";
+            set.Bind(labelJ).Described("If(TestVal1 == TestVal2, 'Yes', 'No')");
+            set.Apply();
+        }
+
+        protected override string ExplainText
+        {
+            get
+            {
+                return "Does the logic work as expected?";
+            }
+        }
+    }
+
+    [Register("MathsView")]
+    public class MathsView : TestViewController
+    {
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            var label1 = new UILabel(new RectangleF(10, 100, 100, 30));
+            Add(label1);
+            var seek1 = new UISlider(new RectangleF(110, 100, 200, 30));
+            seek1.MinValue = 0;
+            seek1.MaxValue = 10;
+            Add(seek1);
+
+            var label2 = new UILabel(new RectangleF(10, 100, 100, 30));
+            Add(label2);
+            var seek2 = new UISlider(new RectangleF(110, 100, 200, 30));
+            seek2.MinValue = 0;
+            seek2.MaxValue = 10;
+            Add(seek2);
+
+            var labelA = new UILabel(new RectangleF(10, 130, 300, 30));
+            Add(labelA);
+            var labelB = new UILabel(new RectangleF(10, 160, 300, 30));
+            Add(labelB);
+            var labelC = new UILabel(new RectangleF(10, 190, 300, 30));
+            Add(labelC);
+            var labelD = new UILabel(new RectangleF(10, 220, 300, 30));
+            Add(labelD);
+            var labelE = new UILabel(new RectangleF(10, 250, 300, 30));
+            Add(labelE);
+            var labelF = new UILabel(new RectangleF(10, 280, 300, 30));
+            Add(labelF);
+            var labelG = new UILabel(new RectangleF(10, 310, 300, 30));
+            Add(labelG);
+            var labelH = new UILabel(new RectangleF(10, 340, 300, 30));
+            Add(labelH);
+            var labelI = new UILabel(new RectangleF(10, 370, 300, 30));
+            Add(labelI);
+            var labelJ = new UILabel(new RectangleF(10, 400, 300, 30));
+            Add(labelJ);
+
+            var set = this.CreateBindingSet<MathsView, MathsViewModel>();
+            set.Bind(label1).To(vm => vm.TestVal1);
+            set.Bind(seek1).To(vm => vm.TestVal1);
+            set.Bind(label2).To(vm => vm.TestVal2);
+            set.Bind(seek2).To(vm => vm.TestVal2);
+            labelA.Text = "Add";
+            set.Bind(labelB).Described("TestVal1 + '+' + TestVal2 + '=' + (TestVal1 + TestVal2)");
+            labelC.Text = "Subtract";
+            set.Bind(labelD).Described("TestVal1 + '-' + TestVal2 + '=' + (TestVal1 - TestVal2)");
+            labelE.Text = "Multiply";
+            set.Bind(labelF).Described("TestVal1 + '*' + TestVal2 + '=' + (TestVal1 * TestVal2)");
+            labelG.Text = "Divide";
+            set.Bind(labelH).Described("TestVal1 + '/' + TestVal2 + '=' + (TestVal1 / TestVal2)");
+            labelI.Text = "Modulo";
+            set.Bind(labelJ).Described("TestVal1 + '%' + TestVal2 + '=' + (TestVal1 % TestVal2)");
+            set.Apply();
+        }
+
+        protected override string ExplainText
+        {
+            get
+            {
+                return "Does the maths work as expected?";
+            }
+        }
+    }
 }

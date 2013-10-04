@@ -175,7 +175,13 @@ namespace ApiExamples.Core.ViewModels
 
     }
     public class ListViewModel : BaseListTestViewModel
-    { }
+    {
+        private int i = 0;
+        public ICommand Hello
+        {
+            get { return new MvxCommand(() => Mvx.Trace("Hello " + ++i));}
+        }
+    }
 
     public class LinearLayoutViewModel : BaseListTestViewModel
     { }
@@ -446,6 +452,40 @@ namespace ApiExamples.Core.ViewModels
         {
             get { return _value; }
             set { _value = value; RaisePropertyChanged(() => Value); }
+        }
+    }
+
+    public class IfViewModel : TestViewModel
+    {
+        private int _testVal1 = 0;
+        public int TestVal1 
+        {   
+            get { return _testVal1; }
+            set { _testVal1 = value; RaisePropertyChanged(() => TestVal1); }
+        }
+
+        private int _testVal2 = 10;
+        public int TestVal2 
+        {   
+            get { return _testVal2; }
+            set { _testVal2 = value; RaisePropertyChanged(() => TestVal2); }
+        }
+    }
+
+    public class MathsViewModel : TestViewModel
+    {
+        private int _testVal1 = 10;
+        public int TestVal1
+        {
+            get { return _testVal1; }
+            set { _testVal1 = value; RaisePropertyChanged(() => TestVal1); }
+        }
+
+        private int _testVal2 = 2;
+        public int TestVal2
+        {
+            get { return _testVal2; }
+            set { _testVal2 = value; RaisePropertyChanged(() => TestVal2); }
         }
     }
 }
