@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>DialogExamples.Touch</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>DialogExamples.Touch</AssemblyName>
+    <AssemblyName>DialogExamplesTouch</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
