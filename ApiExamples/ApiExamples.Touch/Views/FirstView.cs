@@ -595,32 +595,32 @@ namespace ApiExamples.Touch.Views
             seek1.MaxValue = 10;
             Add(seek1);
 
-            var label2 = new UILabel(new RectangleF(10, 100, 100, 30));
+            var label2 = new UILabel(new RectangleF(10, 90, 100, 30));
             Add(label2);
-            var seek2 = new UISlider(new RectangleF(110, 100, 200, 30));
+            var seek2 = new UISlider(new RectangleF(110, 120, 200, 30));
             seek2.MinValue = 0;
             seek2.MaxValue = 10;
             Add(seek2);
 
-            var labelA = new UILabel(new RectangleF(10, 130, 300, 30));
+            var labelA = new UILabel(new RectangleF(10, 150, 300, 30));
             Add(labelA);
-            var labelB = new UILabel(new RectangleF(10, 160, 300, 30));
+            var labelB = new UILabel(new RectangleF(10, 170, 300, 20));
             Add(labelB);
-            var labelC = new UILabel(new RectangleF(10, 190, 300, 30));
+            var labelC = new UILabel(new RectangleF(10, 190, 300, 20));
             Add(labelC);
-            var labelD = new UILabel(new RectangleF(10, 220, 300, 30));
+            var labelD = new UILabel(new RectangleF(10, 210, 300, 20));
             Add(labelD);
-            var labelE = new UILabel(new RectangleF(10, 250, 300, 30));
+            var labelE = new UILabel(new RectangleF(10, 230, 300, 20));
             Add(labelE);
-            var labelF = new UILabel(new RectangleF(10, 280, 300, 30));
+            var labelF = new UILabel(new RectangleF(10, 250, 300, 20));
             Add(labelF);
-            var labelG = new UILabel(new RectangleF(10, 310, 300, 30));
+            var labelG = new UILabel(new RectangleF(10, 270, 300, 20));
             Add(labelG);
-            var labelH = new UILabel(new RectangleF(10, 340, 300, 30));
+            var labelH = new UILabel(new RectangleF(10, 290, 300, 20));
             Add(labelH);
-            var labelI = new UILabel(new RectangleF(10, 370, 300, 30));
+            var labelI = new UILabel(new RectangleF(10, 310, 300, 20));
             Add(labelI);
-            var labelJ = new UILabel(new RectangleF(10, 400, 300, 30));
+            var labelJ = new UILabel(new RectangleF(10, 330, 300, 20));
             Add(labelJ);
 
             var set = this.CreateBindingSet<IfView, IfViewModel>();
@@ -657,39 +657,39 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var label1 = new UILabel(new RectangleF(10, 70, 100, 30));
+            var label1 = new UILabel(new RectangleF(10, 90, 100, 30));
             Add(label1);
-            var seek1 = new UISlider(new RectangleF(110, 70, 200, 30));
+            var seek1 = new UISlider(new RectangleF(110, 90, 200, 30));
             seek1.MinValue = 0;
             seek1.MaxValue = 10;
             Add(seek1);
 
-            var label2 = new UILabel(new RectangleF(10, 100, 100, 30));
+            var label2 = new UILabel(new RectangleF(10, 120, 100, 30));
             Add(label2);
-            var seek2 = new UISlider(new RectangleF(110, 100, 200, 30));
+            var seek2 = new UISlider(new RectangleF(110, 120, 200, 30));
             seek2.MinValue = 0;
             seek2.MaxValue = 10;
             Add(seek2);
 
-            var labelA = new UILabel(new RectangleF(10, 130, 300, 30));
+            var labelA = new UILabel(new RectangleF(10, 150, 300, 20));
             Add(labelA);
-            var labelB = new UILabel(new RectangleF(10, 160, 300, 30));
+            var labelB = new UILabel(new RectangleF(10, 170, 300, 20));
             Add(labelB);
-            var labelC = new UILabel(new RectangleF(10, 190, 300, 30));
+            var labelC = new UILabel(new RectangleF(10, 190, 300, 20));
             Add(labelC);
-            var labelD = new UILabel(new RectangleF(10, 220, 300, 30));
+            var labelD = new UILabel(new RectangleF(10, 210, 300, 20));
             Add(labelD);
-            var labelE = new UILabel(new RectangleF(10, 250, 300, 30));
+            var labelE = new UILabel(new RectangleF(10, 230, 300, 20));
             Add(labelE);
-            var labelF = new UILabel(new RectangleF(10, 280, 300, 30));
+            var labelF = new UILabel(new RectangleF(10, 250, 300, 20));
             Add(labelF);
-            var labelG = new UILabel(new RectangleF(10, 310, 300, 30));
+            var labelG = new UILabel(new RectangleF(10, 270, 300, 20));
             Add(labelG);
-            var labelH = new UILabel(new RectangleF(10, 340, 300, 30));
+            var labelH = new UILabel(new RectangleF(10, 290, 300, 20));
             Add(labelH);
-            var labelI = new UILabel(new RectangleF(10, 370, 300, 30));
+            var labelI = new UILabel(new RectangleF(10, 310, 300, 30));
             Add(labelI);
-            var labelJ = new UILabel(new RectangleF(10, 400, 300, 30));
+            var labelJ = new UILabel(new RectangleF(10, 330, 300, 20));
             Add(labelJ);
 
             var set = this.CreateBindingSet<MathsView, MathsViewModel>();
