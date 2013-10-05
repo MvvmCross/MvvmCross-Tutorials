@@ -588,14 +588,14 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var label1 = new UILabel(new RectangleF(10, 70, 100, 30));
+            var label1 = new UILabel(new RectangleF(10, 90, 100, 30));
             Add(label1);
-            var seek1 = new UISlider(new RectangleF(110, 70, 200, 30));
+            var seek1 = new UISlider(new RectangleF(110, 90, 200, 30));
             seek1.MinValue = 0;
             seek1.MaxValue = 10;
             Add(seek1);
 
-            var label2 = new UILabel(new RectangleF(10, 90, 100, 30));
+            var label2 = new UILabel(new RectangleF(10, 120, 100, 30));
             Add(label2);
             var seek2 = new UISlider(new RectangleF(110, 120, 200, 30));
             seek2.MinValue = 0;
@@ -687,7 +687,7 @@ namespace ApiExamples.Touch.Views
             Add(labelG);
             var labelH = new UILabel(new RectangleF(10, 290, 300, 20));
             Add(labelH);
-            var labelI = new UILabel(new RectangleF(10, 310, 300, 30));
+            var labelI = new UILabel(new RectangleF(10, 310, 300, 20));
             Add(labelI);
             var labelJ = new UILabel(new RectangleF(10, 330, 300, 20));
             Add(labelJ);
