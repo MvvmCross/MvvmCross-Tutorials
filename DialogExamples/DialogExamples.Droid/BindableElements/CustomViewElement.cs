@@ -19,8 +19,8 @@ namespace DialogExamples.Droid.BindableElements
         public IMvxBindingContext BindingContext { get; set; }
 
         private View _cachedView;
- 
-        protected override Android.Views.View GetViewImpl(Android.Content.Context context, Android.Views.View convertView, Android.Views.ViewGroup parent)
+
+        protected override View GetViewImpl(Context context, ViewGroup parent)
         {
             // note that this setup uses one view per element - so it's not memory efficient
             // if you have large lists and if you  really need to use dialog, then you'll need to use
