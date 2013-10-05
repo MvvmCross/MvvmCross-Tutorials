@@ -602,7 +602,7 @@ namespace ApiExamples.Touch.Views
             seek2.MaxValue = 10;
             Add(seek2);
 
-            var labelA = new UILabel(new RectangleF(10, 150, 300, 30));
+            var labelA = new UILabel(new RectangleF(10, 150, 300, 20));
             Add(labelA);
             var labelB = new UILabel(new RectangleF(10, 170, 300, 20));
             Add(labelB);
