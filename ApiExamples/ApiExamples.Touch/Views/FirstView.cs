@@ -207,6 +207,7 @@ namespace ApiExamples.Touch.Views
     {
         // not tested
     }
+
     [Register("FrameView")]
     public class FrameView : NotTestedTestViewController
     {
@@ -587,9 +588,9 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var label1 = new UILabel(new RectangleF(10, 100, 100, 30));
+            var label1 = new UILabel(new RectangleF(10, 70, 100, 30));
             Add(label1);
-            var seek1 = new UISlider(new RectangleF(110, 100, 200, 30));
+            var seek1 = new UISlider(new RectangleF(110, 70, 200, 30));
             seek1.MinValue = 0;
             seek1.MaxValue = 10;
             Add(seek1);
@@ -628,15 +629,15 @@ namespace ApiExamples.Touch.Views
             set.Bind(label2).To(vm => vm.TestVal2);
             set.Bind(seek2).To(vm => vm.TestVal2);
             labelA.Text = "Smallest? (Second if equal)";
-            set.Bind(labelB).Described("If(TestVal1 < TestVal2, 'First', 'Second')");
+            set.Bind(labelB).SourceDescribed("If(TestVal1 < TestVal2, 'First', 'Second')");
             labelC.Text = "Largest? (Second if equal)";
-            set.Bind(labelD).Described("If(TestVal1 > TestVal2, 'First', 'Second')");
+            set.Bind(labelD).SourceDescribed("If(TestVal1 > TestVal2, 'First', 'Second')");
             labelE.Text = "Smallest? (First if equal)";
-            set.Bind(labelF).Described("If(TestVal1 <= TestVal2, 'First', 'Second')");
+            set.Bind(labelF).SourceDescribed("If(TestVal1 <= TestVal2, 'First', 'Second')");
             labelG.Text = "Largest? (First if equal)";
-            set.Bind(labelH).Described("If(TestVal1 >= TestVal2, 'First', 'Second')");
+            set.Bind(labelH).SourceDescribed("If(TestVal1 >= TestVal2, 'First', 'Second')");
             labelI.Text = "Equal?";
-            set.Bind(labelJ).Described("If(TestVal1 == TestVal2, 'Yes', 'No')");
+            set.Bind(labelJ).SourceDescribed("If(TestVal1 == TestVal2, 'Yes', 'No')");
             set.Apply();
         }
 
@@ -656,9 +657,9 @@ namespace ApiExamples.Touch.Views
         {
             base.ViewDidLoad();
 
-            var label1 = new UILabel(new RectangleF(10, 100, 100, 30));
+            var label1 = new UILabel(new RectangleF(10, 70, 100, 30));
             Add(label1);
-            var seek1 = new UISlider(new RectangleF(110, 100, 200, 30));
+            var seek1 = new UISlider(new RectangleF(110, 70, 200, 30));
             seek1.MinValue = 0;
             seek1.MaxValue = 10;
             Add(seek1);
@@ -697,15 +698,15 @@ namespace ApiExamples.Touch.Views
             set.Bind(label2).To(vm => vm.TestVal2);
             set.Bind(seek2).To(vm => vm.TestVal2);
             labelA.Text = "Add";
-            set.Bind(labelB).Described("TestVal1 + '+' + TestVal2 + '=' + (TestVal1 + TestVal2)");
+            set.Bind(labelB).SourceDescribed("TestVal1 + '+' + TestVal2 + '=' + (TestVal1 + TestVal2)");
             labelC.Text = "Subtract";
-            set.Bind(labelD).Described("TestVal1 + '-' + TestVal2 + '=' + (TestVal1 - TestVal2)");
+            set.Bind(labelD).SourceDescribed("TestVal1 + '-' + TestVal2 + '=' + (TestVal1 - TestVal2)");
             labelE.Text = "Multiply";
-            set.Bind(labelF).Described("TestVal1 + '*' + TestVal2 + '=' + (TestVal1 * TestVal2)");
+            set.Bind(labelF).SourceDescribed("TestVal1 + '*' + TestVal2 + '=' + (TestVal1 * TestVal2)");
             labelG.Text = "Divide";
-            set.Bind(labelH).Described("TestVal1 + '/' + TestVal2 + '=' + (TestVal1 / TestVal2)");
+            set.Bind(labelH).SourceDescribed("TestVal1 + '/' + TestVal2 + '=' + (TestVal1 / TestVal2)");
             labelI.Text = "Modulo";
-            set.Bind(labelJ).Described("TestVal1 + '%' + TestVal2 + '=' + (TestVal1 % TestVal2)");
+            set.Bind(labelJ).SourceDescribed("TestVal1 + '%' + TestVal2 + '=' + (TestVal1 % TestVal2)");
             set.Apply();
         }
 
@@ -716,5 +717,11 @@ namespace ApiExamples.Touch.Views
                 return "Does the maths work as expected?";
             }
         }
+    }
+
+    [Register("RadioGroupView")]
+    public class RadioGroupView : NotTestedTestViewController
+    {
+        // not tested
     }
 }
