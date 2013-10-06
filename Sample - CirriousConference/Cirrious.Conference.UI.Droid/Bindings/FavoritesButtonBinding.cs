@@ -37,7 +37,7 @@ namespace Cirrious.Conference.UI.Droid.Bindings
             FireValueChanged(_currentValue);
         }
 
-        public override void SetValue(object value)
+        protected override void SetValueImpl(object target, object value)
         {
             var boolValue = (bool)value;
             _currentValue = boolValue;

@@ -140,6 +140,19 @@ namespace Cirrious.Conference.UI.Droid.Views.SessionsLists
                 return toReturn;
             }
 
+            public override int GetItemViewType(int position)
+            {
+                var item = GetRawItem(position);
+                if (item is WithCommand<SessionWithFavoriteFlag>)
+                    return 0;
+                return 1;
+            }
+
+            public override int ViewTypeCount
+            {
+                get { return 2; }
+            }
+
             protected override global::Android.Views.View GetBindableView(global::Android.Views.View convertView, object dataContext, int templateId)
             {
                 if (dataContext is WithCommand<SessionWithFavoriteFlag>)
