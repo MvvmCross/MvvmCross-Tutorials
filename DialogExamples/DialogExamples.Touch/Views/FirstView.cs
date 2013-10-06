@@ -47,8 +47,17 @@ namespace DialogExamples.Touch.Views
                         },
                     new Section("Action")
                         {
-                            new StringElement("Second").Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
-                            new StringElement("Bindable Elements").Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand)  
+                            new StyledStringElement("Second")
+                                {
+                                    BackgroundColor = UIColor.Red,
+                                    TextColor = UIColor.Yellow,
+                                    Alignment = UITextAlignment.Right
+                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
+                            new StyledStringElement("Bindable Elements") {
+                                BackgroundColor = UIColor.Blue,
+                                TextColor = UIColor.White,
+                                Alignment = UITextAlignment.Center
+                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand), 
                         },
                     new Section("Debug out:")
                         {
