@@ -1,3 +1,4 @@
+using Cirrious.CrossCore;
 using MonoTouchCellTutorial.Core.Interfaces;
 using MonoTouchCellTutorial.Core.Services;
 using Cirrious.MvvmCross.ViewModels;
