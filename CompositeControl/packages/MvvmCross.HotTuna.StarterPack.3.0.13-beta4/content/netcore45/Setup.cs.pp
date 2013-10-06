@@ -1,13 +1,13 @@
-using Android.Content;
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.WindowsStore.Platform;
+using Windows.UI.Xaml.Controls;
 
-namespace CompositeControl.Droid
+namespace $rootnamespace$
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxStoreSetup
     {
-        public Setup(Context applicationContext) : base(applicationContext)
+        public Setup(Frame rootFrame) : base(rootFrame)
         {
         }
 

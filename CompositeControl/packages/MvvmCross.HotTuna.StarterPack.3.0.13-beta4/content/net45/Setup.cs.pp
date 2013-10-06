@@ -1,13 +1,16 @@
-using Android.Content;
+using System.Windows.Threading;
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.Wpf.Platform;
+using Cirrious.MvvmCross.Wpf.Views;
 
-namespace CompositeControl.Droid
+namespace $rootnamespace$
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup
+        : MvxWpfSetup
     {
-        public Setup(Context applicationContext) : base(applicationContext)
+        public Setup(Dispatcher dispatcher, IMvxWpfViewPresenter presenter)
+            : base(dispatcher, presenter)
         {
         }
 

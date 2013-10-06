@@ -2,10 +2,10 @@ using Android.App;
 using Android.Content.PM;
 using Cirrious.MvvmCross.Droid.Views;
 
-namespace CompositeControl.Droid
+namespace $rootnamespace$
 {
     [Activity(
-		Label = "CompositeControl.Droid"
+		Label = "$rootnamespace$"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"

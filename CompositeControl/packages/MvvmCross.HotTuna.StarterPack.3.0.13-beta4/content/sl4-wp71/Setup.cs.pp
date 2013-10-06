@@ -1,13 +1,13 @@
-using Android.Content;
 using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.WindowsPhone.Platform;
+using Microsoft.Phone.Controls;
 
-namespace CompositeControl.Droid
+namespace $rootnamespace$
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxPhoneSetup
     {
-        public Setup(Context applicationContext) : base(applicationContext)
+        public Setup(PhoneApplicationFrame rootFrame) : base(rootFrame)
         {
         }
 
