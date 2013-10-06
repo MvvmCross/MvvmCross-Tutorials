@@ -22,7 +22,7 @@ namespace NoBinding
             if (MvxSimpleIoCContainer.Instance != null)
                 return;
 
-            var ioc = MvxSimpleIoCContainer.Initialise();
+            var ioc = MvxSimpleIoCContainer.Initialize();
 
             ioc.RegisterSingleton<IMvxTrace>(new MvxDebugOnlyTrace());
             ioc.RegisterSingleton<IMvxPluginManager>(new MvxFilePluginManager(".Droid", ".dll"));

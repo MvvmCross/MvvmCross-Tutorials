@@ -25,7 +25,7 @@ namespace Mvvm
             if (MvxSimpleIoCContainer.Instance != null)
                 return;
 
-            var ioc = MvxSimpleIoCContainer.Initialise();
+            var ioc = MvxSimpleIoCContainer.Initialize();
 
             ioc.RegisterSingleton<IMvxPluginManager>(new MvxFilePluginManager(".Droid", ".dll"));
 

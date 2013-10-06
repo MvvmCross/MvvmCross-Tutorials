@@ -21,7 +21,7 @@ namespace CrossLight.Framework
             if (MvxSimpleIoCContainer.Instance != null)
                 return;
 
-            var ioc = MvxSimpleIoCContainer.Initialise();
+            var ioc = MvxSimpleIoCContainer.Initialize();
 
             ioc.RegisterSingleton<IMvxTrace>(new MvxDebugOnlyTrace());
             MvxTrace.Initialize();
