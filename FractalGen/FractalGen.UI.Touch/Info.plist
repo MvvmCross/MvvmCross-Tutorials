@@ -33,7 +33,5 @@
 	<array>
 		<string>Resources/Default-568h@2x.png</string>
 	</array>
-	<key>MKDirectionsApplicationSupportedModes</key>
-	<array/>
 </dict>
 </plist>

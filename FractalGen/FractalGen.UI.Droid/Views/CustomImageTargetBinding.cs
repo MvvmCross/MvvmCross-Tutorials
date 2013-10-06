@@ -29,10 +29,10 @@ namespace FractalGen.UI.Droid.Views
             get { return MvxBindingMode.OneWay; }
         }
 
-        public override void SetValue(object value)
+        protected override void SetValueImpl(object target, object value)
         {
-            var target = ImageView;
-            if (target == null)
+            var imageView = (ImageView)target;
+            if (imageView == null)
                 return;
 
             if (value == null)
@@ -40,7 +40,7 @@ namespace FractalGen.UI.Droid.Views
 
             var writable = (ISimpleWriteableBitmap) value;
             var bitmap = Bitmap.CreateBitmap(writable.Pixels, writable.Width, writable.Height, Bitmap.Config.Argb4444);
-            target.SetImageBitmap(bitmap);
+            imageView.SetImageBitmap(bitmap);
         }
     }
 }
