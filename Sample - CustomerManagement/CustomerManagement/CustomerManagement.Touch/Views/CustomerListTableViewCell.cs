@@ -1,4 +1,6 @@
 using Cirrious.MvvmCross.Binding.Binders;
+using Cirrious.MvvmCross.Binding.Bindings;
+using Cirrious.MvvmCross.Binding.Bindings.SourceSteps;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
@@ -16,12 +18,18 @@ namespace CustomerManagement.Touch.Views
                       new MvxBindingDescription()
                           {
                               TargetName = "TitleText",
-                              SourcePropertyPath = "Name"
+                              Source = new MvxPathSourceStepDescription()
+                                  {
+                                      SourcePropertyPath = "Name"
+                                  }
                           },
                       new MvxBindingDescription()
                           {
                               TargetName = "DetailText",
-                              SourcePropertyPath = "Website"
+                              Source = new MvxPathSourceStepDescription()
+                                  {
+                                      SourcePropertyPath = "Website"
+                                  }
                           },
                   };
 

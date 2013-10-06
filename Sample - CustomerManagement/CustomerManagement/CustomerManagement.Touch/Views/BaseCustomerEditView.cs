@@ -1,3 +1,4 @@
+using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Touch;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Views;

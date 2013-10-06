@@ -3,7 +3,7 @@ using CustomerManagement.Core.ViewModels;
 
 namespace CustomerManagement.WindowsPhone.Views
 {
-    public class BaseCustomerNewView : MvxPhonePage<NewCustomerViewModel> { }
+    public abstract class BaseCustomerNewView : MvxPhonePage<NewCustomerViewModel> { }
 
     [MvxPhoneView("/Views/CustomerNewView.xaml")]
     public partial class CustomerNewView : BaseCustomerNewView
