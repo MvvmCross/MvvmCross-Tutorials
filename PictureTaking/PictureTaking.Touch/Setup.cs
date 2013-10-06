@@ -18,16 +18,4 @@ namespace PictureTaking.Touch
 			return new PictureTaking.Core.App();
 		}
 	}
-
-	public class LinkerPleaseInclude
-	{
-		public void Stuff()
-		{
-			UIButton u = null;
-			u.TouchUpInside += (object sender, System.EventArgs e) => {};
-
-			UIImageView i = null;
-			i.Image = null;
-		}
-	}
 }
