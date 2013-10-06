@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         local:MvxBind="HitThis Second" />
-    <TextView
+    <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"

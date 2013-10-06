@@ -2,10 +2,10 @@ using Android.App;
 using Android.Content.PM;
 using Cirrious.MvvmCross.Droid.Views;
 
-namespace CustomBinding.Droid
+namespace $rootnamespace$
 {
     [Activity(
-		Label = "CustomBinding.Droid"
+		Label = "$rootnamespace$"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"

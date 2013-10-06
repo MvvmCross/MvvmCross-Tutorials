@@ -30,10 +30,10 @@ namespace CustomBinding.Droid.Controls
             FireValueChanged(value);
         }
 
-        public override void SetValue(object value)
+        protected override void SetValueImpl(object target, object value)
         {
             var stringValue = (string)value;
-            var anotherView = AnotherView;
+            var anotherView = (AnotherView)target;
             
             if (anotherView == null)
             {
