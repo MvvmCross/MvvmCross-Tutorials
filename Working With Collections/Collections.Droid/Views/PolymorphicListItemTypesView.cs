@@ -26,6 +26,19 @@ namespace Collections.Droid.Views
             {
             }
 
+            public override int GetItemViewType(int position)
+            {
+                var item = GetRawItem(position);
+                if (item is Kitten)
+                    return 0;
+                return 1;
+            }
+
+            public override int ViewTypeCount
+            {
+                get { return 2; }
+            }
+
             protected override View GetBindableView(View convertView, object source, int templateId)
             {
                 if (source is Kitten)
