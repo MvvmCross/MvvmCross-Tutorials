@@ -78,6 +78,7 @@
     <Compile Include="Bootstrap\JsonLocalisationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
+    <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -115,78 +116,53 @@
     <BundleResource Include="Resources\Default-568h@2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\MonoTouch40\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoTouch40\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\MonoTouch40\Cirrious.CrossCore.Touch.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoTouch40\Cirrious.CrossCore.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Binding.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Localization.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.JsonLocalisation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.JsonLocalisation">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.ResourceLoader.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Plugins.ResourceLoader.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.StarterPack.3.0.8.1\lib\MonoTouch40\Cirrious.MvvmCross.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\MonoTouch40\Cirrious.MvvmCross.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.8.1\lib\MonoTouch40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\MonoTouch40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.8.1\lib\MonoTouch40\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.8.1\lib\MonoTouch40\System.Windows.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.8.1\lib\MonoTouch40\System.Xml.Serialization.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Babel.Core\Babel.Core.csproj">
