@@ -144,6 +144,8 @@
     <AndroidResource Include="Resources\Layout\Test_If.axml" />
     <AndroidResource Include="Resources\Layout\Test_Maths.axml" />
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\Layout\Item_SpinnerDropDown.axml" />
+    <AndroidResource Include="Resources\Layout\Item_Spinner.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
