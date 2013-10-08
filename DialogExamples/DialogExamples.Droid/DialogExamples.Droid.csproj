@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\LinearView.cs" />
     <Compile Include="Views\SecondView.cs" />
     <Compile Include="Views\ThirdView.cs" />
   </ItemGroup>
