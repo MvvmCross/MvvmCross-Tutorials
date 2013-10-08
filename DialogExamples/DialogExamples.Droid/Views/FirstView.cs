@@ -49,7 +49,8 @@ namespace DialogExamples.Droid.Views
                     new Section("Action")
                         {
                             new ButtonElement("Second").Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
-                            new ButtonElement("Bindable Elements").Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand)  
+                            new ButtonElement("Bindable Elements").Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand),
+                            new ButtonElement("Linear view dialog").Bind(bindings, element => element.SelectedCommand, vm => vm.GoLinearCommand)  
                         },
                     new Section("Debug out:")
                         {
