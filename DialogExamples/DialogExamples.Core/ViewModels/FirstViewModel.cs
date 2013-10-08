@@ -12,6 +12,11 @@ namespace DialogExamples.Core.ViewModels
             get { return new MvxCommand(() => ShowViewModel<SecondViewModel>());}
         }
 
+        public ICommand GoLinearCommand
+        {
+            get { return new MvxCommand(() => ShowViewModel<LinearViewModel>()); }
+        }
+
         public ICommand BindableElementsCommand
         {
             get { return new MvxCommand(() => ShowViewModel<ThirdViewModel>()); }
