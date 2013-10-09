@@ -14,7 +14,7 @@ namespace DialogExamples.Core.ViewModels
 
         public ICommand GoLinearCommand
         {
-            get { return new MvxCommand(() => ShowViewModel<LinearViewModel>()); }
+            get { return new MvxCommand(() => { }); /*ShowViewModel<LinearViewModel>()});*/ }
         }
 
         public ICommand BindableElementsCommand
