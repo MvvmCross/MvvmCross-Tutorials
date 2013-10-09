@@ -3,6 +3,7 @@ using ApiExamples.Core.ViewModels;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
+using MonoTouch.ObjCRuntime;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 
@@ -42,6 +43,9 @@ namespace ApiExamples.Touch.Views
                     Lines = 0,
                 };
             Add(explain);
+
+            if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
+                EdgesForExtendedLayout = UIRectEdge.None;
 
             var nextButton = new UIButton(UIButtonType.RoundedRect);
             nextButton.Frame = new RectangleF(10,10,300,30);
