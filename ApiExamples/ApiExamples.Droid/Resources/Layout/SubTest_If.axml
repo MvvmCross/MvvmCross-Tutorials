@@ -4,10 +4,11 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
+	<!-- Note this is done an Include File just to prove include files work! -->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="USING INCLUDE..." />
+        android:text="Pick 2 numbers...." />
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
