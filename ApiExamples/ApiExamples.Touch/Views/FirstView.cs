@@ -728,4 +728,10 @@ namespace ApiExamples.Touch.Views
     {
         // not tested
     }
+
+    [Register("RatingBarView")]
+    public class RatingBarView : NotTestedTestViewController
+    {
+        // not tested
+    }
 }

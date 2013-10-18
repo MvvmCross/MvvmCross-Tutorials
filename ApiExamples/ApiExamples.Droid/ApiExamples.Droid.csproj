@@ -147,6 +147,7 @@
     <AndroidResource Include="Resources\Layout\Item_SpinnerDropDown.axml" />
     <AndroidResource Include="Resources\Layout\Item_Spinner.axml" />
     <AndroidResource Include="Resources\Layout\SubTest_If.axml" />
+    <AndroidResource Include="Resources\Layout\Test_RatingBar.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />

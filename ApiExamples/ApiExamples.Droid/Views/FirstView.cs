@@ -163,7 +163,17 @@ namespace ApiExamples.Droid.Views
             SetContentView(Resource.Layout.Test_If);
         }
     }
-    
+
+    [Activity(NoHistory = true)]
+    public class MathsView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_Maths);
+        }
+    }
+
     [Activity(NoHistory = true)]
     public class RadioGroupView : MvxActivity
     {
@@ -175,12 +185,12 @@ namespace ApiExamples.Droid.Views
     }
 
     [Activity(NoHistory = true)]
-    public class MathsView : MvxActivity
+    public class RatingBarView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Test_Maths);
+            SetContentView(Resource.Layout.Test_RatingBar);
         }
     }
 }

@@ -161,22 +161,25 @@ namespace ApiExamples.Droid
 			public const int Test_RadioGroup = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int Test_Relative = 2130903060;
+			public const int Test_RatingBar = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int Test_Seek = 2130903061;
+			public const int Test_Relative = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int Test_Spinner = 2130903062;
+			public const int Test_Seek = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int Test_Text = 2130903063;
+			public const int Test_Spinner = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Test_Time = 2130903064;
+			public const int Test_Text = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Test_WithErrors = 2130903065;
+			public const int Test_Time = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int Test_WithErrors = 2130903066;
 			
 			static Layout()
 			{

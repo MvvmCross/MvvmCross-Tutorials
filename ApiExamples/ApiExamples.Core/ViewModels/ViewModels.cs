@@ -542,4 +542,28 @@ namespace ApiExamples.Core.ViewModels
         }
     }
 
+    public class RatingBarViewModel
+        : TestViewModel
+    {
+        private int _outOf = 10;
+        public int OutOf 
+        {   
+            get { return _outOf; }
+            set { _outOf = value; RaisePropertyChanged(() => OutOf); }
+        }
+
+        private int _rating = 4;
+        public int Rating 
+        {   
+            get { return _rating; }
+            set { _rating = value; RaisePropertyChanged(() => Rating); }
+        }
+
+        private int _stepSize = 1;
+        public int StepSize 
+        {   
+            get { return _stepSize; }
+            set { _stepSize = value; RaisePropertyChanged(() => StepSize); }
+        }
+    }
 }
