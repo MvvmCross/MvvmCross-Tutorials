@@ -14,6 +14,8 @@ namespace ApiExamples.Core.ViewModels
     {
         protected override string Convert(string value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
+            if (value == null)
+                return null;
             return value.Replace((string)parameter, string.Empty);
         }
     }
