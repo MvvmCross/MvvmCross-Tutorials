@@ -11,16 +11,9 @@ namespace FragmentSample.UI.Droid.Views
 {
     public class NameDialogFragment : MvxDialogFragment
     {
-        private readonly Context _context;
-
         public NamesViewModel NamesViewModel
         {
             get { return (NamesViewModel) ViewModel; }
-        }
-
-        public NameDialogFragment(Context context)
-        {
-            _context = context;
         }
 
         public override Dialog OnCreateDialog(Bundle savedState)
@@ -29,7 +22,7 @@ namespace FragmentSample.UI.Droid.Views
 
             var view = this.BindingInflate(Resource.Layout.Dialog_Names, null);
 
-            var dialog = new AlertDialog.Builder(_context);
+            var dialog = new AlertDialog.Builder(Activity);
             dialog.SetTitle("Name Dialog");
             dialog.SetView(view);
             dialog.SetNegativeButton("Cancel", (s, a) => { });

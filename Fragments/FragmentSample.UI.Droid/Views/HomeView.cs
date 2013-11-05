@@ -10,6 +10,8 @@ namespace FragmentSample.UI.Droid.Views
     public class HomeView
         : MvxFragmentActivity
     {
+        private const string NameDialogTagName = "A Name Dialog";
+
         public HomeViewModel HomeViewModel
         {
             get { return (HomeViewModel)base.ViewModel; }
@@ -24,9 +26,18 @@ namespace FragmentSample.UI.Droid.Views
 
         private void DialogOnClick(object sender, EventArgs eventArgs)
         {
-            var dialog = new NameDialogFragment(this);
+            var dialog = new NameDialogFragment();
             dialog.ViewModel = HomeViewModel.Names;
-            dialog.Show(SupportFragmentManager, "A Name Dialog");                                     
+            dialog.Show(SupportFragmentManager, NameDialogTagName);                                     
+        }
+
+        protected override void OnCreate(Android.OS.Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            var existingDialog = (NameDialogFragment)SupportFragmentManager.FindFragmentByTag(NameDialogTagName);
+            if (existingDialog != null)
+                existingDialog.ViewModel = HomeViewModel.Names;
         }
     }
 }
