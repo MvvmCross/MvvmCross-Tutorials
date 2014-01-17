@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Cirrious.CrossCore.Converters;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace ApiExamples.Droid.Views
@@ -181,6 +182,14 @@ namespace ApiExamples.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Test_RadioGroup);
+        }
+    }
+
+    public class ErrorExistsValueConverter : MvxValueConverter
+    {
+        public override object Convert(object value, System.Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            return (value != null);
         }
     }
 

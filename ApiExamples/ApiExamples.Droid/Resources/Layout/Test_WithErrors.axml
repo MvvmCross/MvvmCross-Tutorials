@@ -19,7 +19,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#ff0000"
-    local:MvxBind="Text Errors['Email']"
+    local:MvxBind="Text Errors['Email'];Visible Errors['Email']"
       />
   <CheckBox
     android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#ff0000"
-    local:MvxBind="Text Errors['AcceptTerms']"
+    local:MvxBind="Text Errors['AcceptTerms'];Visible Errors['AcceptTerms']"
       />
   <TextView
     android:layout_width="fill_parent"
@@ -51,7 +51,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#ff0000"
-    local:MvxBind="Text Errors.Count"
+    local:MvxBind="Text Errors.Count;Visible Errors.Count"
       />
   </LinearLayout>
   <Button
