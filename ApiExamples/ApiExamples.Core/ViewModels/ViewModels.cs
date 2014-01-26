@@ -568,4 +568,47 @@ namespace ApiExamples.Core.ViewModels
             set { _stepSize = value; RaisePropertyChanged(() => StepSize); }
         }
     }
+
+    public class CommandViewModel : TestViewModel
+    {
+        private bool _shouldEnable;
+        public bool ShouldEnable 
+        {   
+            get { return _shouldEnable; }
+            set { _shouldEnable = value; RaisePropertyChanged(() => ShouldEnable); RaiseCanExecuteChanged(); }
+        }
+
+        private void RaiseCanExecuteChanged()
+        {
+            if (_myCommand != null)
+                _myCommand.RaiseCanExecuteChanged();
+        }
+
+        private MvxCommand _myCommand;
+        public ICommand MyCommand
+        {
+            get
+            {
+                _myCommand = _myCommand ?? new MvxCommand(DoMyCommand, CanDoMyCommand);
+                return _myCommand;
+            }
+        }
+
+        private bool CanDoMyCommand()
+        {
+            return ShouldEnable;
+        }
+
+        private void DoMyCommand()
+        {
+            Count++;
+        }
+
+        private int _count;
+        public int Count 
+        {   
+            get { return _count; }
+            set { _count = value; RaisePropertyChanged(() => Count); }
+        }
+    }
 }

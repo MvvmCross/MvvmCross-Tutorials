@@ -734,4 +734,33 @@ namespace ApiExamples.Touch.Views
     {
         // not tested
     }
+
+    [Register("CommandView")]
+    public class CommandView : TestViewController
+    {
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            var button = new UIButton(UIButtonType.RoundedRect);
+            button.Frame = new RectangleF(10, 90, 300, 30);
+            Add(button);
+            var sw = new UISwitch(new RectangleF(10, 120, 300, 30));
+            Add(sw);
+
+            var set = this.CreateBindingSet<CommandView, CommandViewModel>();
+            set.Bind(button).To(vm => vm.MyCommand);
+            set.Bind(button).For("Title").To("Format('Clicked {0} times', Count)");
+            set.Bind(sw).For(v => v.On).To(vm => vm.ShouldEnable);
+            set.Apply();
+        }
+
+        protected override string ExplainText
+        {
+            get
+            {
+                return "Does the button click and en/disable?";
+            }
+        }
+    }
 }

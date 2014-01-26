@@ -202,4 +202,14 @@ namespace ApiExamples.Droid.Views
             SetContentView(Resource.Layout.Test_RatingBar);
         }
     }
+
+    [Activity(NoHistory = true)]
+    public class CommandView : MvxActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Test_Command);
+        }
+    }
 }
