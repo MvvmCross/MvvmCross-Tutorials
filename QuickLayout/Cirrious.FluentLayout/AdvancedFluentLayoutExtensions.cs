@@ -34,12 +34,12 @@ namespace Cirrious.FluentLayouts.Touch
 
         public static FluentLayout Below(this UIView view, UIView previous, float margin = 0f)
         {
-            return view.Top().EqualTo().BottomOf(previous).Minus(margin);
+            return view.Top().EqualTo().BottomOf(previous).Plus(margin);
         }
 
         public static FluentLayout Above(this UIView view, UIView previous, float margin = 0f)
         {
-            return view.Bottom().EqualTo().TopOf(previous).Plus(margin);
+            return view.Bottom().EqualTo().TopOf(previous).Minus(margin);
         }
 
         public static FluentLayout WithSameLeft(this UIView view, UIView previous)
