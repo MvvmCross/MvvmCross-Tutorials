@@ -34,7 +34,7 @@
                     Text="SubTotal"
                     />
                 <TextBox 
-                    Text="{Binding SubTotal, Mode=TwoWay}" 
+                    Text="{Binding SubTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                     />
 
                 <TextBlock
