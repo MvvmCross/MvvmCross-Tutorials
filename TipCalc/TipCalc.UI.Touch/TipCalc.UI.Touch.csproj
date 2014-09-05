@@ -102,6 +102,10 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj">
+      <Project>{64257a8a-e176-479d-8fc0-fd559a80b2e4}</Project>
+      <Name>TipCalc.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -134,12 +138,6 @@
     <Reference Include="monotouch" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\TipCalc\TipCalc.Core.csproj">
-      <Project>{64257A8A-E176-479D-8FC0-FD559A80B2E4}</Project>
-      <Name>TipCalc.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="Views\TipView.xib" />

@@ -121,7 +121,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TipCalc\TipCalc.Core.csproj">
+    <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj">
       <Project>{64257a8a-e176-479d-8fc0-fd559a80b2e4}</Project>
       <Name>TipCalc.Core</Name>
     </ProjectReference>

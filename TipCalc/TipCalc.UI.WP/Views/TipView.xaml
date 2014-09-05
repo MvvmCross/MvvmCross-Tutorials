@@ -43,7 +43,7 @@
                     Style="{StaticResource PhoneTextSubtleStyle}"
                     />
                 <Slider 
-                    Value="{Binding Generosity,Mode=TwoWay}" 
+                    Value="{Binding Generosity, Mode=TwoWay}" 
                     SmallChange="1" 
                     LargeChange="10" 
                     Minimum="0" 

@@ -132,12 +132,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TipCalc\TipCalc.Core.csproj">
-      <Project>{64257a8a-e176-479d-8fc0-fd559a80b2e4}</Project>
-      <Name>TipCalc.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1-beta3\lib\win81\Cirrious.CrossCore.dll</HintPath>
     </Reference>
@@ -153,6 +147,12 @@
     <Reference Include="Cirrious.MvvmCross.WindowsCommon">
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1-beta3\lib\win81\Cirrious.MvvmCross.WindowsCommon.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TipCalc.Core\TipCalc.Core.csproj">
+      <Project>{64257a8a-e176-479d-8fc0-fd559a80b2e4}</Project>
+      <Name>TipCalc.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

@@ -7,6 +7,11 @@ namespace TipCalc.UI.Touch
 {
     public partial class TipView : MvxViewController
     {
+		public new TipViewModel ViewModel
+		{
+			get { return (TipViewModel) base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
         public TipView() : base("TipView", null)
         {
         }

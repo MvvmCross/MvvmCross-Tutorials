@@ -10,7 +10,7 @@ namespace TipCalc.Core
         public App()
         {
             Mvx.RegisterType<ICalculation, Calculation>();
-			RegisterAppStart<TipViewModel>();
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<TipViewModel>());
         }
     }
 }

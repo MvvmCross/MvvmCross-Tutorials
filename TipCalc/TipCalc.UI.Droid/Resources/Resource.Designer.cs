@@ -34,17 +34,20 @@ namespace TipCalc.UI.Droid
 			// aapt resource value: 0x7f010000
 			public const int MvxBind = 2130771968;
 			
-			// aapt resource value: 0x7f010003
-			public const int MvxDropDownItemTemplate = 2130771971;
+			// aapt resource value: 0x7f010004
+			public const int MvxDropDownItemTemplate = 2130771972;
 			
-			// aapt resource value: 0x7f010002
-			public const int MvxItemTemplate = 2130771970;
+			// aapt resource value: 0x7f010003
+			public const int MvxItemTemplate = 2130771971;
 			
 			// aapt resource value: 0x7f010001
 			public const int MvxLang = 2130771969;
 			
-			// aapt resource value: 0x7f010004
-			public const int MvxSource = 2130771972;
+			// aapt resource value: 0x7f010005
+			public const int MvxSource = 2130771973;
+			
+			// aapt resource value: 0x7f010002
+			public const int MvxTemplate = 2130771970;
 			
 			static Attribute()
 			{
@@ -136,15 +139,21 @@ namespace TipCalc.UI.Droid
 			// aapt resource value: 1
 			public const int MvxBinding_MvxLang = 1;
 			
+			public static int[] MvxControl = new int[] {
+					2130771970};
+			
+			// aapt resource value: 0
+			public const int MvxControl_MvxTemplate = 0;
+			
 			public static int[] MvxImageView = new int[] {
-					2130771972};
+					2130771973};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
-					2130771970,
-					2130771971};
+					2130771971,
+					2130771972};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
