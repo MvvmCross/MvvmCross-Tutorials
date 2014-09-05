@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Windows.Foundation.Metadata;
+using Windows.UI.Xaml.Data;
 
 namespace TipCalc.UI.WindowsStore.Common
 {
     /// <summary>
     /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
     /// </summary>
-    [WebHostHidden]
+    [Windows.Foundation.Metadata.WebHostHidden]
     public abstract class BindableBase : INotifyPropertyChanged
     {
         /// <summary>
@@ -30,10 +30,10 @@ namespace TipCalc.UI.WindowsStore.Common
         /// desired value.</returns>
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
-            if (Equals(storage, value)) return false;
+            if (object.Equals(storage, value)) return false;
 
             storage = value;
-            OnPropertyChanged(propertyName);
+            this.OnPropertyChanged(propertyName);
             return true;
         }
 
@@ -45,7 +45,7 @@ namespace TipCalc.UI.WindowsStore.Common
         /// that support <see cref="CallerMemberNameAttribute"/>.</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var eventHandler = PropertyChanged;
+            var eventHandler = this.PropertyChanged;
             if (eventHandler != null)
             {
                 eventHandler(this, new PropertyChangedEventArgs(propertyName));
