@@ -1,5 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.Graphics.Display;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 
 namespace TipCalc.UI.WindowsStore.Common
@@ -12,12 +21,12 @@ namespace TipCalc.UI.WindowsStore.Common
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return (value is bool && (bool) value) ? Visibility.Visible : Visibility.Collapsed;
+            return (value is bool && (bool)value) ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            return value is Visibility && (Visibility) value == Visibility.Visible;
+            return value is Visibility && (Visibility)value == Visibility.Visible;
         }
     }
 }

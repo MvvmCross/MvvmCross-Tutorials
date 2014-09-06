@@ -6,7 +6,8 @@ namespace TipCalc.UI.WindowsStore
 {
     public class Setup : MvxStoreSetup
     {
-        public Setup(Frame rootFrame) : base(rootFrame)
+        public Setup(Frame rootFrame)
+            : base(rootFrame)
         {
         }
 

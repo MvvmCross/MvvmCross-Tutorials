@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
-  <Identity Name="872df255-ee7a-4546-99cd-830dffabe83b"
-            Publisher="CN=Stuart"
+  <Identity Name="10ed11c0-7cd9-4264-b89d-8e9b93e71934"
+            Publisher="CN=jon.stoneman"
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>TipCalc.UI.WindowsStore</DisplayName>
-    <PublisherDisplayName>Stuart</PublisherDisplayName>
+    <PublisherDisplayName>jon.stoneman</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
