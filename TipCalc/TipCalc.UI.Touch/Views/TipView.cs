@@ -1,18 +1,20 @@
-using MonoTouch.UIKit;
-using TipCalc.Core.ViewModels;
-using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Touch.Views;
+using TipCalc.Core.ViewModels;
+using UIKit;
 
-namespace TipCalc.UI.Touch
+namespace TipCalc.UI.Touch.Views
 {
     public partial class TipView : MvxViewController
     {
-		public new TipViewModel ViewModel
-		{
-			get { return (TipViewModel) base.ViewModel; }
-			set { base.ViewModel = value; }
-		}
-        public TipView() : base("TipView", null)
+        public new TipViewModel ViewModel
+        {
+            get { return (TipViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
+        public TipView()
+            : base("TipView", null)
         {
         }
 

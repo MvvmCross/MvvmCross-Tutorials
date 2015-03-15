@@ -3,11 +3,6 @@ using TipCalc.Core.Services;
 
 namespace TipCalc.Core.ViewModels
 {
-    public class SecondViewModel : MvxViewModel
-    {
-
-    }
-
     public class TipViewModel : MvxViewModel
     {
         private readonly ICalculation _calculation;
@@ -51,10 +46,6 @@ namespace TipCalc.Core.ViewModels
         private void Recalcuate()
         {
             Tip = _calculation.TipAmount(SubTotal, Generosity);
-            if (Tip > 1000)
-            {
-                ShowViewModel<SecondViewModel>();
-            }
         }
     }
 }
