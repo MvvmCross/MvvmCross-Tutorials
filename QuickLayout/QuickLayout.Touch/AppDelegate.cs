@@ -1,8 +1,8 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Platform;
+using UIKit;
 
 namespace QuickLayout.Touch
 {
