@@ -5,6 +5,7 @@ using UIKit;
 using QuickLayout.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
+using ObjCRuntime;
 
 namespace QuickLayout.Touch.Views
 {
@@ -16,6 +17,10 @@ namespace QuickLayout.Touch.Views
             View.BackgroundColor = UIColor.White;
             base.ViewDidLoad();
 
+			// ios7 layout
+			if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
+				EdgesForExtendedLayout = UIRectEdge.None;
+			
             var button = new UIButton(UIButtonType.RoundedRect);
             button.SetTitle("Search", UIControlState.Normal);
             Add(button);

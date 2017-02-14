@@ -6,6 +6,7 @@ using QuickLayout.Core.ViewModels;
 using Cirrious.FluentLayouts;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
+using ObjCRuntime;
 
 namespace QuickLayout.Touch.Views
 {
@@ -23,6 +24,10 @@ namespace QuickLayout.Touch.Views
             View = scrollView;
             scrollView.TranslatesAutoresizingMaskIntoConstraints = true;
             base.ViewDidLoad();
+
+			// ios7 layout
+			if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
+				EdgesForExtendedLayout = UIRectEdge.None;
 
             var set = this.CreateBindingSet<DetailsView, DetailsViewModel>();
 
