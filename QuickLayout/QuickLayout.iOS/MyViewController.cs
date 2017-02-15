@@ -2,7 +2,7 @@ using System;
 using UIKit;
 using CoreGraphics;
 
-namespace QuickLayout.Touch
+namespace QuickLayout.iOS
 {
     public class MyViewController : UIViewController
     {

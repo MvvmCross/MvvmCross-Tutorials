@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace QuickLayout.Touch
+namespace QuickLayout.iOS
 {
     public class Application
     {

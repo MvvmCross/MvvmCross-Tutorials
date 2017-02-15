@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace QuickLayout.Touch
+namespace QuickLayout.iOS
 {
     public class DebugTrace : IMvxTrace
     {

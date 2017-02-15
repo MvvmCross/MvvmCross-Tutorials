@@ -7,7 +7,7 @@ using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using ObjCRuntime;
 
-namespace QuickLayout.Touch.Views
+namespace QuickLayout.iOS.Views
 {
     [Register("SearchView")]
     public class SearchView : MvxViewController

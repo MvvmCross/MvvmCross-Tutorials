@@ -4,7 +4,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
 
-namespace QuickLayout.Touch
+namespace QuickLayout.iOS
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate

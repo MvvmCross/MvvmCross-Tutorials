@@ -4,7 +4,7 @@ using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform.Platform;
 using UIKit;
 
-namespace QuickLayout.Touch
+namespace QuickLayout.iOS
 {
     public class Setup : MvxIosSetup
     {
