@@ -1,4 +1,4 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.BindingContext;
 using CrossUI.Droid.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 
