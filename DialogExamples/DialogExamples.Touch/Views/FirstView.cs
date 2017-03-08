@@ -7,7 +7,7 @@ using DialogExamples.Core.ViewModels;
 using UIKit;
 using Foundation;
 
-namespace DialogExamples.Touch.Views
+namespace DialogExamples.iOS.Views
 {
     [Register("FirstView")]
     public class FirstView : MvxDialogViewController

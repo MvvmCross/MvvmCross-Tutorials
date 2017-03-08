@@ -2,10 +2,10 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Dialog.iOS;
 using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using DialogExamples.Touch.BindableElements;
+using DialogExamples.iOS.BindableElements;
 using Foundation;
 
-namespace DialogExamples.Touch.Views
+namespace DialogExamples.iOS.Views
 {
     [Register("ThirdView")]
     public class ThirdView : MvxDialogViewController

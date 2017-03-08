@@ -4,7 +4,7 @@ using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 using Foundation;
 
-namespace DialogExamples.Touch.Views
+namespace DialogExamples.iOS.Views
 {
     [Register("SecondView")]
     public class SecondView : MvxDialogViewController

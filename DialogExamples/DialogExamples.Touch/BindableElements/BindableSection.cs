@@ -8,7 +8,7 @@ using MvvmCross.Binding;
 using MvvmCross.Binding.Attributes;
 using CrossUI.iOS.Dialog.Elements;
 
-namespace DialogExamples.Touch.BindableElements
+namespace DialogExamples.iOS.BindableElements
 {
     public class BindableSection<TElementTemplate> : Section
         where TElementTemplate : Element, IBindableElement

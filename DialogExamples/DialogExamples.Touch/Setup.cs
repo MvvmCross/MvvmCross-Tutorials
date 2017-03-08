@@ -4,7 +4,7 @@ using MvvmCross.Platform.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 
-namespace DialogExamples.Touch
+namespace DialogExamples.iOS
 {
 	public class Setup : MvxIosDialogSetup
 	{

@@ -5,7 +5,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using UIKit;
 
-namespace DialogExamples.Touch
+namespace DialogExamples.iOS
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does ensure types and properties
     // are preserved in the deployed app

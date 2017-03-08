@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace DialogExamples.Touch
+namespace DialogExamples.iOS
 {
     public class Application
     {

@@ -4,7 +4,7 @@ using MvvmCross.Platform;
 using Foundation;
 using UIKit;
 
-namespace DialogExamples.Touch
+namespace DialogExamples.iOS
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : MvxApplicationDelegate

@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace DialogExamples.Touch
+namespace DialogExamples.iOS
 {
     public class DebugTrace : IMvxTrace
     {

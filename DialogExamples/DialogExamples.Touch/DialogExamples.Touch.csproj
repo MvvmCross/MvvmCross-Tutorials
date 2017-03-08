@@ -8,7 +8,7 @@
     <ProjectGuid>{403EE118-85F5-46F2-B01B-58644658E2FA}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DialogExamples.Touch</RootNamespace>
+    <RootNamespace>DialogExamples.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>DialogExamplesTouch</AssemblyName>
   </PropertyGroup>

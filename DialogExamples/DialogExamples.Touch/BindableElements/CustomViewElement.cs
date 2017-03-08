@@ -6,7 +6,7 @@ using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 using UIKit;
 
-namespace DialogExamples.Touch.BindableElements
+namespace DialogExamples.iOS.BindableElements
 {
     public class CustomViewElement
         : UIViewElement
