@@ -1,5 +1,5 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
-using CrossUI.Touch.Dialog.Elements;
+using MvvmCross.Binding.BindingContext;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 
 namespace DialogExamples.Touch.BindableElements

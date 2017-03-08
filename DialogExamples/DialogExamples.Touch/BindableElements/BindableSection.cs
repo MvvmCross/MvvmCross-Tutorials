@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using Cirrious.CrossCore.Platform;
-using Cirrious.CrossCore.WeakSubscription;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.Attributes;
-using CrossUI.Touch.Dialog.Elements;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Platform.WeakSubscription;
+using MvvmCross.Binding;
+using MvvmCross.Binding.Attributes;
+using CrossUI.iOS.Dialog.Elements;
 
 namespace DialogExamples.Touch.BindableElements
 {

@@ -1,12 +1,12 @@
-using Cirrious.MvvmCross.Dialog.Touch;
-using MonoTouch.UIKit;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Touch.Platform;
+using MvvmCross.Dialog.iOS;
+using UIKit;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
 
 namespace DialogExamples.Touch
 {
-	public class Setup : MvxTouchDialogSetup
+	public class Setup : MvxIosDialogSetup
 	{
 		public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
             : base(applicationDelegate, window)

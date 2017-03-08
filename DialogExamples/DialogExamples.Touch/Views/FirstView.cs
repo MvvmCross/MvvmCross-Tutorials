@@ -1,12 +1,11 @@
-using System.Drawing;
+using CoreGraphics;
 using System.Linq;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Views;
-using CrossUI.Touch.Dialog.Elements;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Dialog.iOS;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using UIKit;
+using Foundation;
 
 namespace DialogExamples.Touch.Views
 {

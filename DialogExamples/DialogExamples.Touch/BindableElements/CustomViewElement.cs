@@ -1,10 +1,10 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using CrossUI.Touch.Dialog.Elements;
+using System;
+using CoreGraphics;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.iOS.Views;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
-using MonoTouch.CoreGraphics;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace DialogExamples.Touch.BindableElements
 {
@@ -80,7 +80,7 @@ namespace DialogExamples.Touch.BindableElements
             private string _subtitle;
 
             public SampleView()
-                : base(new RectangleF(0f, 0f, 450f, 100f))
+                : base(new CGRect(0f, 0f, 450f, 100f))
             {
                 this.BackgroundColor = UIColor.Clear;
             }
@@ -97,17 +97,17 @@ namespace DialogExamples.Touch.BindableElements
                 set { _subtitle = value; SetNeedsDisplay(); }
             }
 
-            public override void Draw(System.Drawing.RectangleF rect)
+            public override void Draw(CGRect rect)
             {
                 using (CGContext context = UIGraphics.GetCurrentContext())
                 {
                     UIColor.Black.SetColor();
 
-                    var boldFont = UIFont.BoldSystemFontOfSize(14.0f);
-                    var regularFont = UIFont.SystemFontOfSize(14.0f);
+                    var boldFont = UIFont.BoldSystemFontOfSize((nfloat)14.0f);
+                    var regularFont = UIFont.SystemFontOfSize((nfloat)14.0f);
 
-                    this.DrawString(Title, new RectangleF(4, 2, 320, 20), boldFont);
-                    this.DrawString(Subtitle, new RectangleF(54, 22, 450, 20), regularFont);
+                    UIStringDrawing.DrawString(Title, new CGRect(4, 2, 320, 20), boldFont);
+                    UIStringDrawing.DrawString(Subtitle, new CGRect(54, 22, 450, 20), regularFont);
                 }
             }
         }
