@@ -1,5 +1,5 @@
 using System;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace DialogExamples.Core.ViewModels
 {
