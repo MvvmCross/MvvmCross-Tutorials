@@ -1,19 +1,22 @@
-using System.ComponentModel;
-using Android.App;
-using Android.OS;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Dialog.Droid.Views;
-using CrossUI.Droid.Dialog.Elements;
+using MvvmCross.Dialog.iOS;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
+using Foundation;
 
-namespace DialogExamples.Droid.Views
+namespace DialogExamples.iOS.Views
 {
-    [Activity(Label = "View for SecondViewModel")]
-    public class SecondView : MvxDialogActivity
+    [Register("SecondView")]
+    public class SecondView : MvxDialogViewController
     {
-        protected override void OnCreate(Bundle bundle)
+        public SecondView()
+            : base(pushing:true)
         {
-            base.OnCreate(bundle);
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
             var bindings = this.CreateInlineBindingTarget<SecondViewModel>();
 
@@ -26,16 +29,16 @@ namespace DialogExamples.Droid.Views
                         },
                     new Section("Time")
                         {
-                            new TimeElement("Time").Bind(bindings, vm => vm.Duration),
+                            new TimeElement("Time", null).Bind(bindings, vm => vm.Duration),
                             new StringElement("Time is").Bind(bindings, vm => vm.Duration),
                         },
                     new Section("Float")
                         {
-                            new FloatElement("Float?")
-                            {
-                                MinValue = 32,
-                                MaxValue = 212
-                            }.Bind(bindings, vm => vm.Temperature),
+                            new FloatElement()
+                                {
+                                    MinValue = 32,
+                                    MaxValue = 212
+                                }.Bind(bindings, vm => vm.Temperature),
                             new StringElement("Float is").Bind(bindings, vm => vm.Temperature),
                         },
                     new Section("Todo:")

@@ -1,8 +1,8 @@
 using MvvmCross.Binding.BindingContext;
-using CrossUI.Droid.Dialog.Elements;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
 
-namespace DialogExamples.Droid.BindableElements
+namespace DialogExamples.iOS.BindableElements
 {
     public class CustomStringElement
         : StringElement
