@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.Core", "Dial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.Droid", "DialogExamples.Droid\DialogExamples.Droid.csproj", "{4F1CA122-CB11-464B-AC49-D99C308A2D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.Touch", "DialogExamples.Touch\DialogExamples.Touch.csproj", "{403EE118-85F5-46F2-B01B-58644658E2FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogExamples.iOS", "DialogExamples.iOS\DialogExamples.iOS.csproj", "{403EE118-85F5-46F2-B01B-58644658E2FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

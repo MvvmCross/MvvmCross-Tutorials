@@ -1,6 +1,6 @@
 using MvvmCross.Binding.BindingContext;
 
-namespace DialogExamples.Droid.BindableElements
+namespace DialogExamples.iOS.BindableElements
 {
     public interface IBindableElement
         : IMvxBindingContextOwner

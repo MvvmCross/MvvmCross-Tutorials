@@ -6,33 +6,24 @@ using MvvmCross.Platform.Platform;
 using MvvmCross.Platform.WeakSubscription;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Attributes;
-using CrossUI.Droid.Dialog.Elements;
+using CrossUI.iOS.Dialog.Elements;
 
-namespace DialogExamples.Droid.BindableElements
+namespace DialogExamples.iOS.BindableElements
 {
     public class BindableSection<TElementTemplate> : Section
         where TElementTemplate : Element, IBindableElement
     {
-        private Func<TElementTemplate> _createElement;
         private IEnumerable _itemsSource;
         private MvxNotifyCollectionChangedEventSubscription _subscription;
 
         public BindableSection()
             : base()
         {
-            _createElement = () => Activator.CreateInstance<TElementTemplate>();
         }
 
         public BindableSection(string caption)
             : base(caption)
         {
-            _createElement = () => Activator.CreateInstance<TElementTemplate>();
-        }
-
-        public BindableSection(string caption, Func<TElementTemplate> createElement)
-            : base(caption)
-        {
-            _createElement = createElement;
         }
 
         [MvxSetToNullAfterBinding]
@@ -68,13 +59,12 @@ namespace DialogExamples.Droid.BindableElements
 
         private void NotifyDataSetChanged()
         {
-            List<Element> newElements = new List<Element>();
+            var newElements = new List<Element>();
             if (_itemsSource != null)
             {
                 foreach (var item in _itemsSource)
                 {
-                    var element = _createElement();
-                    ;
+                    var element = Activator.CreateInstance<TElementTemplate>();
 
                     element.DataContext = item;
 
@@ -83,12 +73,12 @@ namespace DialogExamples.Droid.BindableElements
             }
 
             Elements.Clear();
-            foreach (var newElement in newElements)
-            {
-                Elements.Add(newElement);
-            }
+            Elements.AddRange(newElements);
 
-            HandleElementsChangedEvent();
+            var root = this.Parent as RootElement;
+            if (root == null) root = this.GetImmediateRootElement();
+
+            if (root != null) root.TableView.ReloadData();
         }
     }
 }

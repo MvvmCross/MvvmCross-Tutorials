@@ -1,24 +1,25 @@
+using CoreGraphics;
 using System.Linq;
-using Android.App;
-using Android.OS;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Dialog.Droid.Views;
-using CrossUI.Droid.Dialog.Elements;
+using MvvmCross.Dialog.iOS;
+using CrossUI.iOS.Dialog.Elements;
 using DialogExamples.Core.ViewModels;
+using UIKit;
+using Foundation;
 
-namespace DialogExamples.Droid.Views
+namespace DialogExamples.iOS.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
-    public class LinearView : MvxLinearDialogActivity
+    [Register("FirstView")]
+    public class FirstView : MvxDialogViewController
     {
-        protected override void OnCreate(Bundle bundle)
+        public override void ViewDidLoad()
         {
-            base.OnCreate(bundle);
+            base.ViewDidLoad();
 
-            var bindings = this.CreateInlineBindingTarget<LinearViewModel>();
+            var bindings = this.CreateInlineBindingTarget<FirstViewModel>();
 
             // note that this list isn't bound - if the view model list changes, then the UI won't update it;s list
-            var radioChoices = from r in (ViewModel as LinearViewModel).DessertChoices
+            var radioChoices = from r in (ViewModel as FirstViewModel).DessertChoices
                                select (Element)new RadioElement(r);
 
             Root = new RootElement("Example Root")
@@ -26,14 +27,11 @@ namespace DialogExamples.Droid.Views
                     new Section("Your details")
                         {
                             new EntryElement("Login", "Enter Login name").Bind(bindings, vm => vm.TextProperty),
-                            new EntryElement("Password", "Enter Password")
-                            {
-                                Password = true
-                            }.Bind(bindings, vm => vm.PasswordProperty)
+                            new EntryElement("Password", "Enter Password", "", true).Bind(bindings, vm => vm.PasswordProperty)
                         },
                     new Section("Your options")
                         {
-                            new BooleanElement("Remember me?").Bind(bindings, vm => vm.SwitchThis),
+                            new BooleanElement("Remember me?", false).Bind(bindings, vm => vm.SwitchThis),
                             new CheckboxElement("Upgrade?").Bind(bindings, vm => vm.CheckThis),
                         },
                     new Section("Radio")
@@ -48,9 +46,17 @@ namespace DialogExamples.Droid.Views
                         },
                     new Section("Action")
                         {
-                            new ButtonElement("Second").Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
-                            new ButtonElement("Bindable Elements").Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand),
-                            new ButtonElement("Listview dialog").Bind(bindings, element => element.SelectedCommand, vm => vm.GoListViewCommand)  
+                            new StyledStringElement("Second")
+                                {
+                                    BackgroundColor = UIColor.Red,
+                                    TextColor = UIColor.Yellow,
+                                    Alignment = UITextAlignment.Right
+                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.GoSecondCommand),
+                            new StyledStringElement("Bindable Elements") {
+                                BackgroundColor = UIColor.Blue,
+                                TextColor = UIColor.White,
+                                Alignment = UITextAlignment.Center
+                                }.Bind(bindings, element => element.SelectedCommand, vm => vm.BindableElementsCommand), 
                         },
                     new Section("Debug out:")
                         {
