@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
 namespace Babel.Wpf.Bootstrap
 {
     public class JsonPluginBootstrap
-        : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.Json.PluginLoader>
+        : MvxPluginBootstrapAction<MvvmCross.Plugins.Json.PluginLoader>
     {
     }
 }
