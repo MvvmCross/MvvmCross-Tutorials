@@ -1,8 +1,8 @@
-using System.Drawing;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
+using Foundation;
+using UIKit;
 
 namespace Babel.Touch.Views
 {
@@ -24,7 +24,7 @@ namespace Babel.Touch.Views
 
         private UILabel AddLabel(int count)
         {
-            var label = new UILabel(new RectangleF(10, 10 + count * 40, 300, 40));
+            var label = new UILabel(new CGRect(10, 10 + count * 40, 300, 40));
             Add(label);
             return label;
         }

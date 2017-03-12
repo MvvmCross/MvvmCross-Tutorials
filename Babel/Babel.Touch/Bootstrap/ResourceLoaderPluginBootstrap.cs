@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
 namespace Babel.Touch.Bootstrap
 {
     public class ResourceLoaderPluginBootstrap
-        : MvxLoaderPluginBootstrapAction<Cirrious.MvvmCross.Plugins.ResourceLoader.PluginLoader, Cirrious.MvvmCross.Plugins.ResourceLoader.Touch.Plugin>
+        : MvxLoaderPluginBootstrapAction<MvvmCross.Plugins.ResourceLoader.PluginLoader, MvvmCross.Plugins.ResourceLoader.iOS.Plugin>
     {
     }
 }

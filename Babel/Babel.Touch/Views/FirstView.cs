@@ -1,9 +1,9 @@
-using System.Drawing;
+using CoreGraphics;
 using Babel.Core.ViewModels;
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
+using UIKit;
+using Foundation;
 
 namespace Babel.Touch.Views
 {
@@ -35,7 +35,7 @@ namespace Babel.Touch.Views
 
         private UILabel AddLabel(int count)
         {
-            var label = new UILabel(new RectangleF(10, 10 + count*40, 300, 40));
+            var label = new UILabel(new CGRect(10, 10 + count*40, 300, 40));
             Add(label);
             return label;
         }
@@ -43,7 +43,7 @@ namespace Babel.Touch.Views
         private UIButton AddButton(int count, string title)
         {
             var button = new UIButton(UIButtonType.RoundedRect);
-            button.Frame = new RectangleF(10, 10 + count*40, 300, 40);
+            button.Frame = new CGRect(10, 10 + count*40, 300, 40);
             button.SetTitle(title, UIControlState.Normal);
             Add(button);
             return button;
