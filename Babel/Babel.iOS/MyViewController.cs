@@ -2,7 +2,7 @@ using System;
 using UIKit;
 using CoreGraphics;
 
-namespace Babel.Touch
+namespace Babel.iOS
 {
     public class MyViewController : UIViewController
     {

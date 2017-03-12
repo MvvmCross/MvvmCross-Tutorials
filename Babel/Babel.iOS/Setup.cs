@@ -6,7 +6,7 @@ using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Core.ViewModels;
 using System.Collections.Generic;
 
-namespace Babel.Touch
+namespace Babel.iOS
 {
 	public class Setup : MvxIosSetup
 	{

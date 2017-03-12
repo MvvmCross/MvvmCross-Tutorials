@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace Babel.Touch
+namespace Babel.iOS
 {
     public class DebugTrace : IMvxTrace
     {

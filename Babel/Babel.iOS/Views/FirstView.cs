@@ -6,7 +6,7 @@ using UIKit;
 using Foundation;
 using ObjCRuntime;
 
-namespace Babel.Touch.Views
+namespace Babel.iOS.Views
 {
     [Register("FirstView")]
     public class FirstView : MvxViewController

@@ -4,7 +4,7 @@ using System.Linq;
 
 using UIKit;
 
-namespace Babel.Touch
+namespace Babel.iOS
 {
     public class Application
     {

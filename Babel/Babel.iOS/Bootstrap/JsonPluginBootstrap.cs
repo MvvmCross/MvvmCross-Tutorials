@@ -1,6 +1,6 @@
 using MvvmCross.Platform.Plugins;
 
-namespace Babel.Touch.Bootstrap
+namespace Babel.iOS.Bootstrap
 {
     public class JsonPluginBootstrap
         : MvxPluginBootstrapAction<MvvmCross.Plugins.Json.PluginLoader>
