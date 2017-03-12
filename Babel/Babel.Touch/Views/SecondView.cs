@@ -3,6 +3,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using Foundation;
 using UIKit;
+using ObjCRuntime;
 
 namespace Babel.Touch.Views
 {
@@ -14,6 +15,10 @@ namespace Babel.Touch.Views
             View = new UIView() { BackgroundColor = UIColor.White };
             base.ViewDidLoad();
 
+            // ios7 layout
+            if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
+                EdgesForExtendedLayout = UIRectEdge.None;
+            
             var label = AddLabel(0);
             this.BindLanguage(label, "Text", "PageTitle");
             label = AddLabel(1);

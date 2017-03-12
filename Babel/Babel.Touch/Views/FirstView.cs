@@ -4,6 +4,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using UIKit;
 using Foundation;
+using ObjCRuntime;
 
 namespace Babel.Touch.Views
 {
@@ -14,6 +15,10 @@ namespace Babel.Touch.Views
         {
             View = new UIView(){ BackgroundColor = UIColor.White};
             base.ViewDidLoad();
+
+            // ios7 layout
+            if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
+                EdgesForExtendedLayout = UIRectEdge.None;
 
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
             var button = AddButton(0, "Second Page");
