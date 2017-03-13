@@ -1,8 +1,7 @@
 using Android.App;
 using Android.Widget;
-using Cirrious.MvvmCross.Droid.Fragging;
-using Cirrious.MvvmCross.Droid.Fragging.Fragments;
 using FragmentSample.Core.ViewModels.Form;
+using MvvmCross.Droid.Support.V4;
 
 namespace FragmentSample.UI.Droid.Views
 {

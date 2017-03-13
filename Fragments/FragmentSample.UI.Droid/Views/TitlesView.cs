@@ -1,8 +1,8 @@
 using Android.App;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Droid.Fragging;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
 using FragmentSample.Core.ViewModels.Shakespeare;
+using MvvmCross.Droid.Support.V4;
 
 namespace FragmentSample.UI.Droid.Views
 {
