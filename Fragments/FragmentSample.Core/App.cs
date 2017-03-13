@@ -1,5 +1,5 @@
-﻿using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform.IoC;
+using MvvmCross.Core.ViewModels;
 using FragmentSample.Core.ViewModels;
 
 namespace FragmentSample.Core
@@ -28,7 +28,7 @@ namespace FragmentSample.Core
         private void InitialisePlugins()
         {
             // initialise any plugins where are required at app startup
-            // e.g. Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            // e.g. MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Windows.Input;
-using Cirrious.MvvmCross.ViewModels;
+using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 using FragmentSample.Core.ViewModels.Dialog;
 using FragmentSample.Core.ViewModels.Form;
 using FragmentSample.Core.ViewModels.Shakespeare;
