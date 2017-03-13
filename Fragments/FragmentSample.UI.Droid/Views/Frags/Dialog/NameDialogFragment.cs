@@ -2,10 +2,10 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Droid.Fragging.Fragments;
 using FragmentSample.Core.ViewModels;
 using FragmentSample.Core.ViewModels.Dialog;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Droid.Support.V4;
 
 namespace FragmentSample.UI.Droid.Views
 {

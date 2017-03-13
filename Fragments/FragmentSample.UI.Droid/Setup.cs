@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Android.Content;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Droid.Views;
+using MvvmCross.Core.ViewModels;
 using FragmentSample.Core;
 
 namespace FragmentSample.UI.Droid
@@ -65,10 +65,10 @@ namespace FragmentSample.UI.Droid
             return customPresenter;
         }
 
-        public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
+        public override void LoadPlugins(MvvmCross.Platform.Plugins.IMvxPluginManager pluginManager)
         {
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.File.PluginLoader>();
-            pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.File.PluginLoader>();
+            pluginManager.EnsurePluginLoaded<MvvmCross.Plugins.DownloadCache.PluginLoader>();
             base.LoadPlugins(pluginManager);
         }
     }

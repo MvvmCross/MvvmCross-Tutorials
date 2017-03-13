@@ -1,9 +1,7 @@
 using Android.OS;
 using Android.Views;
-using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Droid.Fragging.Fragments;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Droid.Support.V4;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 namespace FragmentSample.UI.Droid.Views

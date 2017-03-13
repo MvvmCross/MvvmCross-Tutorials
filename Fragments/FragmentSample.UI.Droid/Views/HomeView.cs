@@ -1,8 +1,8 @@
 using System;
 using Android.App;
 using Android.Widget;
-using Cirrious.MvvmCross.Droid.Fragging;
 using FragmentSample.Core.ViewModels;
+using MvvmCross.Droid.Support.V4;
 
 namespace FragmentSample.UI.Droid.Views
 {

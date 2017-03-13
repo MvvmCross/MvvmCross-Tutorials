@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace FragmentSample.Core.Services.Search
 {
@@ -8,7 +8,7 @@ namespace FragmentSample.Core.Services.Search
     {
         public void GetItems(string key, Action<List<SearchResult>> onSuccess, Action<SearchServiceError> onError)
         {
-            ThreadPool.QueueUserWorkItem(ignored =>
+            Task.Run(() =>
                 {
                     if (string.IsNullOrWhiteSpace(key))
                     {
