@@ -125,27 +125,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\FirstViewModel.json">
       <Link>BabelResources\Text\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\LolCat\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\LolCat\FirstViewModel.json">
       <Link>BabelResources\Text\LolCat\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\LolCat\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\LolCat\SecondViewModel.json">
       <Link>BabelResources\Text\LolCat\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\ProperEnglish\FirstViewModel.json">
       <Link>BabelResources\Text\ProperEnglish\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\ProperEnglish\SecondViewModel.json">
       <Link>BabelResources\Text\ProperEnglish\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\SecondViewModel.json">
       <Link>BabelResources\Text\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

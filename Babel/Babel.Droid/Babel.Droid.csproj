@@ -121,22 +121,22 @@
     <Compile Include="Views\FirstView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\LolCat\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\LolCat\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\LolCat\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\LolCat\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\LolCat\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\LolCat\SecondViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\ProperEnglish\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\ProperEnglish\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\ProperEnglish\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\ProperEnglish\SecondViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\SecondViewModel.json</Link>
     </AndroidAsset>
     <None Include="packages.config" />
