@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.ResourceLoader.WindowsStore;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.WindowsStore.Platform;
 using Windows.UI.Xaml.Controls;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Plugins.ResourceLoader.WindowsCommon;
+using MvvmCross.WindowsUWP.Platform;
 
 namespace Babel.Store
 {
@@ -19,7 +19,7 @@ namespace Babel.Store
         }
     }
 
-    public class Setup : MvxStoreSetup
+    public class Setup : MvxWindowsSetup
     {
         public Setup(Frame rootFrame) : base(rootFrame)
         {

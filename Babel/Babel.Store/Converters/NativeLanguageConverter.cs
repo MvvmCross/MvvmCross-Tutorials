@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cirrious.CrossCore.WindowsStore.Converters;
-using Cirrious.MvvmCross.Localization;
+using MvvmCross.Localization;
+using MvvmCross.Platform.WindowsCommon.Converters;
 
 namespace Babel.Store.Converters
 {

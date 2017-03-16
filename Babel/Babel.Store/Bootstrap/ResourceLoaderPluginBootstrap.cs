@@ -1,9 +1,9 @@
-using Cirrious.CrossCore.Plugins;
+using MvvmCross.Platform.Plugins;
 
 namespace Babel.Store.Bootstrap
 {
     public class ResourceLoaderPluginBootstrap
-        : MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.ResourceLoader.PluginLoader>
+        : MvxPluginBootstrapAction<MvvmCross.Plugins.ResourceLoader.PluginLoader>
     {
     }
 }
