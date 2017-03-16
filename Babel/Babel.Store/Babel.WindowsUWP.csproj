@@ -7,8 +7,8 @@
     <ProjectGuid>{69E87973-C0A4-49CE-8869-CA190623D45A}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Babel.Store</RootNamespace>
-    <AssemblyName>Babel.Store</AssemblyName>
+    <RootNamespace>Babel.WindowsUWP</RootNamespace>
+    <AssemblyName>Babel.WindowsUWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>

@@ -3,7 +3,7 @@
   <Identity Name="5194c60e-93ed-46aa-b500-2d8884e53295" Publisher="CN=Stuart" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="5194c60e-93ed-46aa-b500-2d8884e53295" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Babel.Store</DisplayName>
+    <DisplayName>Babel.WindowsUWP</DisplayName>
     <PublisherDisplayName>Stuart</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
