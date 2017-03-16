@@ -1,5 +1,5 @@
-﻿using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.Wpf.Converters;
+﻿using MvvmCross.Localization;
+using MvvmCross.Platform.Wpf.Converters;
 
 namespace Babel.Wpf.Converters
 {

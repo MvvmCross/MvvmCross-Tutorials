@@ -1,12 +1,12 @@
 using Babel.Core.Services;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.Plugins.JsonLocalisation;
+using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
+using MvvmCross.Localization;
+using MvvmCross.Plugins.JsonLocalization;
 
 namespace Babel.Core
 {
-    public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
+    public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
         public override void Initialize()
         {

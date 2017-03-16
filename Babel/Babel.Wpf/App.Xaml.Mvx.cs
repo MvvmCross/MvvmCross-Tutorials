@@ -1,8 +1,8 @@
 using System;
 using System.Windows;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Wpf.Views;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Wpf.Views;
 
 namespace Babel.Wpf
 {

@@ -39,84 +39,77 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoAndroid16\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoAndroid16\Cirrious.CrossCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Localization.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.JsonLocalisation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\MonoAndroid16\Cirrious.MvvmCross.Plugins.ResourceLoader.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\MonoAndroid16\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.File.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.File.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Json.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.JsonLocalization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.JsonLocalization.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.JsonLocalization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.ResourceLoader.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net">
-      <Private>True</Private>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.13-beta4\lib\MonoAndroid16\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows">
-      <Private>True</Private>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.13-beta4\lib\MonoAndroid16\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization">
-      <Private>True</Private>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.0.13-beta4\lib\MonoAndroid16\System.Xml.Serialization.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
-    <Compile Include="Bootstrap\JsonLocalisationPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonLocalizationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
@@ -128,22 +121,22 @@
     <Compile Include="Views\FirstView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\LolCat\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\LolCat\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\LolCat\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\LolCat\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\LolCat\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\LolCat\SecondViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\FirstViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\ProperEnglish\FirstViewModel.json">
       <Link>Assets\BabelResources\Text\ProperEnglish\FirstViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\ProperEnglish\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\ProperEnglish\SecondViewModel.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
+    <AndroidAsset Include="..\Babel.Core\BabelResources\Text\SecondViewModel.json">
       <Link>Assets\BabelResources\Text\SecondViewModel.json</Link>
     </AndroidAsset>
     <None Include="packages.config" />
@@ -166,11 +159,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

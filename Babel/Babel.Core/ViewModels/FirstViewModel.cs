@@ -1,6 +1,6 @@
 using System.Windows.Input;
-using Cirrious.MvvmCross.Plugins.JsonLocalisation;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Plugins.JsonLocalization;
+using MvvmCross.Core.ViewModels;
 
 namespace Babel.Core.ViewModels
 {

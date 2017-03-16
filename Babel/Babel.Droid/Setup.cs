@@ -1,7 +1,8 @@
 using Android.Content;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Localization;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Localization;
+using MvvmCross.Core.ViewModels;
+using System.Collections.Generic;
 
 namespace Babel.Droid
 {
@@ -11,11 +12,11 @@ namespace Babel.Droid
         {
         }
 
-        protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies
+        protected override System.Collections.Generic.IEnumerable<System.Reflection.Assembly> ValueConverterAssemblies
         {
             get
             {
-                var toReturn = base.ValueConverterAssemblies;
+                var toReturn = new List<System.Reflection.Assembly>(base.ValueConverterAssemblies);
                 toReturn.Add(typeof(MvxLanguageConverter).Assembly);
                 return toReturn;
             }

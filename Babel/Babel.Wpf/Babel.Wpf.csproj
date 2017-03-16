@@ -34,44 +34,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\net45\Cirrious.CrossCore.dll</HintPath>
+    <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\net45\MvvmCross.Binding.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.Wpf">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\net45\Cirrious.CrossCore.Wpf.dll</HintPath>
+    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\net45\MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.Localization.dll</HintPath>
+    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    <Reference Include="MvvmCross.Platform.Wpf, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.Wpf.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.JsonLocalisation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.0.13-beta4\lib\portable-win+net45+MonoAndroid16+MonoTouch40+sl40+wp71\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
+    <Reference Include="MvvmCross.Plugins.Json, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Json.4.4.0\lib\net45\MvvmCross.Plugins.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+    <Reference Include="MvvmCross.Plugins.JsonLocalization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.JsonLocalization.4.4.0\lib\dotnet\MvvmCross.Plugins.JsonLocalization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Wpf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.Plugins.ResourceLoader.Wpf.dll</HintPath>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\net45\MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Wpf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.0.13-beta4\lib\net45\Cirrious.MvvmCross.Wpf.dll</HintPath>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader.Wpf, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\net45\MvvmCross.Plugins.ResourceLoader.Wpf.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.0.13-beta4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="MvvmCross.Wpf, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,27 +125,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\FirstViewModel.json">
       <Link>BabelResources\Text\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\LolCat\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\LolCat\FirstViewModel.json">
       <Link>BabelResources\Text\LolCat\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\LolCat\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\LolCat\SecondViewModel.json">
       <Link>BabelResources\Text\LolCat\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\FirstViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\ProperEnglish\FirstViewModel.json">
       <Link>BabelResources\Text\ProperEnglish\FirstViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\ProperEnglish\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\ProperEnglish\SecondViewModel.json">
       <Link>BabelResources\Text\ProperEnglish\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="..\Babel.Phone\BabelResources\Text\SecondViewModel.json">
+    <Resource Include="..\Babel.Core\BabelResources\Text\SecondViewModel.json">
       <Link>BabelResources\Text\SecondViewModel.json</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
