@@ -7,7 +7,7 @@ using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.ResourceLoader.WindowsCommon;
 using MvvmCross.WindowsUWP.Platform;
 
-namespace Babel.Store
+namespace Babel.WindowsUWP
 {
     public class HackMvxStoreResourceLoader : MvxStoreResourceLoader
     {

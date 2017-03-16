@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Core", "Babel.Core\Babel.Core.csproj", "{F7103111-05CE-4859-A81F-F7D88CAEE12E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Droid", "Babel.Droid\Babel.Droid.csproj", "{34B5248B-80CB-40C9-9319-2BD73F830BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Store", "Babel.Store\Babel.Store.csproj", "{69E87973-C0A4-49CE-8869-CA190623D45A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.WindowsUWP", "Babel.Store\Babel.WindowsUWP.csproj", "{69E87973-C0A4-49CE-8869-CA190623D45A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Wpf", "Babel.Wpf\Babel.Wpf.csproj", "{27D3D336-3D07-4FE2-A22A-39EB73339F95}"
 EndProject

@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace Babel.Store
+namespace Babel.WindowsUWP
 {
     public class DebugTrace : IMvxTrace
     {

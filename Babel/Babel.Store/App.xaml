@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Babel.Store.App"
+    x:Class="Babel.WindowsUWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Babel.Store" xmlns:converters="using:Babel.Store.Converters">
+    xmlns:local="using:Babel.WindowsUWP" xmlns:converters="using:Babel.WindowsUWP.Converters">
 
     <Application.Resources>
         <ResourceDictionary>

@@ -1,6 +1,6 @@
 using MvvmCross.Platform.Plugins;
 
-namespace Babel.Store.Bootstrap
+namespace Babel.WindowsUWP.Bootstrap
 {
     public class JsonPluginBootstrap
         : MvxPluginBootstrapAction<MvvmCross.Plugins.Json.PluginLoader>

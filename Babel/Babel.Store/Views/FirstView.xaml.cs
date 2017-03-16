@@ -14,12 +14,12 @@ using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
-namespace Babel.Store.Views
+namespace Babel.WindowsUWP.Views
 {
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class FirstView : Babel.Store.Common.LayoutAwarePage
+    public sealed partial class FirstView : Babel.WindowsUWP.Common.LayoutAwarePage
     {
         public FirstView()
         {

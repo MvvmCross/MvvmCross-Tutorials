@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml.Data;
 
-namespace Babel.Store.Common
+namespace Babel.WindowsUWP.Common
 {
     /// <summary>
     /// Value converter that translates true to false and vice versa.

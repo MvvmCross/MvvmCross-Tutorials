@@ -12,7 +12,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace Babel.Store.Common
+namespace Babel.WindowsUWP.Common
 {
     /// <summary>
     /// Typical implementation of Page that provides several important conveniences:

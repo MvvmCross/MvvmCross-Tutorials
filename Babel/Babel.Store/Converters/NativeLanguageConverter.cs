@@ -5,7 +5,7 @@ using System.Text;
 using MvvmCross.Localization;
 using MvvmCross.Platform.WindowsCommon.Converters;
 
-namespace Babel.Store.Converters
+namespace Babel.WindowsUWP.Converters
 {
     public class NativeLanguageConverter : MvxNativeValueConverter<MvxLanguageConverter>
     {
